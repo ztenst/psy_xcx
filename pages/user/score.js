@@ -77,6 +77,9 @@ Page({
             cutPercent: sliceValue[1] * 10,
         })
     },
+    //评分
+    setGrade(e){
 
+    }
 });
 

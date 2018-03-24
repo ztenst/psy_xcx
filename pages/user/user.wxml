@@ -4,13 +4,13 @@
             <image src="../../images/bj.png"/>
         </view>
         <view class="user-info">
-            <view class="userimg box box-align-center box-pack-center">
+            <view class="userimg">
                 <view class="logo">
-                    <image src="../../images/userlogo.png"/>
+                    <image src="{{userInfo.avatarUrl}}"></image>
                 </view>
             </view>
             <view class="usename">
-                张三丰
+                {{userInfo.nickName}}
             </view>
             <view class="com">常州回音网络科技有限公司</view>
         </view>

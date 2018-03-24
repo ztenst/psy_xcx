@@ -2,6 +2,11 @@ const app = getApp();
 Page({
     data: {},
     onLoad() {
+        this.setData({
+            userInfo: app.globalData.userInfo,
+            customInfo: app.globalData.customInfo
+        });
+        console.log(app.globalData.userInfo.avatarUrl)
     },
     goTo(e) {
         let dataset = e.currentTarget.dataset, url = '';

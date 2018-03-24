@@ -28,5 +28,5 @@
             </block>
         </view>
     </view>
-    <button class="btn-block btn-submit">提交</button>
+    <button class="btn-block btn-submit" bindtap="setGrade">提交</button>
 </view>
