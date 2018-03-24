@@ -53,6 +53,7 @@ Page({
     bindEduPickerChange(e) {
         this.setData({eduindex: e.detail.value})
     },
+    //出生日期改变
     bindDateChange(e) {
         this.setData({
             date: e.detail.value

@@ -454,7 +454,7 @@
     height: 200rpx;
     padding: 24rpx 0;
   }
-  .picker{
+  .pdleft30{
     padding-left:30rpx;
   }
   .imageItem{
@@ -464,9 +464,11 @@
     .pic{
       width:150rpx;
       height:150rpx;
+      border-radius: 50%;
       image{
         width:100%;
         height:100%;
+        border-radius: 50%;
       }
     }
     .text{

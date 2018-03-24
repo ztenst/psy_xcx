@@ -148,8 +148,6 @@ export default {
         return getRequest(`${HOST}/api/index/getUserTags`, params)
     },
 
-
-
     getCusList(params) {
         return getRequest(`${HOST}/api/cus/list`, params)
     },
@@ -161,6 +159,17 @@ export default {
     },
     addPraise(params) {
         return getRequest(`${HOST}/api/cus/addPraise`, params)
+    },
+
+
+    getAreaList(params) {
+        return getRequest(`${HOST}/api/tag/area`, params)
+    },
+
+    /*设置咨询师*/
+    setZxs(params) {
+        let url = `${config.host}/api/index/setZxs`
+        return postRequest(url, params)
     },
 
 }

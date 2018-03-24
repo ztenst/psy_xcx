@@ -41,7 +41,7 @@
                             value="{{date}}"
                             start="1970"
                             bindchange="bindDateChange">
-                        <view class="picker">
+                        <view class="pdleft30">
                             {{date}}
                         </view>
                     </picker>
@@ -51,7 +51,7 @@
                 <view class="cell-left ">
                     <label for="" class="label">学历</label>
                 </view>
-                <view class="cell-right picker">
+                <view class="cell-right pdleft30">
                     <picker bindchange="bindEduPickerChange"
                             value="{{eduList[eduindex].id}}"
                             range-key="name"
