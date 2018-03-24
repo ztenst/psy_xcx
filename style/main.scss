@@ -723,3 +723,43 @@
     }
   }
 }
+
+.record{
+  height:100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  .hj{
+    height:88rpx;
+    line-height: 88rpx;
+    width:100%;
+    box-sizing: border-box;
+    padding:0 24rpx;
+    background-color: #f5f6fb;
+    font-size:32rpx;
+    color:#333;
+    .price{
+      color:$color_scheme;
+    }
+  }
+  .record_list{
+    padding:0 24rpx;
+     .item{
+       border-bottom:1rpx solid $borderColorE0;
+       height:136rpx;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       .name{
+         font-size:30rpx;
+         color:#333;
+       }
+       .time{
+         font-size:30rpx;color:#999;
+       }
+       .price{
+         font-size:34rpx;
+         color:$color_scheme;
+       }
+     }
+  }
+}

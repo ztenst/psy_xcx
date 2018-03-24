@@ -10,7 +10,8 @@
     "pages/login/login",
     "pages/user/user",
     "pages/user/yuyue",
-    "pages/user/yuyue-detail"
+    "pages/user/yuyue-detail",
+    "pages/user/record"
   ],
   "window":{
     "backgroundTextStyle":"light",

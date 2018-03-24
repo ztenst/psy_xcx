@@ -1,0 +1,18 @@
+<view class="record">
+    <view class="hj">
+        合计：<text class="price">{{num}}元</text>
+    </view>
+    <view class="record_list">
+        <view class="item">
+            <view class="f-left">
+                <view class="name">
+                    asas
+                </view>
+                <view class="time">2017-07-16 16:30:04</view>
+            </view>
+            <view class="price">
+                150.00元
+            </view>
+        </view>
+    </view>
+</view>
