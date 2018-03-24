@@ -14,19 +14,39 @@
             </view>
         </view>
     </view>
-    <view class="score_box">
-        <view class="lab">为咨询师打分</view>
-        <view class="wux-rater">
-            <block wx:for="{{ stars }}" wx:key="">
-                <view class="wux-rater__box {{ rater.value > index ? 'wux-rater__box--active' : '' }}"
-                      bindtap="handlerClick" data-index="{{ index }}"
-                      style="color: {{ colors && colors[index] ? colors[index]: '#ccc' }};">
-                    <view class="wux-rater__inner">
-                        {{ rater.star }}
+    <form bindsubmit="setGrade">
+        <view class="score_box">
+            <view class="lab">为咨询师打分</view>
+            <view class="wux-rater">
+                <block wx:for="{{ stars }}" wx:key="">
+                    <view class="wux-rater__box {{ rater.value > index ? 'wux-rater__box--active' : '' }}"
+                          bindtap="handlerClick" data-index="{{ index }}"
+                          style="color: {{ colors && colors[index] ? colors[index]: '#ccc' }};">
+                        <view class="wux-rater__inner">
+                            {{ rater.star }}
+                        </view>
                     </view>
-                </view>
-            </block>
+                </block>
+            </view>
         </view>
-    </view>
-    <button class="btn-block btn-submit" bindtap="setGrade">提交</button>
+        <view class="note_box">
+            <textarea placeholder="请输入您的评价" name="note"/>
+        </view>
+        <view class="m-cell " style="border-top:0rpx;">
+            <view class="cell-item">
+                <view class="cell-left">
+                    是否匿名发表评价
+                </view>
+                <view class="cell-right">
+                    <switch checked class="switchSize" color="#409fff"  bindchange="switchPhoneChange"/>
+            </view>
+            </view>
+        </view>
+        <input type="text" name="num" value="{{rater.value}}" hidden/>
+        <input type="text" name="is_nm" value="{{is_nm}}" hidden/>
+        <button class="btn-block btn-submit" form-type="submit">提交</button>
+    </form>
+
+
 </view>
+<toast id="toast"></toast>

@@ -3,7 +3,7 @@ import api from '../../libs/api';
 
 Page({
     data: {
-        rater:{
+        rater: {
             max: 5,
             star: `★`,
             value: 0,
@@ -14,12 +14,17 @@ Page({
             text: [],
             defaultTextColor: `#999`,
         },
-        stars: [`★`,`★`,`★`,`★`,`★`],
+        stars: [`★`, `★`, `★`, `★`, `★`],
         colors: [],
         cutIndex: -1,
         cutPercent: 0,
+        is_nm: 1,
     },
     onLoad(options) {
+        this.setData({
+            oid: options.id,
+            toast: this.selectComponent('#toast')
+        });
 
     },
     /**
@@ -44,6 +49,7 @@ Page({
         this.updateStyle()
         this.updateValue()
 
+        
     },
     // 更新style
     updateStyle(id, vm) {
@@ -77,9 +83,32 @@ Page({
             cutPercent: sliceValue[1] * 10,
         })
     },
+    /**
+     * 切换输入的手机号格式
+     * @param e
+     */
+    switchPhoneChange(e) {
+        this.setData({
+            is_nm: e.detail.value?1:0
+        });
+    },
     //评分
-    setGrade(e){
-
+    setGrade(e) {
+        const formParms = e.detail.value;
+        console.log(formParms)
+        let params = Object.assign({}, formParms,
+            {uid: app.globalData.customInfo.uid,oid:this.data.oid});
+        api.setGrade(params).then(res => {
+            let data = res;
+            this.data.toast.show(data.msg);
+            if (data.status == "success") {
+                setTimeout(function () {
+                    wx.navigateBack({
+                        delta: 1
+                    })
+                },2e3)
+            }
+        });
     }
 });
 

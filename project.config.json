@@ -71,10 +71,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "score",
 					"pathName": "pages/user/score",
-					"query": ""
+					"query": "id=44"
 				}
 			]
 		}

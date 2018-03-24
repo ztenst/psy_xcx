@@ -184,5 +184,8 @@ export default {
     checkOrder(params) {
         return getRequest(`${HOST}/api/index/checkOrder`, params)
     },
+    setGrade(params) {
+        return postRequest(`${HOST}/api/index/setGrade`, params)
+    },
 
 }

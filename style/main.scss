@@ -878,4 +878,18 @@
       clear: both;
     }
   }
+  .note_box{
+     margin:0 24rpx;
+     border:1rpx solid $borderColorEE;
+     border-radius: 10rpx;
+     padding:24rpx;
+    box-sizing: border-box;
+  }
+  .switchSize {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    transform: scale(.7);
+  }
+
 }

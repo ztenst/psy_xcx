@@ -203,7 +203,7 @@
             <view class="cell-item">
                 <view class="cell-left"></view>
                 <view class="cell-right">
-                    <input type="text" style="width:100rpx;" class="cell-input" name="price" placeholder-class="c-999"
+                    <input type="text" style="width:200rpx;" class="cell-input" name="price" placeholder-class="c-999"
                            placeholder="请输入价格" autocomplete="off"/>元/小时
                 </view>
             </view>
