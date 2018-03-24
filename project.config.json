@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -45,6 +45,24 @@
 					"name": "detail",
 					"pathName": "pages/detail/detail",
 					"query": "id=2106"
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "consult",
+					"pathName": "pages/consult/consult",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "yuyue",
+					"pathName": "pages/user/yuyue",
+					"query": ""
 				}
 			]
 		}

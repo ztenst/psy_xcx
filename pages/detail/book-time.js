@@ -9,13 +9,16 @@ const app = getApp();
 
 Page({
     data: {
+        pid:0,
         tabIndex: 0,//设置当前的tabindex
         canNotUseList: [],
         begin: null,
         end: null
     },
     onLoad: function (options) {
-
+        this.setData({
+            pid:options.id
+        })
         api.getTime(options.id).then(res => {
             let json = res.data;
             this.setData({
@@ -85,6 +88,7 @@ Page({
         }
     },
     gotoPay() {
+        let self  = this;
         let setPayParam = {
             price: this.data.price,
             openid: app.globalData.customInfo.open_id
@@ -100,9 +104,10 @@ Page({
                 success(res) {
                     let vipParams = {
                         uid: app.globalData.customInfo.uid,
+                        pid: self.data.pid,
                         price: setPayParam.price,
-                        begin: this.handleDate(this.data.begin),
-                        end: this.handleDate(this.data.end)
+                        begin: self.handleDate(self.data.begin),
+                        end: self.handleDate(self.data.end)
                     };
                     api.addOrder(vipParams).then(r => {
                         let json = r.data;

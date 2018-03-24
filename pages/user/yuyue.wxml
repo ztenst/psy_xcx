@@ -1,0 +1,36 @@
+<view class="consult">
+    <view class="counselor-list" >
+        <view class="item"  wx:for="{{listData}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+            <view class="content">
+                <view class="pic">
+                    <image src="{{item.image}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        <text>{{item.name}}</text>
+                        <view class="area">
+                            <text class="iconfont "></text>{{item.status}}
+                        </view>
+                    </view>
+                    <view class="desc line-clamp2">
+                        手机号:{{item.phone}}
+                    </view>
+                    <view class="tags">
+                        <view class="tag" wx:for="{{item.tags}}" wx:for-item="ts">{{ts}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="cell-box">
+                <view class="cell">
+                    <view class="num">{{item.begin}}-{{item.end}}点</view>
+                    <view class="text">{{item.day}}</view>
+                </view>
+                <view class="cell">
+                    <view class="num">{{item.price}}</view>
+                    <view class="text">{{item.status}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<tab-bar tabIndex="1"></tab-bar>

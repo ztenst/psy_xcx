@@ -1,29 +1,29 @@
 <view class="footer">
-    <view class="item" bindtap="goTo" data-index="0">
+    <view class="item" catchtap="goTo" data-index="0">
         <view class="img">
             <image src="../../images/{{tabIndex=='0'?'hov-':''}}home.png" mode="widthFix"></image>
         </view>
         <view class="text">首页</view>
     </view>
-    <view class="item" bindtap="goTo" data-index="1">
+    <view class="item" catchtap="goTo" data-index="1">
         <view class="img">
             <image src="../../images/{{tabIndex=='1'?'hov-':''}}zx.png" mode="widthFix"></image>
         </view>
         <view class="text">咨询</view>
     </view>
-    <view class="item" bindtap="goTo" data-index="2">
+    <view class="item" catchtap="goTo" data-index="2">
         <view class="img">
             <image src="../../images/{{tabIndex=='2'?'hov-':''}}zx-teacher.png" mode="widthFix"></image>
         </view>
         <view class="text">咨询师</view>
     </view>
-    <view class="item" bindtap="goTo" data-index="3">
+    <view class="item" catchtap="goTo" data-index="3">
         <view class="img">
             <image src="../../images/{{tabIndex=='3'?'hov-':''}}user.png" mode="widthFix"></image>
         </view>
         <view class="text">用户</view>
     </view>
-    <view class="item" bindtap="goTo" data-index="4">
+    <view class="item" catchtap="goTo" data-index="4">
         <view class="img">
             <image src="../../images/{{tabIndex=='4'?'hov-':''}}jy.png" mode="widthFix"></image>
         </view>

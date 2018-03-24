@@ -1,0 +1,39 @@
+<wxs src="../../components/wxs/filter.wxs" module="filter"></wxs>
+
+<view class="zxsDetail">
+    <view class="counselor-list">
+        <view class="item">
+            <view class="content">
+                <view class="pic">
+                    <image src="{{zxsInfo.image}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        <text>{{zxsInfo.name}}</text>
+                        <view class="area">
+                            <text class="iconfont "></text>{{zxsInfo.status}}
+                        </view>
+                    </view>
+                    <view class="desc line-clamp2">
+                        手机号:{{zxsInfo.phone}}
+                    </view>
+                    <view class="tags">
+                        <view class="tag" wx:for="{{zxsInfo.tags}}" wx:for-item="ts">{{ts}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="cell-box">
+                <view class="cell">
+                    <view class="num">{{zxsInfo.begin}}-{{zxsInfo.end}}点</view>
+                    <view class="text">{{zxsInfo.day}}</view>
+                </view>
+                <view class="cell">
+                    <view class="num">{{zxsInfo.price}}</view>
+                    <view class="text">{{zxsInfo.status}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn-yuyue" bindtap="gotoBookTime" data-id="{{zxsInfo.id}}">已完成项目</view>
+</view>
+<tab-bar tabIndex="1"></tab-bar>

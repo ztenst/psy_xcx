@@ -213,7 +213,6 @@
                 </view>
                 <view class="cell-right"></view>
             </view>
-
             <input type="text" name="ly" value="{{ly}}" hidden/>
             <input type="text" name="zc" value="{{zc}}" hidden/>
             <input type="text" name="times" value="{{times}}" hidden/>

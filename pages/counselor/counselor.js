@@ -82,7 +82,6 @@ Page({
             let obj = _.filter(json, {name: "更多"});//更多
             let zc = _.filter(json, {filed: "zc"});//专长
             let mode = _.filter(json, {filed: "mode"});//咨询模式
-            console.log(_.filter(obj[0].list, {filed: 'edu'}))
             this.setData({
                 lingyuList: _.filter(obj[0].list, {filed: "ly"})[0].list,
                 eduList: _.filter(obj[0].list, {filed: 'edu'})[0].list,
@@ -95,8 +94,7 @@ Page({
         var courseList = [];
         for (var i = 0; i < 7; i++) {
             courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        }
-        ;
+        };
         this.setData({courseList});
 
         //获取省份城市字段
@@ -114,21 +112,7 @@ Page({
                 }
             }
         });
-        // uid image头像
-        // id_card身份证
-        // company机构
-        // work_year开始工作年份
-        // area(一级区域，下拉选择 用参数列表)
-        // street(二级区域，下拉选择 用参数列表)
-        // zx_mode(咨询模式，下拉选择 用参数列表)
-        // content个人简介
-        // place办公地点
-        // ly(领域，下拉选择 用参数列表)
-        // zc(专长，下拉选择 用参数列表)
-        // zz(资质，下拉选择 用参数列表)
-        // edu(学历，下拉选择 用参数列表)
-        // price收费，单位是小时 price_note收费简介
-        // times(可用时间数组 字符串数组 第一个数表示周几第二个数表示时间段 比如22就是周二的12-18)
+
 
         //初始化表单校验组件
         this.WxValidate = app.WxValidate({
@@ -236,7 +220,6 @@ Page({
     },
     chooseBtn(e) {
         let dataset = e.currentTarget.dataset;
-        console.log(dataset)
         this.setData({
             [`${dataset.tag}`]: dataset.id
         });
@@ -248,7 +231,6 @@ Page({
      */
     submitForm(e) {
         const formParms = e.detail.value;
-        console.log(formParms)
         if (!this.WxValidate.checkForm(e)) {
             const error = this.WxValidate.errorList[0];
             this.data.toast.show(error.msg)

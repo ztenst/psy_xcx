@@ -172,4 +172,11 @@ export default {
         return postRequest(url, params)
     },
 
+    orderList(params) {
+        return getRequest(`${HOST}/api/index/orderList`, params)
+    },
+    orderInfo(id) {
+        return getRequest(`${HOST}/api/index/orderInfo`, {id}, {cache: true})
+    },
+
 }
