@@ -1,0 +1,32 @@
+<view class="score">
+    <view class="user_box">
+        <view class="user_info">
+            <view class="pic">
+                <image src="../../images/110x110.jpg"></image>
+            </view>
+            <view class="info">
+                <view class="title">
+                    用户000
+                </view>
+                <view class="time">
+                    11月27日咨询
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="score_box">
+        <view class="lab">为咨询师打分</view>
+        <view class="wux-rater">
+            <block wx:for="{{ stars }}" wx:key="">
+                <view class="wux-rater__box {{ rater.value > index ? 'wux-rater__box--active' : '' }}"
+                      bindtap="handlerClick" data-index="{{ index }}"
+                      style="color: {{ colors && colors[index] ? colors[index]: '#ccc' }};">
+                    <view class="wux-rater__inner">
+                        {{ rater.star }}
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <button class="btn-block btn-submit">提交</button>
+</view>

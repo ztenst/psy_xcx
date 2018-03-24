@@ -11,7 +11,8 @@
     "pages/user/user",
     "pages/user/yuyue",
     "pages/user/yuyue-detail",
-    "pages/user/record"
+    "pages/user/record",
+    "pages/user/score"
   ],
   "window":{
     "backgroundTextStyle":"light",

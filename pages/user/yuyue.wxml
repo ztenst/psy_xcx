@@ -1,6 +1,6 @@
 <view class="consult">
     <view class="counselor-list" >
-        <view class="item"  wx:for="{{listData}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+        <view class="item"  wx:for="{{listData}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}" data-status="{{item.status}}">
             <view class="content">
                 <view class="pic">
                     <image src="{{item.image}}"></image>

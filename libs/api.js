@@ -181,7 +181,8 @@ export default {
     getPriceList(params) {
         return getRequest(`${HOST}/api/index/priceList`, params)
     },
-
-
+    checkOrder(params) {
+        return getRequest(`${HOST}/api/index/checkOrder`, params)
+    },
 
 }

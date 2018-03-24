@@ -27,7 +27,11 @@ Page({
     },
     goDetail(e) {
         let dataset = e.currentTarget.dataset, url = '', params = {};
-        url = "/pages/user/yuyue-detail";
+        if(dataset.status=='已支付'){
+            url = "/pages/user/yuyue-detail";
+        }else if(dataset.status=='已确认'){
+            url = "/pages/user/score";
+        }
         params = {id: dataset.id}
         app.goPage(url, params);
     },

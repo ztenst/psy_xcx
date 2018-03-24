@@ -2,6 +2,6 @@
   "navigationBarTitleText": "心理咨询",
   "usingComponents": {
     "tab-bar": "../../components/tab-bar/tab-bar",
-    "toast": "../../components/toast/toast"
+    "list-bar": "../../components/listcomponents/listBar/listBar"
   }
 }

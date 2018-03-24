@@ -5,6 +5,7 @@ var WxParse = require('../../libs/wxParse/wxParse.js');
 const app = getApp();
 Page({
     data: {
+        toast: null,
         zxsInfo: {},
         dateList: [{
             1: [1, 2, 3, 4],
@@ -12,13 +13,9 @@ Page({
         course: [1, 2, 3, 4]
     },
     onLoad: function (options) {
-        var courseList = [];
-        for (var i = 0; i < 7; i++) {
-            courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        }
-        ;
-        this.setData({courseList});
-
+        this.setData({
+            toast: this.selectComponent('#toast')
+        });
         api.orderInfo(options.id).then(json => {
             let zxsInfo = json.data;
             this.setData({zxsInfo});
@@ -42,15 +39,16 @@ Page({
         let id = e.currentTarget.dataset.id;
         app.goPage('/pages/detail/book-time', {'id': id})
     },
-    /**
-     * 转发分享
-     * @param res
-     * @returns {{title: string}}
-     */
-    onShareAppMessage(res) {
-        let self = this;
-        return {
-            title: self.data.articleInfo.title,
-        }
+    checkOrder(e){
+        let id = e.currentTarget.dataset.id;
+        api.checkOrder({id:id}).then(res=>{
+            let data = res;
+            this.data.toast.show(data.msg);
+            // if (data.status == "success") {
+            //     setTimeout(function () {
+            //         app.goPage('/pages/index/index')
+            //     }, 2e3)
+            // }
+        })
     }
 });

@@ -34,6 +34,7 @@
             </view>
         </view>
     </view>
-    <view class="btn-yuyue" bindtap="gotoBookTime" data-id="{{zxsInfo.id}}">已完成项目</view>
+    <view class="btn-yuyue" bindtap="checkOrder" data-id="{{zxsInfo.id}}">已完成项目</view>
 </view>
 <tab-bar tabIndex="1"></tab-bar>
+<toast id="toast"></toast>
