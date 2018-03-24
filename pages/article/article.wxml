@@ -1,0 +1,13 @@
+<import src="../../libs/wxParse/wxParse.wxml"/>
+<view class="article">
+    <view class="articleIndex-header">
+        <view class="title">{{articleInfo.title}}</view>
+        <view class="author-box">
+            <text class="author">{{articleInfo.author}}</text>
+            <text class="bull" wx:if="{{articleInfo.author}}">·</text>
+            <text class="time">{{articleInfo.updated}}</text>
+        </view>
+    </view>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+<tab-bar tabIndex="0"></tab-bar>

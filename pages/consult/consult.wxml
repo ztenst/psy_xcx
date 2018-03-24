@@ -1,0 +1,9 @@
+
+<view class="consult">
+    <filter-bar filters="{{filters}}" filter-condition="{{condition}}" bind:changeSelect="changeData"
+                bind:closeFilterBar="handleCloseFilterBar"></filter-bar>
+    <!--列表组件-->
+    <list-bar list-opts="{{listOpts}}"></list-bar>
+
+</view>
+<tab-bar tabIndex="1"></tab-bar>

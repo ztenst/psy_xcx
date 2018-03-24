@@ -1,0 +1,71 @@
+<view class="user">
+    <view class="user-box">
+        <view class="bg">
+            <image src="../../images/bj.png"/>
+        </view>
+        <view class="user-info">
+            <view class="userimg box box-align-center box-pack-center">
+                <view class="logo">
+                    <image src="../../images/userlogo.png"/>
+                </view>
+            </view>
+            <view class="usename">
+                张三丰
+            </view>
+            <view class="com">常州回音网络科技有限公司</view>
+        </view>
+    </view>
+
+    <view class="card-box">
+        <view class="m-cell">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/collection.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">我的报备</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
+        <view class="m-cell">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/collection.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">我的报备</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
+        <view class="m-cell">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/collection.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">我的报备</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
+        <view class="m-cell">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/collection.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">我的报备</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>
+<tab-bar tabIndex="3"></tab-bar>

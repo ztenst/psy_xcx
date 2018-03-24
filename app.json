@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/consult/consult",
+    "pages/counselor/counselor",
+    "pages/user/user",
+    "pages/suggest/suggest",
+    "pages/article/article",
+    "pages/detail/detail",
+    "pages/detail/book-time",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "心里咨询",
+    "navigationBarTextStyle":"black"
+  }
+}

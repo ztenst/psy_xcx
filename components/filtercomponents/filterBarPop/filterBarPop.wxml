@@ -1,0 +1,59 @@
+<view class="filter " wx:if="{{showFilterBarPop}}" style="top:90rpx;">
+    <view class="filter-bg"></view>
+    <view class="filter-extend {{showFilterBarPop?'show':'hide'}}" >
+        <!--两栏-->
+        <view class="filter-scroller two-column" wx:if="{{barMenu.filed=='area'&&barMenu.type!='more'}}">
+            <scroll-view class="col-l" scroll-y="{{true}}" scroll-x="{{false}}">
+                <view class="option {{currentSelectIndex == index?'on':''}}" wx:for="{{sideMenus.detailList}}"
+                      wx:key="index" bindtap="clickSidebar" data-tag="{{barMenu.filed}}" data-id="{{item.id}}"
+                      data-index="{{index}}" data-sidemenu="{{item}}">
+                    {{item.name}}
+                </view>
+            </scroll-view>
+            <scroll-view class="col-r" scroll-y="{{true}}" scroll-x="{{false}}">
+                <view class="option {{items.selectIndex == index?'on':''}}"
+                      wx:for="{{items.children||items.childAreas||items.childs}}" wx:key="index" data-tag="street" data-id="{{item.id}}"
+                      bindtap="clickItem">
+                    {{item.name}}
+                </view>
+            </scroll-view>
+        </view>
+        <!--一栏-->
+        <view class="line" wx:if="{{barMenu.filed!='area'&&barMenu.type!='more'}}">
+            <view class="filter-scroller">
+                <scroll-view scroll-y="{{true}}" scroll-x="{{false}}">
+                    <view wx:for="{{items.detailList}}" wx:key="index"
+                          bindtap="clickItem" data-tag="{{barMenu.filed}}" data-id="{{item.id}}"
+                          class="option {{items.selectIndex == index?'on':''}}">{{item.name}}
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+        <!--筛选-->
+        <view class="allChioce" wx:if="{{barMenu.type=='more'}}">
+            <view class="filter-scroller">
+                <scroll-view scroll-y="{{true}}" scroll-x="{{false}}">
+                    <view class="section" wx:for="{{barMenu.list}}" wx:for-item="sm" wx:for-index="_index">
+                        <view class="moretitle">{{sm.name}}</view>
+                        <view class="chose-item">
+                            <view wx:for="{{sm.list}}" wx:for-item="sidemenu"
+                                  class="{{sm.selectIndex == index?'on':''}}"
+                                  bindtap="clickFilterbar"
+                                  data-tabindex="{{_index}}"
+                                  data-index="{{index}}"
+                                  data-tag="{{sm.filed}}"
+                                  data-id="{{sidemenu.id}}">{{sidemenu.name}}
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="other-btn-filter">
+                <text class="btn btn-reset" bindtap="handleClean">重置</text>
+                <text class="btn btn-sure" bindtap="handleEnsure">确定</text>
+            </view>
+        </view>
+
+    </view>
+</view>
+

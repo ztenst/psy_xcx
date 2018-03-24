@@ -1,0 +1,56 @@
+module.exports = {
+    //做多保留几位小数
+    cutDecimal: function (num = 0, max = 2) {
+        if (num) {
+            var p = Math.pow(10, max);
+            var result = Math.round(num * p) / p
+            return result;
+        }
+        return 0;
+    },
+
+    //销售状态的类名
+    statusClass: function (status = '') {
+        if(!status) return '';
+        return {'在售': 'bg-pinkish', '即将开盘': 'bg-l-blue', '待售': 'bg-l-blue', '售罄': 'bg-grey', '尾盘': 'bg-l-yellow'}[status]
+    },
+
+    //价格趋势颜色
+    rateColor: function (rate = 0) {
+        if (rate >= 0) return 'c-orange'
+        return 'c-b-green'
+    },
+    //价格趋势箭头
+    rateJiantou: function (rate = 0) {
+        if (rate >= 0) return 'icon-jiantou'
+        return 'icon-jiantou-copy'
+    },
+
+    //字符串分割成数组
+    split: function (str, mark) {
+        return str.split(mark)
+    },
+
+    //过滤标签
+    filterTag: function (str) {
+        var reg1 = getRegExp('<\/?[^>]*>', 'g')
+        var reg2 = getRegExp('[ | ]*\n', 'g')
+        if (reg1.test(str)) {
+            str = str.replace(reg1, '')
+        }
+        if (reg2.test(str)) {
+            str = str.replace(reg2, '')
+        }
+        return str
+    },
+    //列表类别转换
+    modelTrans: function (model = '') {
+        return {'index': '首页', 'xf': '新房', 'esf': '二手房', 'zf': '租房'}[model]
+    },
+    highlightText: function (text, search) {
+        var regex = getRegExp(search, 'gi');
+        var result = text.replace(regex, '<span class="high">$&</span>');
+        result =decodeURI(result);
+        return result;
+    },
+}

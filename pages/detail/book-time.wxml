@@ -1,0 +1,43 @@
+<wxs src="../../components/wxs/filter.wxs" module="filter"></wxs>
+<view class="book-time">
+    <view class="slide-nav">
+        <scroll-view scroll-x class="slide">
+            <view class="in">
+                <view class="item  {{tabIndex==index?'on':''}}" bindtap="getTimeList" wx:for="{{dateList}}" data-index="{{index}}">
+                    <view class="day">{{item.day}}</view>
+                    <view class="week">{{item.week}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="search-btn"></view>
+    </view>
+    <view class="timeList">
+        <view class="filter-extend">
+            <view class="filter-scroller">
+                <view class="filter-option">
+                    <view class="option {{item.can_use=='0'?'cannot':''}}  {{begin&&(begin==item.id||end==item.id||begin<=item.id&&item.id<=end)?'on':''}}"
+                          wx:for="{{timeList}}"
+                          bindtap="selectTime"
+                          data-id="{{item.id}}"
+                          data-iscan="{{item.can_use}}">{{item.time}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="fybox">
+        <view>课时时间</view>
+        <view class="time">
+            <text class="price">¥{{yuan}}</text>
+            /小时
+        </view>
+    </view>
+    <view class="fybox">
+        <view>课程总价</view>
+        <view class="time">
+            <text class="price">¥{{price}}</text>
+        </view>
+    </view>
+    <view class="btn-yuyue" bindtap="gotoPay" data-id="{{zxsInfo.id}}">我要预约</view>
+</view>
+<tab-bar tabIndex="1"></tab-bar>

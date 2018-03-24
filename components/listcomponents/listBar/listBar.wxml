@@ -1,0 +1,22 @@
+<scroll-view class="overflow-scroll" scroll-y="true"
+             style="top:{{listOpts.ToTop}}rpx;bottom:{{listOpts.ToBottom||0}}rpx;"
+             scroll-top="0"
+             lower-threshold="200"
+             bindscrolltolower="loadMore"
+             scroll-with-animation="true">
+
+    <list list-data="{{listData}}" list-type="{{listOpts.listType}}" list-others="{{listOtherParams}}"></list>
+
+
+    <view class="loadmore">
+        <view class="loading" wx:if="{{listScroll.hasMore}}">
+            <view class="icon-loading"></view>
+            <view class="loadmore__tips">加载中...</view>
+        </view>
+        <view class="nodata" wx:else>
+            <view class="loadmore__tips"></view>
+        </view>
+    </view>
+
+
+</scroll-view>

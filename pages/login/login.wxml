@@ -1,0 +1,68 @@
+<view class="page  counselor ">
+    <view class="m-cell">
+        <form bindsubmit="submitLoginForm">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <input type="text" name="name"  class="cell-input" placeholder-class="c-999"
+                           placeholder="请输入姓名" autocomplete="off" />
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <input type="number"  name="phone"
+                           value="{{customInfo.phone}}"
+                           pattern="[0-9]*" class="cell-input"
+                           placeholder-class="c-999"
+                           placeholder="请输入电话号码" autocomplete="off" readonly/>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">性别</label>
+                    <radio-group class="radio-group" bindchange="sexRadioChange" name="sex">
+                        <label class="radio" wx:for="{{sexItems}}">
+                            <radio value="{{item.value}}" checked="{{item.checked}}" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
+                            {{item.name}}
+                        </label>
+                    </radio-group>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">出生年份</label>
+                </view>
+                <view class="cell-right">
+                    <picker mode="date"
+                            name="year"
+                            fields="year"
+                            value="{{date}}"
+                            start="1970"
+                            bindchange="bindDateChange">
+                        <view class="picker">
+                            {{date}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">学历</label>
+                </view>
+                <view class="cell-right picker">
+                    <picker bindchange="bindEduPickerChange"
+                            value="{{eduList[eduindex].id}}"
+                            range-key="name"
+                            range="{{eduList}}" name="edu">
+                        <view>{{eduList[eduindex].name}}</view>
+                    </picker>
+                </view>
+            </view>
+            <button class="btn-block btn-submit" form-type="submit">提交</button>
+        </form>
+    </view>
+</view>
+<tab-bar tabIndex="3"></tab-bar>
+<toast id="toast"></toast>

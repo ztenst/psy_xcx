@@ -1,0 +1,182 @@
+<view class="page  counselor ">
+    <view class="m-cell ">
+        <form bindsubmit="submitForm">
+            <view class="cell-item imageItem">
+                <view bindtap="didPressChooesImage">
+                    <view class="pic">
+                        <image src="{{image?image:'../../images/users.png'}}"></image>
+                    </view>
+                    <view class="text">上传头像</view>
+                </view>
+                <input type="text" name="image" value="{{image}}" hidden/>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left"></view>
+                <view class="cell-right">
+                    <input type="text" class="cell-input" placeholder-class="c-999"
+                           placeholder="请填写真实姓名" autocomplete="off"/>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">请选择性别</label>
+                    <radio-group class="radio-group" name="dllx">
+                        <label class="radio" wx:for="{{sexItems}}">
+                            <radio value="{{item.id}}" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
+                            {{item.name}}
+                        </label>
+                    </radio-group>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left "></view>
+                <view class="cell-right">
+                    <input type="text" class="cell-input" placeholder-class="c-999"
+                           placeholder="请输入身份证号" autocomplete="off"/>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left "></view>
+                <view class="cell-right">
+                    <input type="text" class="cell-input" placeholder-class="c-999"
+                           placeholder="请填写所属机构" autocomplete="off"/>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">学历资质</label>
+                </view>
+                <view class="cell-right">
+                    <input type="number" pattern="[0-9]*" class="cell-input w120" placeholder-class="c-999"
+                           placeholder="" autocomplete="off"/>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">工作年限</label>
+                </view>
+                <view class="cell-right">
+                    <input type="number" pattern="[0-9]*" class="cell-input w120" placeholder-class="c-999"
+                           placeholder="" autocomplete="off"/>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <label for="" class="label">地区</label>
+                </view>
+                <view class="cell-right">
+                    省份
+                    <picker bindchange="bindPickerAreaChange" range-key="name" value="{{areaList[areaIndex].id}}"
+                            name="area"
+                            range="{{areaList}}">
+                        <view class="picker">{{areaList[areaIndex].name}}</view>
+                    </picker>
+                    城市
+                    <picker bindchange="bindPickerStreetChange" range-key="name" value="{{streetList[streetIndex].id}}"
+                            name="street"
+                            range="{{streetList}}">
+                        <view class="picker">{{streetList[streetIndex].name}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <textarea placeholder="请输入个人简介" name="dk_rule"/>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <textarea placeholder="请填写具体位置" name="dk_rule"/>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item nobdm">
+                <view class="cell-left ">
+                    <label for="" class="label">领域</label>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item ">
+                <view class="cell-left btns-cell">
+                    <view class="btn-item on">全部</view>
+                    <view class="btn-item">婚恋</view>
+                    <view class="btn-item">婚恋</view>
+                    <view class="btn-item">婚恋</view>
+                </view>
+            </view>
+            <view class="cell-item nobdm">
+                <view class="cell-left ">
+                    <label for="" class="label">专长</label>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="cell-item ">
+                <view class="cell-left btns-cell">
+                    <view class="btn-item on">全部</view>
+                    <view class="btn-item">婚姻情感</view>
+                    <view class="btn-item">婚姻情感</view>
+                    <view class="btn-item">婚姻情感</view>
+                </view>
+            </view>
+
+            <view class="cell-item nobdm">
+                <view class="cell-left ">
+                    <label for="" class="label">预约时间</label>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+            <view class="dateBox">
+                <view class="head edge">
+                    <view class="curr-week">
+                        <text>时段</text>
+                    </view>
+                    <view class="week-title">
+                        <text>周一</text>
+                        <text>周二</text>
+                        <text>周三</text>
+                        <text>周四</text>
+                        <text>周五</text>
+                        <text>周六</text>
+                        <text>周日</text>
+                    </view>
+                </view>
+                <view class="body">
+                    <view class="sidebar edge">
+                        <view>
+                            <text>06:00 上</text>
+                            <text>12:00 午</text>
+                        </view>
+                        <view>
+                            <text>12:00 下</text>
+                            <text>18:00 午</text>
+                        </view>
+                        <view>
+                            <text>18:00 晚</text>
+                            <text>00:00 上</text>
+                        </view>
+                        <view>
+                            <text>00:00 深</text>
+                            <text>06:00 夜</text>
+                        </view>
+                    </view>
+                    <view class="contenT" wx:for="{{courseList}}">
+                        <view class="column">
+                            <view class="course-wrap">
+                                <view class="course {{y.selected?'on':''}}" wx:for="{{item}}" wx:for-item="y">
+                                    <view></view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+
+
+            <button class="btn-block btn-submit" form-type="submit">提交</button>
+        </form>
+    </view>
+</view>
+<tab-bar tabIndex="2"></tab-bar>

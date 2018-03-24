@@ -1,0 +1,15 @@
+<view class="page  counselor ">
+    <view class="m-cell " >
+        <form bindsubmit="submitForm2">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <textarea placeholder="请输入您的意见或者建议" name="dk_rule"/>
+                </view>
+                <view class="cell-right"></view>
+            </view>
+
+            <button class="btn-block btn-submit" form-type="submit">提交</button>
+        </form>
+    </view>
+</view>
+<tab-bar tabIndex="4"></tab-bar>

@@ -1,0 +1,50 @@
+<wxs src="../../wxs/filter.wxs" module="filter"></wxs>
+<block wx:if="{{listData.length>0}}">
+    <view class="counselor-list" wx:if="{{listType=='product'}}">
+        <view class="item"  wx:for="{{listData}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+            <view class="content">
+                <view class="pic">
+                    <image src="{{item.image}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        <text>{{item.name}}</text>
+                        <text class="lab">已认证</text>
+                        <view class="area">
+                            <text class="iconfont "></text>{{item.place}}
+                        </view>
+                    </view>
+                    <view class="desc line-clamp2">
+                        {{item.content}}
+                    </view>
+                    <view class="tags">
+                        <view class="tag">亲子</view>
+                        <view class="tag">婚姻</view>
+                        <view class="tag">性格</view>
+                    </view>
+                </view>
+            </view>
+            <view class="cell-box">
+                <view class="cell">
+                    <view class="num">{{item.pf}}</view>
+                    <view class="text">好评数</view>
+                </view>
+                <view class="cell">
+                    <view class="num">{{item.hits}}</view>
+                    <view class="text">累计访问</view>
+                </view>
+                <view class="cell">
+                    <view class="num">{{item.year}}</view>
+                    <view class="text">工作年限</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+<toast id="toast"></toast>
+
+
+
+
+
+

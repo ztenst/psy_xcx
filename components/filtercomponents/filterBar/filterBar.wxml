@@ -1,0 +1,14 @@
+<view class="filter">
+    <view class="filter-header">
+        <view class="filter-nav" wx:for="{{barMenus}}" wx:key="index">
+            <view class="filter-nav-inner" bindtap="handleShowDialog" data-barmenu="{{item}}" data-index="{{index}}">
+                <text class="txt">{{item.name}}</text>
+                <text class="iconfont icon-jiantou1"></text>
+            </view>
+        </view>
+    </view>
+    <filter-bar-pop show-filter-bar-pop="{{showFilterBarPop}}" menu="{{selectedMenu}}" selected-indexMenu="{{selectedIndexMenu}}"
+                    bind:changeSelect="changeSelect" bind:closeDialog="handleCloseDialog"
+                    bind:changeMainItem="handleChangeMainItem"></filter-bar-pop>
+</view>
+

@@ -1,0 +1,10 @@
+<view class="footer">
+    <view class="item">
+        <view class="img">
+
+        </view>
+        <view class="text">
+            首页
+        </view>
+    </view>
+</view>

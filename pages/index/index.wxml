@@ -1,0 +1,25 @@
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+<view class="index">
+    <view class="index-container">
+         <view class="artical-list">
+             <block wx:for="{{list}}" wx:key="index">
+                 <view class="banner" wx:if="{{index==0}}" bindtap="gotoDetail" data-id="{{item.id}}">
+                     <view class="pic">
+                         <image src="{{item.image}}"></image>
+                     </view>
+                     <view class="info">
+                         <view class="tit">{{item.title}}</view>
+                     </view>
+                 </view>
+                 <view class="item" wx:if="{{index!=0}}" bindtap="gotoDetail" data-id="{{item.id}}">
+                     <view class="tit">{{item.title}}</view>
+                     <view class="pic">
+                         <image src="{{item.image}}"></image>
+                     </view>
+                 </view>
+             </block>
+         </view>
+    </view>
+</view>
+<tab-bar tabIndex="0"></tab-bar>
