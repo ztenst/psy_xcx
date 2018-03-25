@@ -37,18 +37,15 @@ Component({
             let barMenus = [], temList = [];
             _.chain(this.data.filters)
                 .forEach((v) => {
-                    let result = this.getOriginItem(v);
-                    barMenus.push(Object.assign({}, v, result));
+                    if(v.name!='更多'){
+                        let result = this.getOriginItem(v);
+                        barMenus.push(Object.assign({}, v, result));
+                    }else{
+                        let result = this.getMoreItem(v.list);
+                        barMenus.push(Object.assign({}, {list: result}, {name: '更多', type: 'more', selectIndex: 0}));
+                    }
                 })
                 .value();
-            //更多筛选
-            // _.chain(this.data.filters.more)
-            // .tap((v) => {
-            //     let result = this.getMoreItem(v);
-            //     barMenus.push(Object.assign({}, {list: result}, {name: '筛选', type: 'more', selectIndex: 0}));
-            // })
-            // .value();
-
             this.setData({
                 barMenus: barMenus
             });
@@ -78,7 +75,6 @@ Component({
         }
         ,
         getMoreItem(Item) {
-            // console.log(Item)
             let emptyObj = {id: '', name: '不限'}, list = Item.list;
             _.chain(Item)
                 .forEach((v) => {

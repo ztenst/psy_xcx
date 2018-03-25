@@ -5,14 +5,11 @@ import _ from '../../libs/lodash/we-lodash';
 Page({
     data: {
         toast: null,
-
-
     },
     onLoad() {
         this.setData({
             toast: this.selectComponent('#toast')
         });
-
         //初始化表单校验组件
         this.WxValidate = app.WxValidate({
             'note': {required: true},
