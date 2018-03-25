@@ -23,6 +23,7 @@
         </view>
         <view class="text">用户</view>
     </view>
+    
     <view class="item" catchtap="goTo" data-index="4">
         <view class="img">
             <image src="../../images/{{tabIndex=='4'?'hov-':''}}jy.png" mode="widthFix"></image>

@@ -230,7 +230,7 @@ Page({
     bindZxModePickerChange(e) {
         this.setData({modeindex: e.detail.value})
     },
-    
+
     //工作年限改变
     bindDateChange(e) {
         this.setData({

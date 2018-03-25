@@ -45,7 +45,9 @@ App({
                             success: function (resuserinfo) {
                                 self.globalData.userInfo = resuserinfo.userInfo;
                                 api.getOpenId({code: loginres.code}).then(res => {
+                                    res.is_zxs=res.is_zxs.toString();
                                     let data = res;
+                                    console.log(data)
                                     self.globalData.customInfo = data;
                                     resolve(data);
                                 }).catch(err => {
