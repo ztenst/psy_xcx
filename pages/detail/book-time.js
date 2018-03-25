@@ -1,6 +1,10 @@
 //获取应用实例
+import {
+    $dialog
+} from '../../components/wxcomponents'
 import api from '../../libs/api'
 import Util from '../../utils/util';
+import regeneratorRuntime from '../../libs/regenerator-runtime/runtime';
 
 var WxParse = require('../../libs/wxParse/wxParse.js');
 import _ from '../../libs/lodash/we-lodash';
@@ -9,38 +13,68 @@ const app = getApp();
 
 Page({
     data: {
-        pid:0,
+        pid: 0,
         tabIndex: 0,//设置当前的tabindex
         canNotUseList: [],
         begin: null,
         end: null
     },
-    onLoad: function (options) {
+    async onLoad(options) {
+        let self = this;
         this.setData({
-            pid:options.id
-        })
-        api.getTime(options.id).then(res => {
-            let json = res.data;
+            pid: options.id
+        });
+        let res = await   api.getTime(options.id);
+        let json = res.data;
+        this.setData({
+            yuan: json.price,
+            price: json.price,
+            dateList: json.list.slice(0),
+        });
+        this.formatTime(json.list[0].list);
+        this.getCanNotUseList(json.list[0].list)
+        console.log(json.list.slice(0));
+        
+    },
+    onShow() {
+        app.getUserOpenId().then(res => {
             this.setData({
-                yuan: json.price,
-                price: json.price,
-                dateList: json.list,
-                timeList: this.formatTime(json.list[0].list),
-                canNotUseList: this.getCanNotUseList(json.list[0].list)
+                userInfo: app.globalData.userInfo,
+                is_zxs: res.is_zxs
             });
-        })
+            if (!res.uid) {
+                //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
+                $dialog.alert({
+                    title: '经纪圈新房通',
+                    content: '经纪圈新房通需要获取您的手机号来验证身份，请点击下方按钮进行确认。',
+                    buttons: [{
+                        text: '知道了',
+                        type: 'weui-dialog__btn_primary',
+                    }],
+                    onConfirm(e) {
+                    },
+                });
+            } else if (res.uid && res.is_user != '1') {
+                app.goPage('/pages/login/login')
+            }
+        });
     },
     getCanNotUseList(list) {
-        return list = _.filter(list, (o) => {
+        let LIST = list.slice(0);
+        LIST = _.filter(list, (o) => {
             return o.can_use == '0';
-        })
+        });
+        this.setData({
+            canNotUseList: LIST
+        });
     },
     getTimeList(e) {
+        let index = e.currentTarget.dataset.index, dateList = this.data.dateList;
         this.setData({
-            tabIndex: e.currentTarget.dataset.index,
-            timeList: this.formatTime(this.data.dateList[e.currentTarget.dataset.index].list),
-            canNotUseList: this.getCanNotUseList(this.data.dateList[e.currentTarget.dataset.index].list)
+            tabIndex: index,
         });
+        this.formatTime(dateList[index].list);
+        this.getCanNotUseList(dateList[index].list)
     },
     selectTime(e) {
         let dataset = e.currentTarget.dataset, tempBeginEnd = this.data.tempBeginEnd;
@@ -88,7 +122,7 @@ Page({
         }
     },
     gotoPay() {
-        let self  = this;
+        let self = this;
         let setPayParam = {
             price: this.data.price,
             openid: app.globalData.customInfo.open_id
@@ -137,12 +171,14 @@ Page({
     },
     //处理时间格式
     formatTime(list) {
-        let LIST = list;
-        LIST.forEach((v, i) => {
+        let LIST = list.slice(0);
+        LIST.map((v, i) => {
             v.id = v.time;
             v.time = v.time >= 10 ? v.time + ":00" : '0' + v.time + ":00";
         });
-        return LIST;
+        this.setData({
+            timeList: LIST
+        });
     },
     /**
      * 转发分享

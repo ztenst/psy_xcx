@@ -1,5 +1,9 @@
 <wxs src="../../components/wxs/filter.wxs" module="filter"></wxs>
-
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+<block wx:if="{{is_zxs}}">
+    <tab-bar tabIndex="1" is_zxs="{{is_zxs}}"></tab-bar>
+</block>
 <view class="zxsDetail">
     <view class="counselor-list">
         <view class="item">
@@ -146,4 +150,3 @@
     </view>
     <view class="btn-yuyue" bindtap="gotoBookTime" data-id="{{zxsInfo.id}}">我要预约</view>
 </view>
-<tab-bar tabIndex="1"></tab-bar>
