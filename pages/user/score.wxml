@@ -29,22 +29,24 @@
                 </block>
             </view>
         </view>
-        <view class="note_box" wx:if="{{type=='咨询师'}}">
-            <textarea placeholder="请输入您的评价" name="note"/>
-        </view>
-        <view class="m-cell " style="border-top:0rpx;" wx:if="{{type=='咨询师'}}">
-            <view class="cell-item">
-                <view class="cell-left">
-                    是否匿名发表评价
-                </view>
-                <view class="cell-right">
-                    <switch checked class="switchSize" color="#409fff" bindchange="switchPhoneChange"/>
+        <block wx:if="{{status!='已评分'}}">
+            <view class="note_box" wx:if="{{type=='咨询师'}}">
+                <textarea placeholder="请输入您的评价" name="note"/>
+            </view>
+            <view class="m-cell " style="border-top:0rpx;" wx:if="{{type=='咨询师'&&status!='已评分'}}">
+                <view class="cell-item">
+                    <view class="cell-left">
+                        是否匿名发表评价
+                    </view>
+                    <view class="cell-right">
+                        <switch checked class="switchSize" color="#409fff" bindchange="switchPhoneChange"/>
+                    </view>
                 </view>
             </view>
-        </view>
-        <input type="text" name="num" value="{{rater.value}}" hidden/>
-        <input type="text" name="is_nm" value="{{is_nm}}" hidden/>
-        <button class="btn-block btn-submit" form-type="submit" wx:if="{{status!='已支付'}}">提交</button>
+            <input type="text" name="num" value="{{rater.value}}" hidden/>
+            <input type="text" name="is_nm" value="{{is_nm}}" hidden/>
+            <button class="btn-block btn-submit" form-type="submit">提交</button>
+        </block>
     </form>
 
 

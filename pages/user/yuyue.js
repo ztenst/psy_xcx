@@ -29,11 +29,10 @@ Page({
         let dataset = e.currentTarget.dataset, url = '', params = {};
         if (dataset.status == '已支付') {
             url = "/pages/user/yuyue-detail";
-            params = {id: dataset.id}
-        } else if (dataset.status == '已确认') {
+        } else if (dataset.status == '已评分') {
             url = "/pages/user/score";
-            params = {id:dataset.id,oid: dataset.oid,type:'咨询师'}
         }
+        params = {id:dataset.id,oid: dataset.oid,status:dataset.status,type:'咨询师'};
         app.goPage(url, params);
     },
 });

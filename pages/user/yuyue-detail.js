@@ -19,6 +19,11 @@ Page({
         api.orderInfo(options.id).then(json => {
             let zxsInfo = json.data;
             this.setData({zxsInfo});
+            //预约时间初始化
+            var courseList = [];
+            for (var i = 0; i < 7; i++) {
+                courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
+            };
             courseList.forEach((v, index) => {
                 zxsInfo['times'].forEach((V, I) => {
                         if ((index + 1) == V.week) {
