@@ -27,12 +27,13 @@ Page({
     },
     goDetail(e) {
         let dataset = e.currentTarget.dataset, url = '', params = {};
-        if(dataset.status=='已支付'){
+        if (dataset.status == '已支付') {
             url = "/pages/user/yuyue-detail";
-        }else if(dataset.status=='已确认'){
+            params = {id: dataset.id}
+        } else if (dataset.status == '已确认') {
             url = "/pages/user/score";
+            params = {id:dataset.id,oid: dataset.oid,type:'咨询师'}
         }
-        params = {id: dataset.id}
         app.goPage(url, params);
     },
 });

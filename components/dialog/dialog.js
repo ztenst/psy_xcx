@@ -92,12 +92,12 @@ export default {
                         let params = {
                             encryptedData: e.detail.encryptedData,
                             iv: e.detail.iv,
-                            accessKey: app.globalData.wxData.session_key
+                            accessKey: app.globalData.customInfo.session_key
                         }
                         api.getDecode(params).then(resp => {
                             let json = resp.trim();
                             app.globalData.phone = json;
-                            api.xcxLogin({phone: json, openid: app.globalData.wxData.open_id, name: app.globalData.userInfo.nickName}).then(respo => {
+                            api.xcxLogin({phone: json, openid: app.globalData.customInfo.open_id, name: app.globalData.userInfo.nickName}).then(respo => {
                                 if (respo.status == 'success') {
                                     app.globalData.customInfo = Object.assign(app.globalData.customInfo, respo.data);
                                     app.globalData.isUser = true;

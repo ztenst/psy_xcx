@@ -7,11 +7,16 @@ Component({
         },
     },
     data: {
-        is_zxs: app.globalData.customInfo.is_zxs
+
     },
     attached() {
     },
     ready() {
+        // app.getUserOpenId().then(res => {
+        //     this.setData({
+        //         is_zxs: res.is_zxs
+        //     });
+        // });
     },
     methods: {
         goTo(e) {
@@ -21,13 +26,13 @@ Component({
             } else if (index == '1') {
                 app.goPage('/pages/consult/consult')
             } else if (index == '2') {
-                if (this.data.is_zxs == '0') {
+                if (this.data.is_zxs != 1 ) {
                     app.goPage('/pages/counselor/counselor')
-                } else if (this.data.is_zxs == '1') {
-                    app.goPage('/pages/user/user', {type: 'counselor'})
+                } else {
+                    app.goPage('/pages/user/user', {type: 2})
                 }
             } else if (index == '3') {
-                app.goPage('/pages/user/user', {type: 'user'})
+                app.goPage('/pages/user/user', {type: 3})
             } else if (index == '4') {
                 app.goPage('/pages/suggest/suggest')
             }

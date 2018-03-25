@@ -18,7 +18,7 @@
 
     <view class="card-box">
         <view class="m-cell">
-            <view class="cell-item" bindtap="goTo" data-type="kehu">
+            <view class="cell-item" bindtap="goTo" data-type="kehu" wx:if="{{tabIndex==2}}">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
                         <image src="../../images/edit.png" mode="widthFix"></image>
@@ -30,19 +30,7 @@
             </view>
         </view>
         <view class="m-cell">
-            <view class="cell-item" bindtap="goTo" data-type="yuyue">
-                <view class="cell-left ">
-                    <view class="cell-icon-60">
-                        <image src="../../images/edit.png" mode="widthFix"></image>
-                    </view>
-                    <text class="cell-left-text">预约管理</text>
-                </view>
-                <view class="cell-right">
-                </view>
-            </view>
-        </view>
-        <view class="m-cell">
-            <view class="cell-item" bindtap="goTo" data-type="record">
+            <view class="cell-item" bindtap="goTo" data-type="record" wx:if="{{tabIndex==2}}">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
                         <image src="../../images/function.png" mode="widthFix"></image>
@@ -54,6 +42,31 @@
             </view>
         </view>
         <view class="m-cell">
+            <view class="cell-item" bindtap="goTo" data-type="yuyue" wx:if="{{tabIndex==3}}">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/edit.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">预约管理</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
+        <view class="m-cell">
+            <view class="cell-item" bindtap="goTo" data-type="zixun" wx:if="{{tabIndex==3}}">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/edit.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">成为咨询师</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
+
+        <view class="m-cell" style="border-top:0;">
             <view class="cell-item">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
@@ -68,4 +81,4 @@
 
     </view>
 </view>
-<tab-bar tabIndex="3"></tab-bar>
+<tab-bar tabIndex="{{tabIndex}}"></tab-bar>

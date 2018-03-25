@@ -22,8 +22,14 @@ Page({
     },
     onLoad(options) {
         this.setData({
-            oid: options.id,
+            id: options.id,
+            oid: options.oid,
+            type:options.type,
             toast: this.selectComponent('#toast')
+        });
+        api.orderInfo(options.id).then(json => {
+            let orderInfo = json.data;
+            this.setData({orderInfo});
         });
 
     },

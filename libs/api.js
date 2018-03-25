@@ -124,7 +124,7 @@ export default {
     /*获取openid*/
     getOpenId(params) {
         let url = `${config.host}/api/index/getOpenId`
-        return getRequest(url, params, {cache: true})
+        return getRequest(url, params)
     },
     /*存用户信息*/
     indexSub(params) {
@@ -189,6 +189,11 @@ export default {
     },
     setGrade(params) {
         return postRequest(`${HOST}/api/index/setGrade`, params)
+    },
+    /*提交反馈*/
+    addReport(params) {
+        let url = `${config.host}/api/index/addReport`
+        return postRequest(url, params)
     },
 
 }

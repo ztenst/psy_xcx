@@ -2,21 +2,21 @@
     <view class="user_box">
         <view class="user_info">
             <view class="pic">
-                <image src="../../images/110x110.jpg"></image>
+                <image src="{{orderInfo.image}}"></image>
             </view>
             <view class="info">
                 <view class="title">
-                    用户000
+                    {{orderInfo.name}}
                 </view>
                 <view class="time">
-                    11月27日咨询
+                    {{orderInfo.day}}咨询
                 </view>
             </view>
         </view>
     </view>
     <form bindsubmit="setGrade">
         <view class="score_box">
-            <view class="lab">为咨询师打分</view>
+            <view class="lab">为{{type}}打分</view>
             <view class="wux-rater">
                 <block wx:for="{{ stars }}" wx:key="">
                     <view class="wux-rater__box {{ rater.value > index ? 'wux-rater__box--active' : '' }}"

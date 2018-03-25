@@ -17,7 +17,7 @@
         </view>
         <view class="text">咨询师</view>
     </view>
-    <view class="item" catchtap="goTo" data-index="3" wx:if="{{is_zxs!='1'}}">
+    <view class="item" catchtap="goTo" data-index="3" wx:if="{{is_zxs!=1}}">
         <view class="img">
             <image src="../../images/{{tabIndex=='3'?'hov-':''}}user.png" mode="widthFix"></image>
         </view>

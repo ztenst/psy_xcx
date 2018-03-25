@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "心理咨询"
+  "navigationBarTitleText": "投诉与建议",
+  "usingComponents": {
+    "tab-bar": "../../components/tab-bar/tab-bar",
+    "toast": "../../components/toast/toast"
+  }
 }

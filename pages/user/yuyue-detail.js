@@ -44,11 +44,11 @@ Page({
         api.checkOrder({id:id}).then(res=>{
             let data = res;
             this.data.toast.show(data.msg);
-            // if (data.status == "success") {
-            //     setTimeout(function () {
-            //         app.goPage('/pages/index/index')
-            //     }, 2e3)
-            // }
+            if (data.status == "success") {
+                setTimeout(function () {
+                    app.goPage('/pages/user/score',{id:id,oid:'',type:'咨询师'})
+                }, 2e3)
+            }
         })
     }
 });

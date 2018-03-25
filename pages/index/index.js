@@ -7,7 +7,17 @@ const app = getApp();
 Page({
     data: {},
     onLoad() {
+        api.index().then(res => {
+            if (res.data.length >= 0) {
+                this.setData({
+                    list: res.data
+                });
+            }
+        });
+    },
+    onShow(){
         app.getUserOpenId().then(res => {
+            console.log(res)
             this.setData({
                 userInfo: app.globalData.userInfo
             });
@@ -22,18 +32,8 @@ Page({
                     }],
                     onConfirm(e) {},
                 });
-            }else if(res.uid&&res.is_user=='0'){
+            }else if(res.uid&&res.is_user!='1'){
                 app.goPage('/pages/login/login')
-            }
-        });
-
-
-
-        api.index().then(res => {
-            if (res.data.length >= 0) {
-                this.setData({
-                    list: res.data
-                });
             }
         });
     },

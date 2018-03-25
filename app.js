@@ -4,7 +4,7 @@ import WxValidate from './libs/wx-validate/WxValidate'
 
 App({
     onLaunch() {
-        this.getUserOpenId();
+
     },
 
 
@@ -71,7 +71,7 @@ App({
         //不要在30天后才更换openid-尽量提前10分钟更新 
         return new Promise((resolve, reject) => {
             //  console.log(Object.keys(self.globalData.userInfo).length != 0)
-            if (!self.globalData.isUser || status == 'fresh') {
+            if (self.globalData.customInfo.is_user!='1' || status == 'fresh') {
                 wx.login({
                     success: function (loginres) {
                         wx.getUserInfo({
@@ -80,13 +80,6 @@ App({
                                 api.getOpenId({code: loginres.code}).then(res => {
                                     let data = res;
                                     self.globalData.customInfo = data;
-                                    self.globalData.phone = data.phone;
-                                    if (!data.open_id) {
-                                        self.globalData.customInfo = data;
-                                        self.globalData.isUser = true;
-                                    } else {
-                                        self.globalData.wxData = data;
-                                    }
                                     resolve(data);
                                 })
                             }
@@ -94,7 +87,7 @@ App({
                     }
                 })
             } else {
-                resolve(self.globalData);
+                resolve(self.globalData.customInfo);
             }
         });
     },
@@ -147,7 +140,5 @@ App({
         openid: '',
         customInfo: {},
         isUser: false,
-        wxData: null,
-        phone: '',
     },
 })
