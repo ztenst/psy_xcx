@@ -70,7 +70,7 @@
                 </view>
                 <view class="cell-right">
                     <picker range="{{dateList}}"
-                            name="year"
+                            name="work_year"
                             value="{{dateList[dateindex]}}"
                             bindchange="bindDateChange">
                         <view class="pdleft30">

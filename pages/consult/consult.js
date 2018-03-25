@@ -4,7 +4,9 @@ import {
 } from '../../components/wxcomponents'
 let app = getApp();
 import api from '../../libs/api';
-
+import util from '../../libs/util';
+import regeneratorRuntime from '../../libs/regenerator-runtime/runtime';
+import _ from '../../libs/lodash/we-lodash';
 
 Page({
     data: {
@@ -17,6 +19,7 @@ Page({
         cidIndex: 0,
         menus: [],
         focused: false,
+        
     },
     async onLoad(options) {
         let res = await api.getActiveTags();
