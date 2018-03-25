@@ -293,49 +293,49 @@
 
     }
   }
-  .evaluate-list{
-    .item{
-      padding:25rpx 0rpx;
+  .evaluate-list {
+    .item {
+      padding: 25rpx 0rpx;
       display: flex;
       justify-content: flex-start;
-      .pic{
-        flex:0 0 80rpx;
-        width:80rpx;
-        height:80rpx;
-        margin-right:30rpx;
+      .pic {
+        flex: 0 0 80rpx;
+        width: 80rpx;
+        height: 80rpx;
+        margin-right: 30rpx;
         border-radius: 50%;
-        image{
-          width:100%;
-          height:100%;
+        image {
+          width: 100%;
+          height: 100%;
           border-radius: 50%;
         }
       }
-      .info{
-        width:100%;
-        .tit{
+      .info {
+        width: 100%;
+        .tit {
           position: relative;
-          height:50rpx;
-          .name{
+          height: 50rpx;
+          .name {
             font-size: 28rpx;
-            color:#333;
+            color: #333;
             font-weight: bold;
           }
-          .tag{
-            font-size:28rpx;
-            color:#999;
+          .tag {
+            font-size: 28rpx;
+            color: #999;
           }
-          .time{
+          .time {
             position: absolute;
-            top:6rpx;
-            right:0;
-            font-size:24rpx;
-            color:#999;
+            top: 6rpx;
+            right: 0;
+            font-size: 24rpx;
+            color: #999;
           }
         }
-        .desc{
+        .desc {
           font-size: 24rpx;
-          color:#666;
-          line-height:42rpx;
+          color: #666;
+          line-height: 42rpx;
         }
       }
     }
@@ -454,27 +454,27 @@
     height: 200rpx;
     padding: 24rpx 0;
   }
-  .pdleft30{
-    padding-left:30rpx;
+  .pdleft30 {
+    padding-left: 30rpx;
   }
-  .imageItem{
+  .imageItem {
     justify-content: center;
     align-items: center;
-    padding:50rpx 0 30rpx;
-    .pic{
-      width:150rpx;
-      height:150rpx;
+    padding: 50rpx 0 30rpx;
+    .pic {
+      width: 150rpx;
+      height: 150rpx;
       border-radius: 50%;
-      image{
-        width:100%;
-        height:100%;
+      image {
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
       }
     }
-    .text{
-      font-size:30rpx;
-      color:#999;
-      margin-top:20rpx;
+    .text {
+      font-size: 30rpx;
+      color: #999;
+      margin-top: 20rpx;
     }
   }
 }
@@ -530,8 +530,8 @@
           border-radius: 50%;
           z-index: 10;
           image {
-            width:100%;
-            height:100%;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
           }
         }
@@ -596,11 +596,11 @@
       font-size: 30rpx;
       background: #fff;
       padding: 0rpx 24rpx;
-      .in{
-        width:100%;
+      .in {
+        width: 100%;
         display: flex;
         align-items: center;
-        flex:1;
+        flex: 1;
         overflow-y: hidden;
         overflow-x: scroll;
         .item {
@@ -609,17 +609,17 @@
           align-items: center;
           flex-direction: column;
           height: 100%;
-          margin-right:68rpx;
-          &:last-child{
-            margin-right:0;
+          margin-right: 68rpx;
+          &:last-child {
+            margin-right: 0;
           }
-          .day{
-            color:#999;
+          .day {
+            color: #999;
             font-size: 24rpx;
           }
-          .week{
-            color:#999;
-            font-size:28rpx;
+          .week {
+            color: #999;
+            font-size: 28rpx;
           }
           .text {
             //display: inline-block;
@@ -630,12 +630,12 @@
             line-height: 40rpx;
           }
           &.on {
-            .day{
-              color:#333;
+            .day {
+              color: #333;
             }
-            .week{
-              color:#333;
-              padding-bottom:20rpx;
+            .week {
+              color: #333;
+              padding-bottom: 20rpx;
               border-bottom: 4rpx solid $color_scheme;
             }
           }
@@ -730,91 +730,102 @@
   }
 }
 
-.record{
-  height:100%;
+.record {
+  height: 100%;
   overflow-y: scroll;
   background-color: #fff;
-  .hj{
-    height:88rpx;
+  .hj {
+    height: 88rpx;
     line-height: 88rpx;
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
-    padding:0 24rpx;
+    padding: 0 24rpx;
     background-color: #f5f6fb;
-    font-size:32rpx;
-    color:#333;
-    .price{
-      color:$color_scheme;
+    font-size: 32rpx;
+    color: #333;
+    .price {
+      color: $color_scheme;
     }
   }
-  .record_list{
-    padding:0 24rpx;
-     .item{
-       border-bottom:1rpx solid $borderColorE0;
-       height:136rpx;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       .name{
-         font-size:30rpx;
-         color:#333;
-       }
-       .time{
-         font-size:30rpx;color:#999;
-       }
-       .price{
-         font-size:34rpx;
-         color:$color_scheme;
-       }
-     }
+  .record_list {
+    padding: 0 24rpx;
+    .item {
+      border-bottom: 1rpx solid $borderColorE0;
+      height: 136rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .name {
+        font-size: 30rpx;
+        color: #333;
+      }
+      .time {
+        font-size: 30rpx;
+        color: #999;
+      }
+      .price {
+        font-size: 34rpx;
+        color: $color_scheme;
+        .yuyue {
+          font-size: 24rpx;
+          color: #999;
+        }
+      }
+    }
+    &.customer_manage_list {
+      border: 1rpx solid $borderColorEE;
+      border-radius: 10rpx;
+    }
   }
 }
-.score{
-  height:100%;
+
+.score {
+  height: 100%;
   background-color: #fff;
   overflow-y: scroll;
   .user_box {
-    padding:0 24rpx;
-    .user_info{
+    padding: 0 24rpx;
+    .user_info {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       border-bottom: 1rpx solid $borderColorEE;
-      padding:28rpx 0;
-      .pic{
-        width:100rpx;
-        height:100rpx;
-        border-radius:50%;
-        margin-right:24rpx;
-        flex:0 0 100rpx;
-        image{
-          width:100%;
-          height:100%;
+      padding: 28rpx 0;
+      .pic {
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;
+        margin-right: 24rpx;
+        flex: 0 0 100rpx;
+        image {
+          width: 100%;
+          height: 100%;
           border-radius: 50%;
         }
       }
-      .info{
-        .title{
-          font-size:34rpx;
-          color:#333;
+      .info {
+        .title {
+          font-size: 34rpx;
+          color: #333;
         }
-        .time{
-          font-size:24rpx;
-          color:#999;
-          margin-top:24rpx;
+        .time {
+          font-size: 24rpx;
+          color: #999;
+          margin-top: 24rpx;
         }
       }
     }
   }
   .score_box {
-    padding:60rpx;
+    padding: 60rpx;
     justify-content: center;
-    align-items: center;flex-direction: column;
-    .lab{
+    align-items: center;
+    flex-direction: column;
+    .lab {
       text-align: center;
-      font-size:30rpx;
-      color:#999;
-      margin-bottom:30rpx;
+      font-size: 30rpx;
+      color: #999;
+      margin-bottom: 30rpx;
     }
     .wux-rater {
       margin: 0;
@@ -836,10 +847,10 @@
         color: #ccc;
         -webkit-transition: color .3s ease;
         transition: color .3s ease;
-        font-size:50rpx;
-        margin-right:30rpx;
-        width:50rpx;
-        height:50rpx;
+        font-size: 50rpx;
+        margin-right: 30rpx;
+        width: 50rpx;
+        height: 50rpx;
         line-height: 50rpx;
         &:last-child {
           padding-right: 4rpx !important;
@@ -878,11 +889,11 @@
       clear: both;
     }
   }
-  .note_box{
-     margin:0 24rpx;
-     border:1rpx solid $borderColorEE;
-     border-radius: 10rpx;
-     padding:24rpx;
+  .note_box {
+    margin: 0 24rpx;
+    border: 1rpx solid $borderColorEE;
+    border-radius: 10rpx;
+    padding: 24rpx;
     box-sizing: border-box;
   }
   .switchSize {

@@ -12,7 +12,8 @@
     "pages/user/yuyue",
     "pages/user/yuyue-detail",
     "pages/user/record",
-    "pages/user/score"
+    "pages/user/score",
+    "pages/user/customer_manage"
   ],
   "window":{
     "backgroundTextStyle":"light",

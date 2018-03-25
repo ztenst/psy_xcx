@@ -4,9 +4,6 @@ import WxValidate from './libs/wx-validate/WxValidate'
 
 App({
     onLaunch() {
-        // this.getSiteConfig();
-        // this.getEsfSiteConfig();
-        // this.getSystemInfo();
         this.getUserOpenId();
     },
 

@@ -38,8 +38,8 @@
                     是否匿名发表评价
                 </view>
                 <view class="cell-right">
-                    <switch checked class="switchSize" color="#409fff"  bindchange="switchPhoneChange"/>
-            </view>
+                    <switch checked class="switchSize" color="#409fff" bindchange="switchPhoneChange"/>
+                </view>
             </view>
         </view>
         <input type="text" name="num" value="{{rater.value}}" hidden/>

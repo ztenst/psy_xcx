@@ -49,7 +49,7 @@ Page({
         this.updateStyle()
         this.updateValue()
 
-        
+
     },
     // 更新style
     updateStyle(id, vm) {
@@ -57,8 +57,7 @@ Page({
         const max = rater.max;
         const value = rater.value;
         const activeColor = rater.activeColor;
-        const colors = []
-
+        const colors = [];
         for (let j = 0; j < max; j++) {
             if (j <= value - 1) {
                 colors.push(activeColor)
@@ -70,19 +69,18 @@ Page({
             });
         }
     },
-
     // 更新value
     updateValue(id, vm) {
         const rater = this.data.rater;
         const value = rater.value
         const _val = value.toString().split(`.`)
-        const sliceValue = _val.length === 1 ? [_val[0], 0] : _val
-
+        const sliceValue = _val.length === 1 ? [_val[0], 0] : _val;
         this.setData({
             cutIndex: sliceValue[0] * 1,
             cutPercent: sliceValue[1] * 10,
         })
     },
+
     /**
      * 切换输入的手机号格式
      * @param e
