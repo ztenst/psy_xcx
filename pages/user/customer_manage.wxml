@@ -8,8 +8,9 @@
                 <view class="time">{{item.phone}}</view>
             </view>
             <view class="price">
-                <text class="yuyue">预约</text>{{item.begin}}-{{item.end}}点
+                <text class="yuyue">预约时间 </text><text style="font-size:24rpx;">{{item.begin}}-{{item.end}}</text>
             </view>
         </view>
     </view>
+    
 </view>

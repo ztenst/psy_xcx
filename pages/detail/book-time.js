@@ -33,8 +33,8 @@ Page({
         });
         this.formatTime(json.list[0].list);
         this.getCanNotUseList(json.list[0].list)
-        console.log(json.list.slice(0));
-        
+
+
     },
     onShow() {
         app.getUserOpenId().then(res => {

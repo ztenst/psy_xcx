@@ -62,7 +62,7 @@
             <view class="cell-item" bindtap="goTo" data-type="zixun" wx:if="{{tabIndex==3}}">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
-                        <image src="../../images/edit.png" mode="widthFix"></image>
+                        <image src="../../images/function.png" mode="widthFix"></image>
                     </view>
                     <text class="cell-left-text">成为咨询师</text>
                 </view>
