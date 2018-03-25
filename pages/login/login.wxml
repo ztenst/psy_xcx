@@ -35,14 +35,12 @@
                     <label for="" class="label">出生年份</label>
                 </view>
                 <view class="cell-right">
-                    <picker mode="date"
+                    <picker range="{{dateList}}"
                             name="year"
-                            fields="year"
-                            value="{{date}}"
-                            start="1970"
+                            value="{{dateList[dateindex]}}"
                             bindchange="bindDateChange">
                         <view class="pdleft30">
-                            {{date}}
+                            {{dateList[dateindex]}}年
                         </view>
                     </picker>
                 </view>

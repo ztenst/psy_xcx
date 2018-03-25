@@ -69,15 +69,12 @@
                     <label for="" class="label">工作年限</label>
                 </view>
                 <view class="cell-right">
-                    <picker mode="date"
-                            range="{{areaList}}"
-                            name="work_year"
-                            fields="year"
-                            value="{{date}}"
-                            start="1970"
+                    <picker range="{{dateList}}"
+                            name="year"
+                            value="{{dateList[dateindex]}}"
                             bindchange="bindDateChange">
                         <view class="pdleft30">
-                            {{date}}
+                            {{dateList[dateindex]}}年
                         </view>
                     </picker>
                 </view>

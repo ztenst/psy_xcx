@@ -1,5 +1,6 @@
 import api from '../../libs/api'
 import Util from '../../utils/util'
+
 let app = getApp();
 
 Page({
@@ -9,8 +10,9 @@ Page({
             {name: '男', value: 1},
             {name: '女', value: 2},
         ],
-        eduList:[],
-        eduindex:0
+        eduList: [],
+        eduindex: 0,
+        dateindex:0
     },
     onLoad() {
         this.setData({
@@ -19,9 +21,10 @@ Page({
         this.setData({
             customInfo: app.globalData.customInfo,
             userInfo: app.globalData.userInfo,
-            date:'1970'
         });
         this.getUserTag();
+        this.getDateList();//
+
 
         //初始化表单校验组件
         this.WxValidate = app.WxValidate({
@@ -36,18 +39,30 @@ Page({
             'edu': {required: '请选择学历'}, //学历
         });
     },
-    getUserTag(){
-        api.getUserTags().then(res=>{
-            let json = res.data,tmpList=[];
+    getUserTag() {
+        api.getUserTags().then(res => {
+            let json = res.data, tmpList = [];
             for (let key in json) {
                 tmpList.push({'id': key, 'name': json[key]});
-                if(Object.keys(json).length==tmpList.length){
+                if (Object.keys(json).length == tmpList.length) {
                     this.setData({
                         eduList: tmpList
                     })
                 }
             }
         })
+    },
+    getDateList(){
+        var date=new Date;
+        var year=date.getFullYear();
+        var dateList = Array.from(Array(50), (v, k) => {
+            return year-k;
+        });
+        console.log(dateList)
+        this.setData({
+            dateList,
+            date:year
+        });
     },
     //学历改变
     bindEduPickerChange(e) {
@@ -56,7 +71,7 @@ Page({
     //出生日期改变
     bindDateChange(e) {
         this.setData({
-            date: e.detail.value
+            dateindex: e.detail.value
         })
     },
     /**
@@ -83,14 +98,14 @@ Page({
         }
         let params = Object.assign({},
             formParms, {imgs: this.data.uploadImgs},
-            {openid:app.globalData.customInfo.open_id,pro: app.globalData.userInfo.province,city: app.globalData.userInfo.city});
+            {openid: app.globalData.customInfo.open_id, pro: app.globalData.userInfo.province, city: app.globalData.userInfo.city});
         api.indexSub(params).then(res => {
             let data = res;
             this.data.toast.show(data.msg);
-            if(data.status=="success"){
+            if (data.status == "success") {
                 setTimeout(function () {
                     app.goPage('/pages/index/index')
-                },2e3)
+                }, 2e3)
             }
         });
     },

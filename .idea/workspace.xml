@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a118f7-17c7-4fac-a002-058df211cdde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/tab-bar/tab-bar.js" afterPath="$PROJECT_DIR$/components/tab-bar/tab-bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" afterPath="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/consult/consult.js" afterPath="$PROJECT_DIR$/pages/consult/consult.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/consult/consult.wxml" afterPath="$PROJECT_DIR$/pages/consult/consult.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/counselor/counselor.js" afterPath="$PROJECT_DIR$/pages/counselor/counselor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/counselor/counselor.wxml" afterPath="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.js" afterPath="$PROJECT_DIR$/pages/login/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/suggest/suggest.js" afterPath="$PROJECT_DIR$/pages/suggest/suggest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/suggest/suggest.wxml" afterPath="$PROJECT_DIR$/pages/suggest/suggest.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/user.js" afterPath="$PROJECT_DIR$/pages/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/user.wxml" afterPath="$PROJECT_DIR$/pages/user/user.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.wxml" afterPath="$PROJECT_DIR$/pages/login/login.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +22,8 @@
       <file leaf-file-name="counselor.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="297">
+              <caret line="73" column="55" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -84,26 +74,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab-bar.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tab-bar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state relative-caret-position="54">
+              <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="counselor.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/login/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="68" column="48" lean-forward="true" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/login/login.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="45" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="counselor.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="180" selection-end-column="6" />
+            <state relative-caret-position="459">
+              <caret line="232" column="4" lean-forward="false" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="4" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
                 <element signature="n#!!block;n#getKey#0" expanded="false" />
                 <element signature="n#!!block;n#didPressChooesImage#0" expanded="false" />
-                <element signature="e#5072#5801#0" expanded="false" />
+                <element signature="e#5121#5850#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -119,32 +129,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-                <element signature="e#358#1087#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="suggest.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-                <element signature="e#495#1224#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -154,7 +138,6 @@
       <find>courseList</find>
       <find>submitForm</find>
       <find>date</find>
-      <find>bindDateChange</find>
       <find>/api/index/setZxs</find>
       <find>indexSub</find>
       <find>bindEduPickerChange</find>
@@ -171,6 +154,7 @@
       <find>rpx</find>
       <find>wxData</find>
       <find>picker</find>
+      <find>bindDateChange</find>
     </findStrings>
     <replaceStrings>
       <replace>rpx</replace>
@@ -211,10 +195,8 @@
         <option value="$PROJECT_DIR$/components/listcomponents/list/list.wxml" />
         <option value="$PROJECT_DIR$/style/components.scss" />
         <option value="$PROJECT_DIR$/pages/user/customer_manage.js" />
-        <option value="$PROJECT_DIR$/pages/login/login.wxml" />
         <option value="$PROJECT_DIR$/pages/login/login.json" />
         <option value="$PROJECT_DIR$/pages/detail/detail.wxml" />
-        <option value="$PROJECT_DIR$/pages/login/login.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/consult/consult.js" />
@@ -222,12 +204,14 @@
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/suggest/suggest.wxml" />
         <option value="$PROJECT_DIR$/pages/suggest/suggest.js" />
-        <option value="$PROJECT_DIR$/pages/counselor/counselor.js" />
-        <option value="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
         <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" />
         <option value="$PROJECT_DIR$/pages/user/user.js" />
         <option value="$PROJECT_DIR$/pages/user/user.wxml" />
         <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.js" />
+        <option value="$PROJECT_DIR$/pages/login/login.js" />
+        <option value="$PROJECT_DIR$/pages/login/login.wxml" />
+        <option value="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
+        <option value="$PROJECT_DIR$/pages/counselor/counselor.js" />
       </list>
     </option>
   </component>
@@ -238,8 +222,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1025" />
-    <option name="height" value="870" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -272,13 +258,19 @@
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="tab-bar" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="counselor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
@@ -335,12 +327,12 @@
       <workItem from="1521892136537" duration="2655000" />
       <workItem from="1521902933783" duration="4297000" />
       <workItem from="1521948763362" duration="11863000" />
-      <workItem from="1521979581160" duration="4781000" />
+      <workItem from="1521979581160" duration="6320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42541000" />
+    <option name="totallyTimeSpent" value="44080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -601,14 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/login.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1135">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/consult/consult.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -624,16 +608,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="e#280#915#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,14 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -716,19 +682,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="180" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="n#!!block;n#getKey#0" expanded="false" />
-            <element signature="n#!!block;n#didPressChooesImage#0" expanded="false" />
-            <element signature="e#5072#5801#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,6 +704,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/user.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -761,11 +722,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.js">
+    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        <state relative-caret-position="324">
+          <caret line="68" column="48" lean-forward="true" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/login.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="45" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="73" column="55" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="232" column="4" lean-forward="false" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="n#!!block;n#getKey#0" expanded="false" />
+            <element signature="n#!!block;n#didPressChooesImage#0" expanded="false" />
+            <element signature="e#5121#5850#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

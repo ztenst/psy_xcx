@@ -68,6 +68,7 @@ Page({
         streetList: [],
         areaIndex: 0,
         streetIndex: 0,
+        dateindex: 0,
 
 
     },
@@ -100,7 +101,7 @@ Page({
         }
         ;
         this.setData({courseList});
-
+        this.getDateList();
         //获取省份城市字段
         api.getAreaList().then(res => {
             this.setData({areaList: res.data})
@@ -188,6 +189,17 @@ Page({
         });
         this.setTime();
     },
+    getDateList(){
+        var date=new Date;
+        var year=date.getFullYear();
+        var dateList = Array.from(Array(50), (v, k) => {
+            return year-k;
+        });
+        this.setData({
+            dateList,
+            date:year
+        });
+    },
     setTime() {
         let courseList = this.data.courseList;
         let times = this.data.times;
@@ -218,10 +230,11 @@ Page({
     bindZxModePickerChange(e) {
         this.setData({modeindex: e.detail.value})
     },
+    
     //工作年限改变
     bindDateChange(e) {
         this.setData({
-            date: e.detail.value
+            dateindex: e.detail.value
         })
     },
 
