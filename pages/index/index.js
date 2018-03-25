@@ -17,9 +17,9 @@ Page({
     },
     onShow(){
         app.getUserOpenId().then(res => {
-            console.log(res)
             this.setData({
-                userInfo: app.globalData.userInfo
+                userInfo: app.globalData.userInfo,
+                is_zxs:res.is_zxs
             });
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息

@@ -1,3 +1,9 @@
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+<block wx:if="{{is_zxs}}">
+    <tab-bar tabIndex="1" is_zxs="{{is_zxs}}"></tab-bar>
+</block>
+
 
 <view class="consult">
     <filter-bar filters="{{filters}}" filter-condition="{{condition}}" bind:changeSelect="changeData"
@@ -6,4 +12,3 @@
     <list-bar list-opts="{{listOpts}}"></list-bar>
 
 </view>
-<tab-bar tabIndex="1"></tab-bar>

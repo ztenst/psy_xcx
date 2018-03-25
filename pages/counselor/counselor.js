@@ -1,3 +1,6 @@
+import {
+    $dialog
+} from '../../components/wxcomponents'
 import api from '../../libs/api'
 import Util from '../../utils/util'
 
@@ -94,7 +97,8 @@ Page({
         var courseList = [];
         for (var i = 0; i < 7; i++) {
             courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        };
+        }
+        ;
         this.setData({courseList});
 
         //获取省份城市字段
@@ -152,7 +156,28 @@ Page({
             'price_note': {required: '请输入收费简介'},
             'times': {required: '请选择时间'},
         });
-
+    },
+    onShow(){
+        app.getUserOpenId().then(res => {
+            this.setData({
+                userInfo: app.globalData.userInfo,
+                is_zxs:res.is_zxs
+            });
+            if (!res.uid) {
+                //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
+                $dialog.alert({
+                    title: '经纪圈新房通',
+                    content: '经纪圈新房通需要获取您的手机号来验证身份，请点击下方按钮进行确认。',
+                    buttons: [{
+                        text: '知道了',
+                        type: 'weui-dialog__btn_primary',
+                    }],
+                    onConfirm(e) {},
+                });
+            }else if(res.uid&&res.is_user!='1'){
+                app.goPage('/pages/login/login')
+            }
+        });
     },
     chooseDate(e) {
         let data = e.currentTarget.dataset;
@@ -230,14 +255,13 @@ Page({
      * @returns {boolean}
      */
     submitForm(e) {
-        const formParms = e.detail.value;
+        let formParms = e.detail.value;
         if (!this.WxValidate.checkForm(e)) {
             const error = this.WxValidate.errorList[0];
-            this.data.toast.show(error.msg)
-            return false
+            this.data.toast.show(error.msg);
+            return false;
         }
-        let params = Object.assign({},formParms,
-            {uid: app.globalData.customInfo.uid,times:JSON.stringify(this.data.times)});
+        let params = Object.assign({}, formParms, {uid: app.globalData.customInfo.uid, times: JSON.stringify(this.data.times)});
         api.setZxs(params).then(res => {
             let data = res;
             this.data.toast.show(data.msg);

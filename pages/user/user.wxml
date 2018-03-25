@@ -1,3 +1,8 @@
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+<block wx:if="{{is_zxs}}">
+    <tab-bar tabIndex="{{tabIndex}}" is_zxs="{{is_zxs}}"></tab-bar>
+</block>
 <view class="user">
     <view class="user-box">
         <view class="bg">
@@ -81,4 +86,4 @@
 
     </view>
 </view>
-<tab-bar tabIndex="{{tabIndex}}"></tab-bar>
+

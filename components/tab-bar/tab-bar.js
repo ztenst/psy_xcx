@@ -5,19 +5,16 @@ Component({
             type: String,
             value: ''
         },
+        is_zxs: {
+            type: String,
+            value: '',
+        },
     },
-    data: {
-
-    },
+    data: {},
     attached() {
     },
     ready() {
-        app.getUserOpenId().then(res => {
-            console.log(res)
-            this.setData({
-                is_zxs: res.is_zxs
-            });
-        });
+
     },
     methods: {
         goTo(e) {

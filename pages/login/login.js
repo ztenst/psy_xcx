@@ -64,7 +64,6 @@ Page({
      * @param e
      */
     sexRadioChange(e) {
-        console.log(e.detail.value)
         this.setData({
             sex: e.detail.value
         });

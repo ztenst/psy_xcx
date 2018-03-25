@@ -7,39 +7,8 @@ App({
 
     },
 
-
-    getSiteConfig(forceUpdate = false) {
-        return new Promise((resolve, reject) => {
-            if (this.globalData.siteConfig && !forceUpdate) {
-                resolve(this.globalData.siteConfig)
-            } else {
-                api.common.siteConfig().then(json => {
-                    // json.data.siteName = json.data.m_minname
-                    this.globalData.siteConfig = json.data;
-                    resolve(json.data)
-                }).catch(err => {
-                    reject(err)
-                })
-            }
-        })
-    },
-    getEsfSiteConfig(forceUpdate = false) {
-        return new Promise((resolve, reject) => {
-            if (this.globalData.siteConfig && !forceUpdate) {
-                resolve(this.globalData.siteConfig)
-            } else {
-                api.common.esfSiteConfig().then(json => {
-                    // json.data.siteName = json.data.m_minname
-                    this.globalData.esfSiteConfig = json.data;
-                    resolve(json.data)
-                }).catch(err => {
-                    reject(err)
-                })
-            }
-        })
-    },
     getSystemInfo() {
-        let system = wx.getSystemInfoSync()
+        let system = wx.getSystemInfoSync();
         this.globalData.system = system
     },
     getUserInfo() {
@@ -79,7 +48,9 @@ App({
                                     let data = res;
                                     self.globalData.customInfo = data;
                                     resolve(data);
-                                })
+                                }).catch(err => {
+                                    reject(err)
+                                });
                             }
                         });
                     }

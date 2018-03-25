@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a118f7-17c7-4fac-a002-058df211cdde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/detail/detail.wxml" afterPath="$PROJECT_DIR$/pages/detail/detail.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.json" afterPath="$PROJECT_DIR$/pages/login/login.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.wxml" afterPath="$PROJECT_DIR$/pages/login/login.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/customer_manage.js" afterPath="$PROJECT_DIR$/pages/user/customer_manage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/tab-bar/tab-bar.js" afterPath="$PROJECT_DIR$/components/tab-bar/tab-bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" afterPath="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/consult/consult.js" afterPath="$PROJECT_DIR$/pages/consult/consult.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/consult/consult.wxml" afterPath="$PROJECT_DIR$/pages/consult/consult.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/counselor/counselor.js" afterPath="$PROJECT_DIR$/pages/counselor/counselor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/counselor/counselor.wxml" afterPath="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.js" afterPath="$PROJECT_DIR$/pages/index/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index/index.wxml" afterPath="$PROJECT_DIR$/pages/index/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/login.js" afterPath="$PROJECT_DIR$/pages/login/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/suggest/suggest.js" afterPath="$PROJECT_DIR$/pages/suggest/suggest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/suggest/suggest.wxml" afterPath="$PROJECT_DIR$/pages/suggest/suggest.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/user.js" afterPath="$PROJECT_DIR$/pages/user/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/user.wxml" afterPath="$PROJECT_DIR$/pages/user/user.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +32,8 @@
       <file leaf-file-name="counselor.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+            <state relative-caret-position="270">
+              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -32,85 +42,105 @@
       <file leaf-file-name="tab-bar.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="162">
+              <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer_manage.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/user/customer_manage.wxml">
+      <file leaf-file-name="user.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/user/user.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer_manage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/user/customer_manage.js">
+      <file leaf-file-name="user.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/user/user.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/login/login.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/login/login.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.wxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/detail/detail.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="78" column="40" lean-forward="true" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+            <state relative-caret-position="189">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#188#708#0" expanded="false" />
-                <element signature="e#752#1278#0" expanded="false" />
-                <element signature="e#1300#1391#0" expanded="false" />
-                <element signature="e#1411#2046#0" expanded="false" />
+                <element signature="n#style#0;n#view#4;n#view#1;n#view#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab-bar.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/user/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#311#1040#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab-bar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="648">
+              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="counselor.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="180" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+                <element signature="n#!!block;n#getKey#0" expanded="false" />
+                <element signature="n#!!block;n#didPressChooesImage#0" expanded="false" />
+                <element signature="e#5072#5801#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suggest.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#358#1087#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suggest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#495#1224#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,10 +182,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/login/login.js" />
         <option value="$PROJECT_DIR$/pages/counselor/counselor.json" />
         <option value="$PROJECT_DIR$/style/common.scss" />
-        <option value="$PROJECT_DIR$/pages/counselor/counselor.js" />
         <option value="$PROJECT_DIR$/pages/user/yuyue.json" />
         <option value="$PROJECT_DIR$/pages/detail/book-time.js" />
         <option value="$PROJECT_DIR$/components/listcomponents/listBar/listBar.js" />
@@ -169,11 +197,7 @@
         <option value="$PROJECT_DIR$/pages/user/customer_manage.json" />
         <option value="$PROJECT_DIR$/pages/user/customer_manage.wxml" />
         <option value="$PROJECT_DIR$/style/main.scss" />
-        <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" />
-        <option value="$PROJECT_DIR$/pages/user/user.js" />
-        <option value="$PROJECT_DIR$/pages/user/user.wxml" />
         <option value="$PROJECT_DIR$/components/dialog/dialog.js" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/user/yuyue-detail.json" />
         <option value="$PROJECT_DIR$/pages/user/yuyue.wxml" />
         <option value="$PROJECT_DIR$/pages/user/score.js" />
@@ -182,20 +206,28 @@
         <option value="$PROJECT_DIR$/pages/user/yuyue.js" />
         <option value="$PROJECT_DIR$/libs/api.js" />
         <option value="$PROJECT_DIR$/pages/suggest/suggest.wxss" />
-        <option value="$PROJECT_DIR$/pages/suggest/suggest.wxml" />
         <option value="$PROJECT_DIR$/pages/suggest/suggest.json" />
-        <option value="$PROJECT_DIR$/pages/suggest/suggest.js" />
-        <option value="$PROJECT_DIR$/pages/consult/consult.js" />
         <option value="$PROJECT_DIR$/components/filtercomponents/filterBar/filterBar.js" />
         <option value="$PROJECT_DIR$/components/listcomponents/list/list.wxml" />
         <option value="$PROJECT_DIR$/style/components.scss" />
-        <option value="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.js" />
         <option value="$PROJECT_DIR$/pages/user/customer_manage.js" />
         <option value="$PROJECT_DIR$/pages/login/login.wxml" />
         <option value="$PROJECT_DIR$/pages/login/login.json" />
         <option value="$PROJECT_DIR$/pages/detail/detail.wxml" />
+        <option value="$PROJECT_DIR$/pages/login/login.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/consult/consult.js" />
+        <option value="$PROJECT_DIR$/pages/consult/consult.wxml" />
+        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/suggest/suggest.wxml" />
+        <option value="$PROJECT_DIR$/pages/suggest/suggest.js" />
+        <option value="$PROJECT_DIR$/pages/counselor/counselor.js" />
+        <option value="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
+        <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.wxml" />
+        <option value="$PROJECT_DIR$/pages/user/user.js" />
+        <option value="$PROJECT_DIR$/pages/user/user.wxml" />
+        <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.js" />
       </list>
     </option>
   </component>
@@ -206,10 +238,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="width" value="1025" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -242,19 +272,18 @@
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="tab-bar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="detail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,12 +335,12 @@
       <workItem from="1521892136537" duration="2655000" />
       <workItem from="1521902933783" duration="4297000" />
       <workItem from="1521948763362" duration="11863000" />
-      <workItem from="1521979581160" duration="2589000" />
+      <workItem from="1521979581160" duration="4781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40349000" />
+    <option name="totallyTimeSpent" value="42541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -361,33 +390,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/user/record.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/record.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxss" />
-    <entry file="file://$PROJECT_DIR$/pages/user/score.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -449,28 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/user.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="68" column="51" lean-forward="true" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/yuyue-detail.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -478,20 +463,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/dialog/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
           <caret line="87" column="53" lean-forward="true" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -527,14 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/yuyue.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -546,20 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -602,6 +556,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -612,55 +569,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/consult/consult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#188#708#0" expanded="false" />
-            <element signature="e#752#1278#0" expanded="false" />
-            <element signature="e#1300#1391#0" expanded="false" />
-            <element signature="e#1411#2046#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -681,26 +593,178 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/detail/detail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="78" column="40" lean-forward="true" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/login.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
+        <state relative-caret-position="1135">
           <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/consult/consult.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#280#915#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="64" column="7" lean-forward="true" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/login/login.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/detail/detail.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/consult/consult.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="78" column="40" lean-forward="true" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
+        <state relative-caret-position="513">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#1495#1679#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/consult/consult.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#358#1087#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#495#1224#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="180" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="n#!!block;n#getKey#0" expanded="false" />
+            <element signature="n#!!block;n#didPressChooesImage#0" expanded="false" />
+            <element signature="e#5072#5801#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#311#1040#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/suggest/suggest.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/user.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#view#4;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding />
         </state>
       </provider>
