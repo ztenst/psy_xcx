@@ -12,11 +12,12 @@ Component({
     attached() {
     },
     ready() {
-        // app.getUserOpenId().then(res => {
-        //     this.setData({
-        //         is_zxs: res.is_zxs
-        //     });
-        // });
+        app.getUserOpenId().then(res => {
+            console.log(res)
+            this.setData({
+                is_zxs: res.is_zxs
+            });
+        });
     },
     methods: {
         goTo(e) {

@@ -63,6 +63,7 @@
                 </view>
                 <view class="cell-right">
                     <picker mode="date"
+                            range="{{areaList}}"
                             name="work_year"
                             fields="year"
                             value="{{date}}"

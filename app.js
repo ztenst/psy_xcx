@@ -66,12 +66,10 @@ App({
      * 获取openid 
      * @returns {Promise}
      */
-    getUserOpenId: function (status) {
+    getUserOpenId(status) {
         var self = this;
-        //不要在30天后才更换openid-尽量提前10分钟更新 
         return new Promise((resolve, reject) => {
-            //  console.log(Object.keys(self.globalData.userInfo).length != 0)
-            if (self.globalData.customInfo.is_user!='1' || status == 'fresh') {
+            if (self.globalData.customInfo.is_user != '1' || status == 'fresh') {
                 wx.login({
                     success: function (loginres) {
                         wx.getUserInfo({
