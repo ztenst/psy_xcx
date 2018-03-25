@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a118f7-17c7-4fac-a002-058df211cdde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/filtercomponents/filterBar/filterBar.js" afterPath="$PROJECT_DIR$/components/filtercomponents/filterBar/filterBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/suggest/suggest.js" afterPath="$PROJECT_DIR$/pages/suggest/suggest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.config.json" afterPath="$PROJECT_DIR$/project.config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/listcomponents/list/list.wxml" afterPath="$PROJECT_DIR$/components/listcomponents/list/list.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/components.scss" afterPath="$PROJECT_DIR$/style/components.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,13 +27,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filterBar.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="filterBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/filtercomponents/filterBar/filterBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+            <state relative-caret-position="668">
+              <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding>
                 <element signature="e#0#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/listcomponents/list/list.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="components.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style/components.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="302" column="31" lean-forward="true" selection-start-line="302" selection-start-column="31" selection-end-line="302" selection-end-column="31" />
+              <folding>
+                <element signature="e#7937#8237#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -98,14 +118,12 @@
         <option value="$PROJECT_DIR$/pages/user/yuyue.json" />
         <option value="$PROJECT_DIR$/pages/detail/book-time.js" />
         <option value="$PROJECT_DIR$/components/listcomponents/listBar/listBar.js" />
-        <option value="$PROJECT_DIR$/components/listcomponents/list/list.wxml" />
         <option value="$PROJECT_DIR$/style/args.scss" />
         <option value="$PROJECT_DIR$/pages/user/record.wxml" />
         <option value="$PROJECT_DIR$/pages/user/record.js" />
         <option value="$PROJECT_DIR$/pages/user/yuyue-detail.wxml" />
         <option value="$PROJECT_DIR$/pages/user/score.json" />
         <option value="$PROJECT_DIR$/pages/counselor/counselor.wxml" />
-        <option value="$PROJECT_DIR$/style/components.scss" />
         <option value="$PROJECT_DIR$/pages/counselor/user.wxml" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/pages/user/customer_manage.json" />
@@ -132,6 +150,8 @@
         <option value="$PROJECT_DIR$/pages/suggest/suggest.js" />
         <option value="$PROJECT_DIR$/pages/consult/consult.js" />
         <option value="$PROJECT_DIR$/components/filtercomponents/filterBar/filterBar.js" />
+        <option value="$PROJECT_DIR$/components/listcomponents/list/list.wxml" />
+        <option value="$PROJECT_DIR$/style/components.scss" />
       </list>
     </option>
   </component>
@@ -186,8 +206,14 @@
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="filtercomponents" type="462c0819:PsiDirectoryNode" />
-              <item name="filterBar" type="462c0819:PsiDirectoryNode" />
+              <item name="listcomponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="listcomponents" type="462c0819:PsiDirectoryNode" />
+              <item name="list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
@@ -203,7 +229,7 @@
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="consult" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,12 +279,12 @@
       <workItem from="1521891956723" duration="41000" />
       <workItem from="1521892136537" duration="2655000" />
       <workItem from="1521902933783" duration="4297000" />
-      <workItem from="1521948763362" duration="11524000" />
+      <workItem from="1521948763362" duration="11718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37421000" />
+    <option name="totallyTimeSpent" value="37615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -335,13 +361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/listcomponents/list/list.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/record.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -386,18 +405,6 @@
         <state relative-caret-position="108">
           <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/components.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="364" column="3" lean-forward="true" selection-start-line="364" selection-start-column="3" selection-end-line="364" selection-end-column="3" />
-          <folding>
-            <element signature="e#6226#7893#0" expanded="false" />
-            <element signature="e#6550#7887#0" expanded="false" />
-            <element signature="e#7908#8208#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,14 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/yuyue.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/score.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -723,10 +722,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/filtercomponents/filterBar/filterBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+        <state relative-caret-position="668">
+          <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding>
             <element signature="e#0#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/yuyue.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/listcomponents/list/list.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/components.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="302" column="31" lean-forward="true" selection-start-line="302" selection-start-column="31" selection-end-line="302" selection-end-column="31" />
+          <folding>
+            <element signature="e#7937#8237#0" expanded="false" />
           </folding>
         </state>
       </provider>

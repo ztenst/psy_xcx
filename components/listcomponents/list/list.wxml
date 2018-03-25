@@ -9,7 +9,7 @@
                 <view class="info">
                     <view class="title">
                         <text>{{item.name}}</text>
-                        <text class="lab">已认证</text>
+                        <text class="lab">{{item.zz}}</text>
                         <view class="area">
                             <text class="iconfont "></text>{{item.place}}
                         </view>
@@ -18,9 +18,7 @@
                         {{item.content}}
                     </view>
                     <view class="tags">
-                        <view class="tag">亲子</view>
-                        <view class="tag">婚姻</view>
-                        <view class="tag">性格</view>
+                        <view class="tag" wx:for="{{item.tags}}" wx:for-item="ts">{{ts}}</view>
                     </view>
                 </view>
             </view>
