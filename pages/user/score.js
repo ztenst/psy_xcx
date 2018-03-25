@@ -25,6 +25,7 @@ Page({
             id: options.id,
             oid: options.oid,
             type:options.type,
+            status:options.status,
             toast: this.selectComponent('#toast')
         });
         api.orderInfo(options.id).then(json => {

@@ -29,10 +29,10 @@
                 </block>
             </view>
         </view>
-        <view class="note_box">
+        <view class="note_box" wx:if="{{type=='咨询师'}}">
             <textarea placeholder="请输入您的评价" name="note"/>
         </view>
-        <view class="m-cell " style="border-top:0rpx;">
+        <view class="m-cell " style="border-top:0rpx;" wx:if="{{type=='咨询师'}}">
             <view class="cell-item">
                 <view class="cell-left">
                     是否匿名发表评价
@@ -44,7 +44,7 @@
         </view>
         <input type="text" name="num" value="{{rater.value}}" hidden/>
         <input type="text" name="is_nm" value="{{is_nm}}" hidden/>
-        <button class="btn-block btn-submit" form-type="submit">提交</button>
+        <button class="btn-block btn-submit" form-type="submit" wx:if="{{status!='已支付'}}">提交</button>
     </form>
 
 

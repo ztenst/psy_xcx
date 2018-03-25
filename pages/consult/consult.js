@@ -19,7 +19,7 @@ Page({
         cidIndex: 0,
         menus: [],
         focused: false,
-        
+
     },
     async onLoad(options) {
         let res = await api.getActiveTags();

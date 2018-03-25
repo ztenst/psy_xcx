@@ -7,16 +7,15 @@ Page({
     },
     onLoad(options) {
         api.getUserList({uid: app.globalData.customInfo.uid}).then(res => {
-            console.log(res)
             this.setData({
-                listData: res.data.list
+                listData: res.data
             })
         });
     },
     goDetail(e) {
         let dataset = e.currentTarget.dataset, url = '', params = {};
-        url = "/pages/user/yuyue-detail";
-        params = {id: dataset.id}
+        url = "/pages/user/score";
+        params = {id:dataset.id,oid: dataset.oid,type:'用户',status:dataset.status}
         app.goPage(url, params);
     },
 });

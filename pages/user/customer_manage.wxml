@@ -1,14 +1,14 @@
 <view class="record">
     <view class="record_list customer_manage_list">
-        <view class="item">
+        <view class="item" wx:for="{{listData}}" bindtap="goDetail" data-id="{{item.id}}" data-oid="{{item.oid}}" data-status="{{item.status}}">
             <view class="f-left">
                 <view class="name">
-                    asas
+                    {{item.name}}
                 </view>
-                <view class="time">2017-07-16 16:30:04</view>
+                <view class="time">{{item.phone}}</view>
             </view>
             <view class="price">
-                <text class="yuyue">预约</text>150.00元
+                <text class="yuyue">预约</text>{{item.begin}}-{{item.end}}点
             </view>
         </view>
     </view>
