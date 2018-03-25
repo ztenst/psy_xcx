@@ -11,7 +11,7 @@ Page({
             this.setData({
                 listData: res.data.list
             })
-        })
+        });
     },
     goDetail(e) {
         let dataset = e.currentTarget.dataset, url = '', params = {};

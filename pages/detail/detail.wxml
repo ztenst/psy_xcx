@@ -64,8 +64,7 @@
             <view class="content">
                 <view>{{zxsInfo.price_note}}</view>
                 <view class="time">
-                    <text class="price">¥97</text>
-                    /小时
+                    <text class="price">¥{{zxsInfo.price}}</text>/小时
                 </view>
             </view>
         </view>

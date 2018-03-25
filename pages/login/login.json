@@ -1,7 +1,6 @@
 {
-  "navigationBarTitleText": "心理咨询",
+  "navigationBarTitleText": "认证",
   "usingComponents": {
-    "tab-bar": "../../components/tab-bar/tab-bar",
     "toast": "../../components/toast/toast"
   }
 }
