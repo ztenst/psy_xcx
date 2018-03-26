@@ -46,3 +46,4 @@
     </view>
     <view class="btn-yuyue" bindtap="gotoPay" data-id="{{zxsInfo.id}}">我要预约</view>
 </view>
+<toast id="toast"></toast>

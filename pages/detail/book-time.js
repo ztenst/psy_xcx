@@ -13,6 +13,7 @@ const app = getApp();
 
 Page({
     data: {
+        toast: null,
         pid: 0,
         tabIndex: 0,//设置当前的tabindex
         canNotUseList: [],
@@ -22,7 +23,8 @@ Page({
     async onLoad(options) {
         let self = this;
         this.setData({
-            pid: options.id
+            pid: options.id,
+            toast: this.selectComponent('#toast')
         });
         let res = await   api.getTime(options.id);
         let json = res.data;
@@ -144,11 +146,12 @@ Page({
                         end: self.handleDate(self.data.end)
                     };
                     api.addOrder(vipParams).then(r => {
-                        let json = r.data;
-                        console.log(json.status)
-                        if (json.status == 'success') {
-                            let url = '/pages/index/index';
-                            app.goPage(url);
+                        let data = r;
+                        self.data.toast.show(data.msg);
+                        if (data.status == "success") {
+                            setTimeout(function () {
+                                app.goPage('/pages/index/index')
+                            }, 2e3)
                         }
                     })
                 },

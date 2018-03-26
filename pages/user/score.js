@@ -28,9 +28,10 @@ Page({
             status:options.status,
             toast: this.selectComponent('#toast')
         });
-        api.orderInfo(options.id).then(json => {
+
+        api.orderInfo({id:options.id,oid:options.oid,uid:app.globalData.customInfo.uid}).then(json => {
             let orderInfo = json.data;
-            this.setData({orderInfo,score:parseInt(orderInfo.num).toFixed(1)});
+            this.setData({orderInfo,score:parseInt(orderInfo.num?orderInfo.num:0).toFixed(1)});
             this.update(orderInfo.num);
         });
 
@@ -101,9 +102,8 @@ Page({
     //评分
     setGrade(e) {
         const formParms = e.detail.value;
-        console.log(formParms)
         let params = Object.assign({}, formParms,
-            {uid: app.globalData.customInfo.uid,oid:this.data.oid});
+            {uid: app.globalData.customInfo.uid,oid:this.data.oid,order_id:this.data.id});
         api.setGrade(params).then(res => {
             let data = res;
             this.data.toast.show(data.msg);

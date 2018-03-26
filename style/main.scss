@@ -888,6 +888,12 @@
     .wux-rater:after {
       clear: both;
     }
+    .note{
+       width:100%;
+       box-sizing: border-box;
+       padding:30rpx 24rpx;
+       color:#666;
+    }
   }
   .note_box {
     margin: 0 24rpx;

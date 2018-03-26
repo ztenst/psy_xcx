@@ -175,8 +175,8 @@ export default {
     orderList(params) {
         return getRequest(`${HOST}/api/index/orderList`, params)
     },
-    orderInfo(id) {
-        return getRequest(`${HOST}/api/index/orderInfo`, {id}, {cache: true})
+    orderInfo(params) {
+        return getRequest(`${HOST}/api/index/orderInfo`, params)
     },
     getPriceList(params) {
         return getRequest(`${HOST}/api/index/priceList`, params)
