@@ -16,8 +16,8 @@
     </view>
     <form bindsubmit="setGrade">
         <view class="score_box">
-            <view class="lab" wx:if="{{!score}}">为{{type}}打分</view>
-            <view class="lab" style="color:#333;font-size:48rpx;" wx:else="{{!score}}">{{score}}分</view>
+            <view class="lab" wx:if="{{score!=NaN}}">为{{type}}打分</view>
+            <view class="lab" style="color:#333;font-size:48rpx;" wx:else>{{score}}分</view>
             <view class="wux-rater">
                 <block wx:for="{{ stars }}" wx:key="">
                     <view class="wux-rater__box {{ rater.value > index ? 'wux-rater__box--active' : '' }}"

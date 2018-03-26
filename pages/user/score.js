@@ -31,7 +31,7 @@ Page({
         api.orderInfo(options.id).then(json => {
             let orderInfo = json.data;
             this.setData({orderInfo,score:parseInt(orderInfo.num).toFixed(1)});
-            this.update(orderInfo.num)
+            this.update(orderInfo.num);
         });
 
     },
