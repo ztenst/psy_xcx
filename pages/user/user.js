@@ -1,6 +1,7 @@
 import {
     $dialog
 } from '../../components/wxcomponents'
+import api from '../../libs/api'
 const app = getApp();
 Page({
     data: {},
@@ -10,6 +11,12 @@ Page({
             userInfo: app.globalData.userInfo,
             customInfo: app.globalData.customInfo
         });
+        api.getConfig().then(res=>{
+            let json =res.data;
+            this.setData({
+                phone:json.phone
+            })
+        })
     },
     onShow(){
         app.getUserOpenId().then(res => {
@@ -45,5 +52,15 @@ Page({
             url = '/pages/user/customer_manage';
         }
         app.goPage(url);
+    },
+    //拨打电话
+    call(e) {
+        let phone = e.currentTarget.dataset.tel.replace(/\s*转\s*/, ',');
+        wx.makePhoneCall({
+            phoneNumber: phone
+        })
+    },
+    toSuggest(){
+        app.goPage('/pages/suggest/suggest')
     }
 });

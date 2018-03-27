@@ -1,8 +1,5 @@
 <import src="../../components/dialog/dialog.wxml"/>
 <template is="dialog" data="{{ ...$dialog }}"/>
-<block wx:if="{{is_zxs}}">
-    <tab-bar tabIndex="4" is_zxs="{{is_zxs}}"></tab-bar>
-</block>
 <toast id="toast"></toast>
 <view class="page  counselor ">
     <view class="m-cell " >

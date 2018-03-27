@@ -20,22 +20,25 @@ Page({
         begin: null,
         end: null
     },
-    async onLoad(options) {
+    onLoad(options) {
         let self = this;
         this.setData({
             pid: options.id,
             toast: this.selectComponent('#toast')
         });
-        let res = await   api.getTime(options.id);
-        let json = res.data;
-        this.setData({
-            yuan: json.price,
-            price: json.price,
-            dateList: json.list.slice(0),
+        api.getTime(options.id).then(res => {
+            let json= res.data;
+            console.log(json)
         });
-        this.formatTime(json.list[0].list);
-        this.getCanNotUseList(json.list[0].list)
 
+        // let json = res.data;
+        // this.setData({
+        //     yuan: json.price,
+        //     price: json.price,
+        //     dateList: json.list.slice(0),
+        // });
+        // this.formatTime(json.list[0].list);
+        // this.getCanNotUseList(json.list[0].list)
 
     },
     onShow() {

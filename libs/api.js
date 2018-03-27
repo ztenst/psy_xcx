@@ -126,6 +126,11 @@ export default {
         let url = `${config.host}/api/index/getOpenId`
         return getRequest(url, params)
     },
+
+    getConfig(params) {
+        let url = `${config.host}/api/index/getConfig`
+        return getRequest(url, params)
+    },
     /*存用户信息*/
     indexSub(params) {
         let url = `${config.host}/api/index/setUser`

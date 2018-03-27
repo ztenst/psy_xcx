@@ -31,8 +31,6 @@ Component({
                 }
             } else if (index == '3') {
                 app.goPage('/pages/user/user', {type: 3})
-            } else if (index == '4') {
-                app.goPage('/pages/suggest/suggest')
             }
         }
     }
