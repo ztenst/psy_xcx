@@ -269,11 +269,13 @@
 }
 
 .counselor-list {
-  padding:20 24rpx 0;
+  width:100%;
+  box-sizing: border-box;
+  padding:30rpx 24rpx 0;
   .item {
     border-radius: 10rpx;
     border: 1rpx solid $borderColorE6;
-    margin-bottom: 20rpx;
+    margin-bottom:20rpx;
     padding: 30rpx 24rpx;
     .content {
       display: flex;
