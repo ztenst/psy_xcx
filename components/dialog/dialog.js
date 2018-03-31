@@ -101,7 +101,7 @@ export default {
                                 if (respo.status == 'success') {
                                     app.globalData.customInfo = Object.assign(app.globalData.customInfo, respo.data);
                                     app.globalData.isUser = true;
-                                    app.goPage('/pages/login/login')
+                                    app.goPage('/pages/login/login',{},{type: 'redirect'})
                                 }
                             })
                         });

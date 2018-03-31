@@ -22,7 +22,7 @@
     </view>
 
     <view class="card-box">
-        <view class="m-cell" wx:if="{{tabIndex==2}}">
+        <view class="m-cell" wx:if="{{is_zxs==1}}">
             <view class="cell-item" bindtap="goTo" data-type="kehu" >
                 <view class="cell-left ">
                     <view class="cell-icon-60">
@@ -34,7 +34,7 @@
                 </view>
             </view>
         </view>
-        <view class="m-cell" wx:if="{{tabIndex==2}}">
+        <view class="m-cell" wx:if="{{is_zxs==1}}">
             <view class="cell-item" bindtap="goTo" data-type="record" >
                 <view class="cell-left ">
                     <view class="cell-icon-60">
@@ -46,7 +46,7 @@
                 </view>
             </view>
         </view>
-        <view class="m-cell" wx:if="{{tabIndex==3}}">
+        <view class="m-cell"  wx:if="{{is_zxs!=1}}">
             <view class="cell-item" bindtap="goTo" data-type="yuyue" >
                 <view class="cell-left ">
                     <view class="cell-icon-60">
@@ -58,7 +58,7 @@
                 </view>
             </view>
         </view>
-        <view class="m-cell" wx:if="{{tabIndex==3}}">
+        <view class="m-cell" wx:if="{{is_zxs!=1}}">
             <view class="cell-item" bindtap="goTo" data-type="zixun" >
                 <view class="cell-left ">
                     <view class="cell-icon-60">
@@ -87,7 +87,7 @@
             <view class="cell-item" bindtap="toSuggest">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
-                        <image src="../../images/contact.png" mode="widthFix"></image>
+                        <image src="../../images/jianyi.png" mode="widthFix"></image>
                     </view>
                     <text class="cell-left-text">投诉建议</text>
                 </view>

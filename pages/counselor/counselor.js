@@ -158,11 +158,11 @@ Page({
             'times': {required: '请选择时间'},
         });
     },
-    onShow(){
+    onShow() {
         app.getUserOpenId().then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
-                is_zxs:res.is_zxs
+                is_zxs: res.is_zxs
             });
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
@@ -173,9 +173,10 @@ Page({
                         text: '知道了',
                         type: 'weui-dialog__btn_primary',
                     }],
-                    onConfirm(e) {},
+                    onConfirm(e) {
+                    },
                 });
-            }else if(res.uid&&res.is_user!='1'){
+            } else if (res.uid && res.is_user != '1') {
                 app.goPage('/pages/login/login')
             }
         });
@@ -189,15 +190,15 @@ Page({
         });
         this.setTime();
     },
-    getDateList(){
-        var date=new Date;
-        var year=date.getFullYear();
+    getDateList() {
+        var date = new Date;
+        var year = date.getFullYear();
         var dateList = Array.from(Array(50), (v, k) => {
-            return year-k;
+            return year - k;
         });
         this.setData({
             dateList,
-            date:year
+            date: year
         });
     },
     setTime() {
@@ -280,7 +281,7 @@ Page({
             this.data.toast.show(data.msg);
             if (data.status == "success") {
                 setTimeout(function () {
-                    app.goPage('/pages/index/index')
+                    app.goPage('/pages/index/index',{},{type: 'redirect'})
                 }, 2e3)
             }
         });

@@ -33,7 +33,7 @@ Page({
                     onConfirm(e) {},
                 });
             }else if(res.uid&&res.is_user!='1'){
-                app.goPage('/pages/login/login')
+                app.goPage('/pages/login/login',{},{type: 'redirect'})
             }
         });
     },
