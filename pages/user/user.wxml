@@ -82,7 +82,7 @@
                 <view class="cell-right">
                 </view>
             </view>
-        </view>
+            </view>
         <view class="m-cell" >
             <view class="cell-item" bindtap="toSuggest">
                 <view class="cell-left ">
