@@ -28,17 +28,16 @@ Page({
         });
         api.getTime(options.id).then(res => {
             let json= res.data;
-            console.log(json)
+            this.setData({
+                yuan: json.price,
+                price: json.price,
+                dateList: json.list.slice(0),
+            });
+            this.formatTime(json.list[0].list);
+            this.getCanNotUseList(json.list[0].list)
         });
 
-        // let json = res.data;
-        // this.setData({
-        //     yuan: json.price,
-        //     price: json.price,
-        //     dateList: json.list.slice(0),
-        // });
-        // this.formatTime(json.list[0].list);
-        // this.getCanNotUseList(json.list[0].list)
+
 
     },
     onShow() {
@@ -60,7 +59,7 @@ Page({
                     },
                 });
             } else if (res.uid && res.is_user != '1') {
-                app.goPage('/pages/login/login')
+                app.goPage('/pages/login/login',{},{type: 'redirect'})
             }
         });
     },
