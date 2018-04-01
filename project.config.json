@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -77,10 +77,10 @@
 					"query": "id=44"
 				},
 				{
-					"id": -1,
+					"id": 8,
 					"name": "book-time",
 					"pathName": "pages/detail/book-time",
-					"query": "id=2128"
+					"query": "id=2134"
 				}
 			]
 		}

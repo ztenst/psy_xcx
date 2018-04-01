@@ -27,17 +27,15 @@ Page({
             toast: this.selectComponent('#toast')
         });
         api.getTime(options.id).then(res => {
-            let json= res.data;
+            let json = res.data;
             this.setData({
                 yuan: json.price,
                 price: json.price,
-                dateList: json.list.slice(0),
+                dateList: [].concat(json.list),
             });
             this.formatTime(json.list[0].list);
             this.getCanNotUseList(json.list[0].list)
         });
-
-
 
     },
     onShow() {
@@ -59,12 +57,12 @@ Page({
                     },
                 });
             } else if (res.uid && res.is_user != '1') {
-                app.goPage('/pages/login/login',{},{type: 'redirect'})
+                app.goPage('/pages/login/login')
             }
         });
     },
     getCanNotUseList(list) {
-        let LIST = list.slice(0);
+        let LIST = [].concat(list);
         LIST = _.filter(list, (o) => {
             return o.can_use == '0';
         });
@@ -176,10 +174,12 @@ Page({
     },
     //处理时间格式
     formatTime(list) {
-        let LIST = list.slice(0);
+        let LIST = [].concat(list);
         LIST.map((v, i) => {
-            v.id = v.time;
-            v.time = v.time >= 10 ? v.time + ":00" : '0' + v.time + ":00";
+            if(typeof v.time === "number"){
+                v.id = v.time;
+                v.time = v.time >= 10 ? v.time + ":00" : '0' + v.time + ":00";
+            }
         });
         this.setData({
             timeList: LIST
