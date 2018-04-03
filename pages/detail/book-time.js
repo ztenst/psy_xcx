@@ -124,6 +124,10 @@ Page({
         }
     },
     gotoPay() {
+        if(!this.data.begin&&!this.data.end){
+            this.data.toast.show("请选择预约时间！");
+            return;
+        }
         let self = this;
         let setPayParam = {
             price: this.data.price,
