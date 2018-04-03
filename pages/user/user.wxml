@@ -17,7 +17,7 @@
             <view class="usename">
                 {{userInfo.nickName}}
             </view>
-            <view class="com">常州回音网络科技有限公司</view>
+            <view class="com"></view>
         </view>
     </view>
 
