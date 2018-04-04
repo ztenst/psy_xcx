@@ -27,6 +27,8 @@ Page({
     },
     goDetail(e) {
         let dataset = e.currentTarget.dataset, url = '', params = {};
+        if(dataset.status == '已确认') return;
+
         if (dataset.status == '已支付') {
             url = "/pages/user/yuyue-detail";
         } else if (dataset.status == '已评分') {

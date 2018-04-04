@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a118f7-17c7-4fac-a002-058df211cdde" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/detail/book-time.js" afterPath="$PROJECT_DIR$/pages/detail/book-time.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/user/yuyue.js" afterPath="$PROJECT_DIR$/pages/user/yuyue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.config.json" afterPath="$PROJECT_DIR$/project.config.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,6 +37,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="yuyue.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/user/yuyue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+              <folding>
+                <element signature="e#55#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="tab-bar.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/tab-bar/tab-bar.wxml">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,16 +69,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book-time.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="book-time.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/detail/book-time.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="134" column="10" lean-forward="true" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+            <state relative-caret-position="290">
+              <caret line="193" column="17" lean-forward="true" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
               <folding>
                 <element signature="e#9#68#0" expanded="true" />
-                <element signature="e#2315#3871#0" expanded="false" />
-                <element signature="e#5397#5838#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yuyue.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/user/yuyue.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="807">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,33 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/user/user.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2905">
-              <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-              <folding>
-                <element signature="n#view#0;n#view#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="counselor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/counselor/counselor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6020">
               <caret line="176" column="22" lean-forward="true" selection-start-line="176" selection-start-column="22" selection-end-line="176" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,7 +192,6 @@
         <option value="$PROJECT_DIR$/pages/consult/consult.js" />
         <option value="$PROJECT_DIR$/pages/user/customer_manage.js" />
         <option value="$PROJECT_DIR$/pages/user/record.wxml" />
-        <option value="$PROJECT_DIR$/pages/user/yuyue.js" />
         <option value="$PROJECT_DIR$/pages/detail/detail.wxml" />
         <option value="$PROJECT_DIR$/pages/detail/detail.js" />
         <option value="$PROJECT_DIR$/pages/user/customer_manage.wxml" />
@@ -221,6 +218,7 @@
         <option value="$PROJECT_DIR$/components/tab-bar/tab-bar.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/detail/book-time.js" />
+        <option value="$PROJECT_DIR$/pages/user/yuyue.js" />
       </list>
     </option>
   </component>
@@ -285,7 +283,13 @@
               <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
               <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="detail" type="462c0819:PsiDirectoryNode" />
+              <item name="counselor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="psy_xcx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="psy_xcx" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -344,12 +348,12 @@
       <workItem from="1522469301224" duration="3246000" />
       <workItem from="1522506721031" duration="315000" />
       <workItem from="1522543442293" duration="3715000" />
-      <workItem from="1522759712388" duration="1252000" />
+      <workItem from="1522759712388" duration="2061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66465000" />
+    <option name="totallyTimeSpent" value="67274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -643,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/yuyue.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/yuyue.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -672,16 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/yuyue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="e#55#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -696,6 +683,37 @@
           <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
           <folding>
             <element signature="n#view#0;n#view#0;n#!!top" expanded="false" />
+            <marker date="1522761025365" expanded="true" signature="740:3790" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="792:1251" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="861:1235" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="904:1149" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="952:1064" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1191:1215" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1303:1768" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1374:1752" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1417:1666" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1465:1581" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1708:1732" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1821:2281" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1891:2265" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1934:2179" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="1982:2094" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2221:2245" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2333:2798" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2403:2782" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2446:2696" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2494:2610" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2738:2762" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2829:3298" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2902:3278" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2944:3192" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="2992:3107" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="3234:3258" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="3328:3777" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="3386:3761" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="3428:3675" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="3476:3590" ph="..." />
+            <marker date="1522761025365" expanded="true" signature="3717:3741" ph="..." />
           </folding>
         </state>
       </provider>
@@ -765,12 +783,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail/book-time.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="134" column="10" lean-forward="true" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+        <state relative-caret-position="290">
+          <caret line="193" column="17" lean-forward="true" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
           <folding>
             <element signature="e#9#68#0" expanded="true" />
-            <element signature="e#2315#3871#0" expanded="false" />
-            <element signature="e#5397#5838#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/yuyue.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/yuyue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding>
+            <element signature="e#55#88#0" expanded="true" />
           </folding>
         </state>
       </provider>
