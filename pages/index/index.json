@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "心理咨询",
+  "navigationBarTitleText": "明悦心空",
   "usingComponents": {
     "tab-bar": "../../components/tab-bar/tab-bar"
   }
