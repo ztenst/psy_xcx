@@ -21,24 +21,21 @@ Page({
         end: null
     },
     onLoad(options) {
-        let self = this;
         this.setData({
             pid: options.id,
             toast: this.selectComponent('#toast')
         });
         api.getTime(options.id).then(res => {
-            let json= res.data;
+            let json = res.data;
             this.setData({
                 yuan: json.price,
-                price: json.price,
+                place:json.place,
+                price: parseInt(json.price),
                 dateList: json.list.slice(0),
             });
             this.formatTime(json.list[0].list);
             this.getCanNotUseList(json.list[0].list)
         });
-
-
-
     },
     onShow() {
         app.getUserOpenId().then(res => {
@@ -59,7 +56,7 @@ Page({
                     },
                 });
             } else if (res.uid && res.is_user != '1') {
-                app.goPage('/pages/login/login',{},{type: 'redirect'})
+                app.goPage('/pages/login/login', {}, {type: 'redirect'})
             }
         });
     },
@@ -126,7 +123,7 @@ Page({
         }
     },
     gotoPay() {
-        if(!this.data.begin&&!this.data.end){
+        if (!this.data.begin || !this.data.end) {
             this.data.toast.show("请选择预约时间！");
             return;
         }
@@ -135,6 +132,7 @@ Page({
             price: this.data.price,
             openid: app.globalData.customInfo.open_id
         };
+
         api.setPay(setPayParam).then(r => {
             let Json = r.data;
             wx.requestPayment({
@@ -156,7 +154,7 @@ Page({
                         self.data.toast.show(data.msg);
                         if (data.status == "success") {
                             setTimeout(function () {
-                                app.goPage('/pages/index/index')
+                                app.goPage('/pages/detail/sure-book',{price:setPayParam.price,time:self.getYuyueTime(self.data.begin,self.data.end)})
                             }, 2e3)
                         }
                     })
@@ -188,6 +186,17 @@ Page({
         this.setData({
             timeList: LIST
         });
+    },
+    getYuyueTime(begin,end){
+        begin = begin >= 10 ? begin + ":00" : '0' + begin + ":00";
+        end = end >= 10 ? end + ":00" : '0' + end + ":00";
+        var date = new Date;
+        var month = date.getMonth() + 1;
+        month = (month < 10 ? "0" + month : month);
+        var day = date.getDate();
+        day = (day < 10 ? "0" + day : day);
+        var mydate = (month.toString() + "月" + day.toString()+ "日");
+        return  mydate + " " + begin+ "到"+mydate + " " + end;
     },
     /**
      * 转发分享

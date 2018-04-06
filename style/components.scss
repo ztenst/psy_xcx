@@ -277,6 +277,11 @@
     border: 1rpx solid $borderColorE6;
     margin-bottom:20rpx;
     padding: 30rpx 24rpx;
+    &.nopadding{
+      padding: 0 0 30rpx;
+      border:0;
+      border-bottom:1rpx solid $borderColorE6;
+    }
     .content {
       display: flex;
       justify-content: flex-start;
@@ -299,6 +304,16 @@
           font-size: 34rpx;
           height: 36rpx;
           line-height: 36rpx;
+          .sexImg{
+            display: inline-block;
+            width:36rpx;
+            height:36rpx;
+            vertical-align: middle;
+            image{
+              width:100%;
+              height:100%;
+            }
+          }
           .lab {
             width: 100rpx;
             height: 36rpx;

@@ -31,15 +31,22 @@
             </view>
         </view>
     </view>
+    <view class="fybox" wx:if="{{place}}">
+        <view>线下咨询地点</view>
+        <view class="time">
+            <text class="price">{{place}}</text>
+            <!--/小时-->
+        </view>
+    </view>
     <view class="fybox">
-        <view>课时时间</view>
+        <view>咨询单价</view>
         <view class="time">
             <text class="price">¥{{yuan}}</text>
             /小时
         </view>
     </view>
     <view class="fybox">
-        <view>课程总价</view>
+        <view>咨询总价</view>
         <view class="time">
             <text class="price">¥{{price}}</text>
         </view>

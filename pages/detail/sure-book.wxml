@@ -1,0 +1,54 @@
+<wxs src="../../components/wxs/filter.wxs" module="filter"></wxs>
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+
+<view class="zxsDetail bg-f5">
+    <view class="counselor-list bg-fff">
+        <view class="item nopadding">
+            <view class="content">
+                <view class="pic">
+                    <image src="{{zxsInfo.image}}"></image>
+                </view>
+                <view class="info">
+                    <view class="title">
+                        <view>{{zxsInfo.name}}
+                            <view class="sexImg">
+                                <image src="{{zxsInfo.sex=='男'?'../../images/man.png':'../../images/women.png'}}"></image>
+                            </view>
+                        </view>
+
+                        <view class="area">
+                            <text class="iconfont"></text>
+                            {{zxsInfo.area_name}} {{zxsInfo.street_name}}
+                        </view>
+                    </view>
+                    <view class="tags">
+                        <view class="tag" wx:for="{{zxsInfo.tags}}">{{item}}</view>
+                    </view>
+                    <view class="desc">
+                        学历资质：{{zxsInfo.zz}}
+                    </view>
+                    <view class="desc">
+                        所属机构：{{zxsInfo.company}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="section bg-fff">
+        <view class="title">
+            <text class="line"></text>预约明细
+        </view>
+        <view class="content"><span class="text">预约时间:</span>{{options.time}}</view>
+        <view class="blank20"></view>
+        <view class="content"><span class="text">手机号码:</span>{{zxsInfo.phone}}</view>
+        <view class="blank20"></view>
+        <view class="content"><span class="text">预约地点:</span>{{zxsInfo.place}}</view>
+        <view class="blank20"></view>
+        <view class="content"><span class="text">课时费用:</span>{{options.price}}</view>
+    </view>
+    <view class="section fixed">
+        <view class="btn btn-cancel" bindtap="goback" >返回</view>
+        <view class="btn btn-sure" bindtap="gotoBookTime" data-id="{{zxsInfo.id}}" style="margin-left:15rpx;">确认</view>
+    </view>
+</view>

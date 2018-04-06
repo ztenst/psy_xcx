@@ -14,32 +14,14 @@ Page({
         }],
         course: [1, 2, 3, 4]
     },
-    onLoad: function (options) {
-        // var courseList = [];
-        // for (var i = 0; i < 7; i++) {
-        //     courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        // }
-        // ;
-        // this.setData({courseList});
-
+    onLoad (options) {
+        this.setData({
+            options:options
+        })
         api.getProductInfo(options.id).then(json => {
             let zxsInfo = json.data;
             this.setData({zxsInfo});
-            // courseList.forEach((v, index) => {
-            //     zxsInfo['times'].forEach((V, I) => {
-            //             if ((index + 1) == V.week) {
-            //                 v.forEach((vv, ii) => {
-            //                     if(vv.id==V.time_area){
-            //                         vv.selected=true;
-            //                     }
-            //                 })
-            //             }
-            //         }
-            //     )
-            // });
-            // this.setData({courseList})
         });
-
     },
     onShow(){
         app.getUserOpenId().then(res => {
@@ -66,6 +48,11 @@ Page({
     gotoBookTime(e){
         let id = e.currentTarget.dataset.id;
         app.goPage('/pages/detail/book-time', {'id': id})
+    },
+    goback(){
+        wx.navigateBack({
+            delta: 1
+        })
     },
     /**
      * 转发分享

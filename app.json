@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/consult/consult",
     "pages/counselor/counselor",
@@ -7,6 +7,7 @@
     "pages/article/article",
     "pages/detail/detail",
     "pages/detail/book-time",
+    "pages/detail/sure-book",
     "pages/login/login",
     "pages/user/user",
     "pages/user/yuyue",
@@ -15,10 +16,10 @@
     "pages/user/score",
     "pages/user/customer_manage"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "心里咨询",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

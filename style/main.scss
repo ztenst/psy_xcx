@@ -13,6 +13,30 @@
   background-color: $color_scheme;
   border-radius: 50rpx;
 }
+.btn{
+  display: inline-block;
+  width: 340rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid $color_scheme;
+  &.btn-sure{
+    color: #fff;
+    background-color: $color_scheme;
+  }
+  &.btn-cancel{
+    color: $color_scheme;
+    background-color: #fff;
+  }
+}
+.fixed{
+  position: fixed;
+  bottom:50rpx;
+  left:0;
+  width:100%;
+}
 
 .dateBox {
   position: relative;
@@ -243,6 +267,7 @@
   box-sizing: border-box;
   height: 100%;
   overflow-y: scroll;
+  
   .section {
     padding: 20rpx 24rpx;
     .title {
@@ -711,7 +736,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 88rpx;
+    height: 14rpx;
     .tag {
       font-size: 30rpx;
       color: #333;
