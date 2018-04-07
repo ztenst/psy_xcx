@@ -52,6 +52,10 @@ Page({
             url = '/pages/counselor/counselor';
         } else if (dataset.type == 'kehu') {
             url = '/pages/user/customer_manage';
+        } else if (dataset.type == 'time') {
+            url = '/pages/user/time_manage';
+        } else if (dataset.type == 'price') {
+            url = '/pages/user/price_manage';
         }
         app.goPage(url);
     },

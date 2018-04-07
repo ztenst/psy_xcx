@@ -84,39 +84,39 @@
                     <text class="cell-left-text">更多功能</text>
                 </view>
                 <view class="cell-right">
-                    <text class="iconfont  zhedie {{isExtendBox?'icon-shangjian':''}}"></text>
+                    <text class="iconfont  zhedie {{isExtendBox?'icon-shangjian':''}}" style="display: inline-block"></text>
                 </view>
             </view>
         </view>
 
         <view class="extend-box bdm {{isExtendBox?'':'hide'}}">
             <view class="nav">
-                <view class="item" bindtap="GoTo" data-type="member">
+                <view class="item" bindtap="goTo" data-type="time">
                     <image src="../../images/time.png"></image>
                     <text>时间管理</text>
                 </view>
-                <view class="item" bindtap="GoTo" data-type="house">
+                <view class="item" bindtap="goTo" data-type="price">
                     <image src="../../images/price.png"></image>
                     <text>价格管理</text>
                 </view>
-                <view class="item" bindtap="GoTo" data-type="house">
+                <view class="item" bindtap="call" data-tel="{{phone}}">
                     <image src="../../images/lianxikefu.png"></image>
                     <text>联系客服</text>
                 </view>
             </view>
         </view>
-        <view class="m-cell">
-            <view class="cell-item" bindtap="call" data-tel="{{phone}}">
-                <view class="cell-left ">
-                    <view class="cell-icon-60">
-                        <image src="../../images/contact.png" mode="widthFix"></image>
-                    </view>
-                    <text class="cell-left-text">联系客服</text>
-                </view>
-                <view class="cell-right">
-                </view>
-            </view>
-        </view>
+        <!--<view class="m-cell">-->
+            <!--<view class="cell-item" >-->
+                <!--<view class="cell-left ">-->
+                    <!--<view class="cell-icon-60">-->
+                        <!--<image src="../../images/contact.png" mode="widthFix"></image>-->
+                    <!--</view>-->
+                    <!--<text class="cell-left-text">联系客服</text>-->
+                <!--</view>-->
+                <!--<view class="cell-right">-->
+                <!--</view>-->
+            <!--</view>-->
+        <!--</view>-->
 
         <view class="m-cell">
             <view class="cell-item" bindtap="toSuggest">

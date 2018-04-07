@@ -16,7 +16,9 @@
     "pages/user/record",
     "pages/user/score",
     "pages/user/customer_manage",
-    "pages/user/change-userinfo"
+    "pages/user/change-userinfo",
+    "pages/user/time_manage",
+    "pages/user/price_manage"
   ],
   "window": {
     "backgroundTextStyle": "light",

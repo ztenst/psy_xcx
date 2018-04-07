@@ -1,0 +1,17 @@
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+<toast id="toast"></toast>
+<view class="page  counselor ">
+    <view class="m-cell " >
+        <form bindsubmit="submitForm">
+            <view class="cell-item">
+                <view class="cell-left "></view>
+                <view class="cell-right">
+                    <input type="text" name="id_card" class="cell-input" placeholder-class="c-999"
+                           placeholder="请输入价格" autocomplete="off"/>
+                </view>
+            </view>
+            <button class="btn-block btn-submit" form-type="submit">提交</button>
+        </form>
+    </view>
+</view>
