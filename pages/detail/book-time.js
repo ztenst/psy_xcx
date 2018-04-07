@@ -127,41 +127,12 @@ Page({
             this.data.toast.show("请选择预约时间！");
             return;
         }
-        let self = this;
-        let setPayParam = {
-            price: this.data.price,
-            openid: app.globalData.customInfo.open_id
-        };
-
-        api.setPay(setPayParam).then(r => {
-            let Json = r.data;
-            wx.requestPayment({
-                'timeStamp': Json.timeStamp,
-                'nonceStr': Json.nonceStr,
-                'package': Json.package,
-                'signType': Json.signType,
-                'paySign': Json.paySign,
-                success(res) {
-                    let vipParams = {
-                        uid: app.globalData.customInfo.uid,
-                        pid: self.data.pid,
-                        price: setPayParam.price,
-                        begin: self.handleDate(self.data.begin),
-                        end: self.handleDate(self.data.end)
-                    };
-                    api.addOrder(vipParams).then(r => {
-                        let data = r;
-                        self.data.toast.show(data.msg);
-                        if (data.status == "success") {
-                            setTimeout(function () {
-                                app.goPage('/pages/detail/sure-book',{price:setPayParam.price,time:self.getYuyueTime(self.data.begin,self.data.end)})
-                            }, 2e3)
-                        }
-                    })
-                },
-                'fail': function (res) {
-                }
-            })
+        app.goPage('/pages/detail/sure-book',{
+            price:this.data.price,
+            pid: this.data.pid,
+            time:this.getYuyueTime(this.data.begin,this.data.end),
+            begin: this.handleDate(this.data.begin),
+            end: this.handleDate(this.data.end)
         })
     },
     handleDate(time) {

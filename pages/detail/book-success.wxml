@@ -1,0 +1,32 @@
+<import src="../../components/dialog/dialog.wxml"/>
+<template is="dialog" data="{{ ...$dialog }}"/>
+<block wx:if="{{is_zxs}}">
+    <tab-bar tabIndex="1" is_zxs="{{is_zxs}}"></tab-bar>
+</block>
+<view class="zxsDetail">
+    <view class="successBox">
+        <image src="../../images/bookSuccessImg.png"></image>
+        <view class="text">支付成功</view>
+    </view>
+    <view class="blank20  bg-f5"></view>
+    <view class="section bg-fff">
+        <view class="title">
+            <text class="line"></text>
+             联系方式
+        </view>
+        <view class="contactBox">
+            <view class="content"><span class="text">手机号:</span>{{contactInfo.phone}}</view>
+            <view class="btnAction" bindtap="call" data-tel="{{contactInfo.phone}}">
+                <image src="../../images/boda.png" style="width:26rpx;" mode="widthFix"></image>拨打
+            </view>
+        </view>
+        <view class="blank20"></view>
+        <view class="contactBox">
+            <view class="content"><span class="text">微信号:</span>{{contactInfo.wx}}</view>
+            <view class="btnAction">
+                <image src="../../images/wximg.png" mode="widthFix" style="width:32rpx;"></image>复制
+            </view>
+        </view>
+    </view>
+</view>
+

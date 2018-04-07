@@ -365,7 +365,38 @@
       }
     }
   }
-
+  .successBox{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:100rpx 0 60rpx;
+    image{
+      width:120rpx;
+      height:120rpx;
+      display: block;
+    }
+    .text{
+      margin-top:40rpx;
+      font-size:36rpx;
+      color:#333;
+    }
+  }
+  .contactBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:30rpx;
+    .btnAction{
+      font-size:28rpx;
+      color:$color_scheme;
+      image{
+        margin-right:14rpx;
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
 .counselor {
@@ -500,6 +531,11 @@
       font-size: 30rpx;
       color: #999;
       margin-top: 20rpx;
+    }
+  }
+  .idCard{
+    .img-item{
+
     }
   }
 }

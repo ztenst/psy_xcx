@@ -107,7 +107,7 @@ export default {
         return getRequest(`${HOST}/api/cus/info`, {id}, {cache: true})
     },
     getActiveTags() {
-        return getRequest(`${HOST}/api/tag/list`, {}, {cache: true})
+        return getRequest(`${HOST}/api/tag/list`, {'cate':'old'}, {cache: true})
     },
     getTime(id) {
         return getRequest(`${HOST}/api/index/getTime`, {uid:id}, {cache: true})
@@ -200,5 +200,12 @@ export default {
         let url = `${config.host}/api/index/addReport`
         return postRequest(url, params)
     },
+    getContact(params) {
+        return getRequest(`${HOST}/api/index/getContact`, params)
+    },
+    checkCanIn(params) {
+        return getRequest(`${HOST}/api/index/checkCanIn`, params)
+    },
+
 
 }

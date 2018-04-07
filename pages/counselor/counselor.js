@@ -70,6 +70,11 @@ Page({
         streetIndex: 0,
         dateindex: 0,
 
+        sexItems: [
+            {name: '男', value: 1},
+            {name: '女', value: 2},
+        ],
+
 
     },
     onLoad() {
@@ -127,17 +132,19 @@ Page({
             'place': {required: true},
             'area': {required: true},
             'street': {required: true},
+            'sex': {required: true}, //性别,
             'id_card': {required: true},
             'company': {required: true},
             'work_year': {required: true},
             'zx_mode': {required: true},
             'ly': {required: true},
-            'zc': {required: true},
             'zz': {required: true},
+            'wx': {required: true},
             'edu': {required: true},
-            'price': {required: true},
-            'price_note': {required: true},
-            'times': {required: true},
+            // 'price': {required: true},
+            // 'price_note': {required: true},
+            // 'times': {required: true},
+
         }, {
             'name': {required: '请输入姓名'},
             'image': {required: '请选择头像'},
@@ -145,17 +152,19 @@ Page({
             'place': {required: '请输入具体地点'},
             'area': {required: '请输入区域'},
             'street': {required: '请输入地址'},
+            'sex': {required: '请选择性别'}, //性别
             'id_card': {required: '请输入身份证号'},
             'company': {required: '请填写所属机构'},
             'work_year': {required: '请选择工作年限'},
             'zx_mode': {required: '请选择咨询模式'},
             'ly': {required: '请选择领域'},
-            'zc': {required: '请选择专长'},
             'zz': {required: '请选择资质'},
+            'wx': {required: '请输入学历'},
             'edu': {required: '请选择学历'},
-            'price': {required: '请输入单价'},
-            'price_note': {required: '请输入收费简介'},
-            'times': {required: '请选择时间'},
+            // 'price': {required: '请输入单价'},
+            // 'price_note': {required: '请输入收费简介'},
+            // 'times': {required: '请选择时间'},
+
         });
     },
     onShow() {
@@ -179,7 +188,15 @@ Page({
             } else if (res.uid && res.is_user != '1') {
                 app.goPage('/pages/login/login')
             }
-        });
+        }).then(r=>{
+            api.checkCanIn({uid: app.globalData.customInfo.uid}).then(res=>{
+                let data = res;
+                if (data.status != "success") {
+                    this.data.toast.show(data.msg);
+                }
+            })
+        })
+
     },
     chooseDate(e) {
         let data = e.currentTarget.dataset;
@@ -199,6 +216,15 @@ Page({
         this.setData({
             dateList,
             date: year
+        });
+    },
+    /**
+     *设置性别
+     * @param e
+     */
+    sexRadioChange(e) {
+        this.setData({
+            sex: e.detail.value
         });
     },
     setTime() {

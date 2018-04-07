@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "预约时间",
   "usingComponents": {
-    "toast": "../../components/toast/toast"
+    "tab-bar": "../../components/tab-bar/tab-bar"
   }
 }

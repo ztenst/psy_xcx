@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
@@ -87,6 +87,12 @@
 					"name": "sure-book",
 					"pathName": "pages/detail/sure-book",
 					"query": "id=2134"
+				},
+				{
+					"id": 10,
+					"name": "book-success",
+					"pathName": "pages/detail/book-success",
+					"query": "uid=2134"
 				}
 			]
 		}

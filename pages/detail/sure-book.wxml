@@ -37,7 +37,8 @@
     </view>
     <view class="section bg-fff">
         <view class="title">
-            <text class="line"></text>预约明细
+            <text class="line"></text>
+            预约明细
         </view>
         <view class="content"><span class="text">预约时间:</span>{{options.time}}</view>
         <view class="blank20"></view>
@@ -48,7 +49,8 @@
         <view class="content"><span class="text">课时费用:</span>{{options.price}}</view>
     </view>
     <view class="section fixed">
-        <view class="btn btn-cancel" bindtap="goback" >返回</view>
-        <view class="btn btn-sure" bindtap="gotoBookTime" data-id="{{zxsInfo.id}}" style="margin-left:15rpx;">确认</view>
+        <view class="btn btn-cancel" bindtap="goback">返回</view>
+        <view class="btn btn-sure" bindtap="gotoPay" style="margin-left:15rpx;">确认</view>
     </view>
 </view>
+<toast id="toast"></toast>
