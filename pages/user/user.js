@@ -4,7 +4,9 @@ import {
 import api from '../../libs/api'
 const app = getApp();
 Page({
-    data: {},
+    data: {
+        isExtendBox:true
+    },
     onLoad(options) {
         this.setData({
             tabIndex:options.type,
@@ -62,5 +64,13 @@ Page({
     },
     toSuggest(){
         app.goPage('/pages/suggest/suggest')
+    },
+    changeUserInfo(){
+        app.goPage('/pages/user/change-userinfo')
+    },
+    xiala(e){
+        this.setData({
+            isExtendBox:!this.data.isExtendBox
+        });
     }
 });

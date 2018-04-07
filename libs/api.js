@@ -107,10 +107,10 @@ export default {
         return getRequest(`${HOST}/api/cus/info`, {id}, {cache: true})
     },
     getActiveTags() {
-        return getRequest(`${HOST}/api/tag/list`, {'cate':'old'}, {cache: true})
+        return getRequest(`${HOST}/api/tag/list`, {'cate': 'old'}, {cache: true})
     },
     getTime(id) {
-        return getRequest(`${HOST}/api/index/getTime`, {uid:id}, {cache: true})
+        return getRequest(`${HOST}/api/index/getTime`, {uid: id}, {cache: true})
     },
     /**/
     setPay(params) {
@@ -205,6 +205,9 @@ export default {
     },
     checkCanIn(params) {
         return getRequest(`${HOST}/api/index/checkCanIn`, params)
+    },
+    getUserInfo(params) {
+        return getRequest(`${HOST}/api/index/getUserInfo`, params)
     },
 
 
