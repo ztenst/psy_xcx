@@ -20,7 +20,7 @@ function getKey() {
     return key + myDate.getFullYear() + '/' + (month < 10 ? "0" + month : month) + (day < 10 ? "0" + day : day) + '/' + new Date().getTime() + num + '.jpg';
 }
 
-function didPressChooesImage(that) {
+function didPressChooesImage(that,dataset) {
     // initQiniu();
     // 微信 API 选文件
     wx.chooseImage({
@@ -30,7 +30,7 @@ function didPressChooesImage(that) {
             // 交给七牛上传
             qiniuUploader.upload(filePath, (res) => {
                     that.setData({
-                        image: 'http://' + res.imageURL
+                        [`${dataset.tag}`]: 'http://' + res.imageURL
                     });
                 }, (error) => {
                     console.error('error: ' + JSON.stringify(error));
@@ -266,9 +266,9 @@ Page({
     },
 
     //上传项目图片
-    didPressChooesImage() {
-        var that = this;
-        didPressChooesImage(that);
+    didPressChooesImage(e) {
+        let that = this,dataset= e.currentTarget.dataset;
+        didPressChooesImage(that,dataset);
     },
 
     //区域改变

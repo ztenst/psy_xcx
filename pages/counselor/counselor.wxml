@@ -9,7 +9,7 @@
     <view class="m-cell ">
         <form bindsubmit="submitForm">
             <view class="cell-item imageItem">
-                <view bindtap="didPressChooesImage">
+                <view bindtap="didPressChooesImage" data-tag="image">
                     <view class="pic">
                         <image src="{{image?image:'../../images/users.png'}}"></image>
                     </view>
@@ -238,23 +238,24 @@
             <!--<view class="cell-right"></view>-->
             <!--</view>-->
             <view class="cell-item idCard">
-                <view class="img-item" bindtap="didPressChooesImage">
+                <view class="img-item" bindtap="didPressChooesImage" data-tag="id_pic_main">
                     <view class="pic">
-                        <image src="{{image?image:'../../images/users.png'}}"></image>
+                        <image src="{{id_pic_main?id_pic_main:'../../images/110x110.jpg'}}"></image>
                     </view>
                     <view class="text">身份证正面</view>
                 </view>
-                <view class="img-item" bindtap="didPressChooesImage">
+                <view class="img-item" bindtap="didPressChooesImage" data-tag="id_pic_sec">
                     <view class="pic">
-                        <image src="{{image?image:'../../images/users.png'}}"></image>
+                        <image src="{{id_pic_sec?id_pic_sec:'../../images/110x110.jpg'}}"></image>
                     </view>
                     <view class="text">身份证反面</view>
                 </view>
             </view>
 
+            
             <input type="text" name="ly" value="{{ly}}" hidden/>
-            <input type="text" name="id_pic_main" value="{{image}}" hidden/>
-            <input type="text" name="id_pic_sec" value="{{image}}" hidden/>
+            <input type="text" name="id_pic_main" value="{{id_pic_main}}" hidden/>
+            <input type="text" name="id_pic_sec" value="{{id_pic_sec}}" hidden/>
             <!--<input type="text" name="zc" value="{{zc}}" hidden/>-->
             <!--<input type="text" name="times" value="{{times}}" hidden/>-->
 

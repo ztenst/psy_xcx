@@ -534,8 +534,24 @@
     }
   }
   .idCard{
+    padding:30rpx 24rpx;
+    display: flex;
+    justify-content: space-between;
     .img-item{
-
+       .pic{
+         width:340rpx;
+         height:180rpx;
+         image{
+           width:100%;
+           height:100%;
+         }
+       }
+      .text{
+        font-size:30rpx;
+        color: #666;
+        text-align: center;
+        margin-top:20rpx;
+      }
     }
   }
 }
