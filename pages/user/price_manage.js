@@ -45,8 +45,8 @@ Page({
                     app.goPage('/pages/login/login', {}, {type: 'redirect'})
                 }
             })
-            .then(r=>{
-                api.getZxsPrice({uid: app.globalData.customInfo.uid}).then(res=>{
+            .then(r => {
+                api.getZxsPrice({uid: app.globalData.customInfo.uid}).then(res => {
                     let json = res;
                     console.log(json);
                 });

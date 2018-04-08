@@ -8,7 +8,7 @@
         <view class="bg">
             <image src="../../images/bj.png"/>
         </view>
-        <view class="setting" bindtap="changeUserInfo">
+        <view class="setting" bindtap="changeUserInfo" wx:if="{{is_zxs==1}}">
             <image src="../../images/setting.png"/>
         </view>
         <view class="user-info">
@@ -41,7 +41,7 @@
             <view class="cell-item" bindtap="goTo" data-type="record">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
-                        <image src="../../images/function.png" mode="widthFix"></image>
+                        <image src="../../images/cash.png" mode="widthFix"></image>
                     </view>
                     <text class="cell-left-text">收款记录</text>
                 </view>
@@ -75,8 +75,8 @@
             </view>
         </view>
 
-        <view class="m-cell">
-            <view class="cell-item" bindtap="xiala" >
+        <view class="m-cell" wx:if="{{is_zxs==1}}">
+            <view class="cell-item" bindtap="xiala">
                 <view class="cell-left ">
                     <view class="cell-icon-60">
                         <image src="../../images/function.png" mode="widthFix"></image>
@@ -89,7 +89,7 @@
             </view>
         </view>
 
-        <view class="extend-box bdm {{isExtendBox?'':'hide'}}">
+        <view class="extend-box  {{isExtendBox?'':'hide'}}" wx:if="{{is_zxs==1}}">
             <view class="nav">
                 <view class="item" bindtap="goTo" data-type="time">
                     <image src="../../images/time.png"></image>
@@ -103,20 +103,25 @@
                     <image src="../../images/lianxikefu.png"></image>
                     <text>联系客服</text>
                 </view>
+                <view class="item" bindtap="call" data-tel="{{phone}}">
+                    <image src="../../images/yuyue.png"></image>
+                    <text>预约管理</text>
+                </view>
             </view>
         </view>
-        <!--<view class="m-cell">-->
-            <!--<view class="cell-item" >-->
-                <!--<view class="cell-left ">-->
-                    <!--<view class="cell-icon-60">-->
-                        <!--<image src="../../images/contact.png" mode="widthFix"></image>-->
-                    <!--</view>-->
-                    <!--<text class="cell-left-text">联系客服</text>-->
-                <!--</view>-->
-                <!--<view class="cell-right">-->
-                <!--</view>-->
-            <!--</view>-->
-        <!--</view>-->
+
+        <view class="m-cell" wx:if="{{is_zxs!=1}}">
+            <view class="cell-item">
+                <view class="cell-left ">
+                    <view class="cell-icon-60">
+                        <image src="../../images/contact.png" mode="widthFix"></image>
+                    </view>
+                    <text class="cell-left-text">联系客服</text>
+                </view>
+                <view class="cell-right">
+                </view>
+            </view>
+        </view>
 
         <view class="m-cell">
             <view class="cell-item" bindtap="toSuggest">
