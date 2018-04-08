@@ -57,8 +57,7 @@
                     </view>
                     <text class="cell-left-text">预约管理</text>
                 </view>
-                <view class="cell-right">
-                </view>
+                <view class="cell-right"></view>
             </view>
         </view>
 
@@ -70,8 +69,7 @@
                     </view>
                     <text class="cell-left-text">成为咨询师</text>
                 </view>
-                <view class="cell-right">
-                </view>
+                <view class="cell-right"></view>
             </view>
         </view>
 
@@ -103,7 +101,7 @@
                     <image src="../../images/lianxikefu.png"></image>
                     <text>联系客服</text>
                 </view>
-                <view class="item" bindtap="call" data-tel="{{phone}}">
+                <view class="item" bindtap="goTo" data-type="yuyue">
                     <image src="../../images/yuyue.png"></image>
                     <text>预约管理</text>
                 </view>

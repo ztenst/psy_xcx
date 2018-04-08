@@ -62,7 +62,6 @@ Page({
         lingyuList: [],
         times: [],
         courseList: [],
-        date: '1970',
 
         areaList: [],
         streetList: [],
@@ -79,51 +78,10 @@ Page({
     },
     onLoad() {
         this.setData({
-            toast: this.selectComponent('#toast')
-        });
-        this.setData({
+            toast: this.selectComponent('#toast'),
             customInfo: app.globalData.customInfo,
-            userInfo: app.globalData.userInfo,
-            date: '1970'
+            userInfo: app.globalData.userInfo
         });
-        api.getActiveTags().then(res => {
-            let json = res.data;
-            let obj = _.filter(json, {name: "更多"});//更多
-            let zc = _.filter(json, {filed: "zc"});//专长
-            let mode = _.filter(json, {filed: "mode"});//咨询模式
-            this.setData({
-                lingyuList: _.filter(obj[0].list, {filed: "ly"})[0].list,
-                eduList: _.filter(obj[0].list, {filed: 'edu'})[0].list,
-                zzList: _.filter(obj[0].list, {filed: 'zz'})[0].list,
-                zcList: zc[0].list,
-                zx_modeList: mode[0].list
-            });
-        });
-        //预约时间初始化
-        var courseList = [];
-        for (var i = 0; i < 7; i++) {
-            courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        }
-        ;
-        this.setData({courseList});
-        this.getDateList();
-        //获取省份城市字段
-        api.getAreaList().then(res => {
-            this.setData({areaList: res.data})
-            var objectArray = res.data;
-            var areaList = [];
-            for (var i = 0; i < objectArray.length; i++) {
-                areaList.push(objectArray[i]);
-                if (i == objectArray.length - 1) {
-                    this.setData({
-                        areaList: areaList,
-                        streetList: objectArray[this.data.areaIndex].childAreas
-                    });
-                }
-            }
-        });
-
-
         //初始化表单校验组件
         this.WxValidate = app.WxValidate({
             'name': {required: true},
@@ -141,10 +99,6 @@ Page({
             'zz': {required: true},
             'wx': {required: true},
             'edu': {required: true},
-            // 'price': {required: true},
-            // 'price_note': {required: true},
-            // 'times': {required: true},
-
         }, {
             'name': {required: '请输入姓名'},
             'image': {required: '请选择头像'},
@@ -161,10 +115,6 @@ Page({
             'zz': {required: '请选择资质'},
             'wx': {required: '请输入学历'},
             'edu': {required: '请选择学历'},
-            // 'price': {required: '请输入单价'},
-            // 'price_note': {required: '请输入收费简介'},
-            // 'times': {required: '请选择时间'},
-
         });
     },
     onShow() {
@@ -192,7 +142,52 @@ Page({
             .then(re => {
                 api.getUserInfo({uid: app.globalData.customInfo.uid}).then(res => {
                     let userInfo = res.data;
-                    this.setData({userInfo})
+                    console.log(userInfo)
+                    this.setData({userInfo});
+                    api.getActiveTags().then(res => {
+                        let json = res.data,
+                            obj = _.filter(json, {name: "更多"}),
+                            zc = _.filter(json, {filed: "zc"}),
+                            mode = _.filter(json, {filed: "mode"}),
+                            lingyuList = _.filter(obj[0].list, {filed: "ly"})[0].list,
+                            eduList = _.filter(obj[0].list, {filed: 'edu'})[0].list,
+                            zzList = _.filter(obj[0].list, {filed: 'zz'})[0].list,
+                            zcList = zc[0].list,
+                            zx_modeList = mode[0].list;
+                        this.setData({
+                            lingyuList, eduList, zzList, zcList, zx_modeList
+                        }, () => {
+                            let eduindex = eduList.findIndex((v) => {
+                                return v.id = userInfo.edu;
+                            });
+                            let zzindex = zzList.findIndex((v) => {
+                                return v.id = userInfo.mid;
+                            });
+                            let modeindex = zx_modeList.findIndex((v) => {
+                                return v.id = userInfo.zx_mode;
+                            });
+                            this.setData({
+                                eduindex, modeindex,zzindex
+                            });
+                            console.log(this.data.eduindex)
+                        })
+                    });
+                    this.getDateList(userInfo.work_year);
+                    //获取省份城市字段
+                    api.getAreaList().then(res => {
+                        this.setData({areaList: res.data})
+                        var objectArray = res.data;
+                        var areaList = [];
+                        for (var i = 0; i < objectArray.length; i++) {
+                            areaList.push(objectArray[i]);
+                            if (i == objectArray.length - 1) {
+                                this.setData({
+                                    areaList: areaList,
+                                    streetList: objectArray[this.data.areaIndex].childAreas
+                                });
+                            }
+                        }
+                    });
                 })
             })
     },
@@ -205,16 +200,20 @@ Page({
         });
         this.setTime();
     },
-    getDateList() {
+    getDateList(Year) {
         var date = new Date;
         var year = date.getFullYear();
         var dateList = Array.from(Array(50), (v, k) => {
             return year - k;
         });
+        let dateindex = dateList.findIndex((v, k) => {
+            return v == Year;
+        });
         this.setData({
             dateList,
-            date: year
-        });
+            date: year,
+            dateindex
+        })
     },
     /**
      *设置性别
@@ -255,12 +254,9 @@ Page({
     bindZxModePickerChange(e) {
         this.setData({modeindex: e.detail.value})
     },
-
     //工作年限改变
     bindDateChange(e) {
-        this.setData({
-            dateindex: e.detail.value
-        })
+        this.setData({dateindex: e.detail.value});
     },
 
     //上传项目图片
@@ -277,9 +273,7 @@ Page({
     },
     //街道改变
     bindPickerStreetChange(e) {
-        this.setData({
-            streetIndex: e.detail.value
-        })
+        this.setData({streetIndex: e.detail.value})
     },
     chooseBtn(e) {
         let dataset = e.currentTarget.dataset;
@@ -299,7 +293,7 @@ Page({
             this.data.toast.show(error.msg);
             return false;
         }
-        let params = Object.assign({}, formParms, {uid: app.globalData.customInfo.uid,is_edit:1});
+        let params = Object.assign({}, formParms, {uid: app.globalData.customInfo.uid, is_edit: 1});
         api.setZxs(params).then(res => {
             let data = res;
             this.data.toast.show(data.msg);
