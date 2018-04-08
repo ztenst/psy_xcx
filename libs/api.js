@@ -209,6 +209,7 @@ export default {
     getUserInfo(params) {
         return getRequest(`${HOST}/api/index/getUserInfo`, params)
     },
-
-
+    getZxsPrice(params) {
+        return getRequest(`${HOST}/api/index/getZxsPrice`, params)
+    }
 }
