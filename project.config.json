@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -99,6 +99,12 @@
 					"name": "change-userinfo",
 					"pathName": "pages/user/change-userinfo",
 					"query": "uid=2134"
+				},
+				{
+					"id": 12,
+					"name": "time_manage",
+					"pathName": "pages/user/time_manage",
+					"query": ""
 				}
 			]
 		}

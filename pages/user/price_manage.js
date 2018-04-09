@@ -47,8 +47,9 @@ Page({
             })
             .then(r => {
                 api.getZxsPrice({uid: app.globalData.customInfo.uid}).then(res => {
-                    let json = res;
-                    console.log(json);
+                    this.setData({
+                        price:res.data
+                    })
                 });
             })
     },
@@ -66,7 +67,7 @@ Page({
         }
         let params = Object.assign({}, formParms,
             {uid: app.globalData.customInfo.uid});
-        api.addReport(params).then(res => {
+        api.setZxsPrice(params).then(res => {
             let data = res;
             this.data.toast.show(data.msg);
             if (data.status == "success") {

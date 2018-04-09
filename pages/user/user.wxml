@@ -81,8 +81,8 @@
                     </view>
                     <text class="cell-left-text">更多功能</text>
                 </view>
-                <view class="cell-right">
-                    <text class="iconfont  zhedie {{isExtendBox?'icon-shangjian':''}}" style="display: inline-block"></text>
+                <view class="cell-right" style="flex:1;display: flex;justify-content: flex-end">
+                    <text class="iconfont  icon-shangjian {{isExtendBox?'':'down'}}" style="display: inline-block;"></text>
                 </view>
             </view>
         </view>

@@ -667,16 +667,12 @@
       font-size: 32rpx;
     }
   }
-  .zhedie {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-    &.up {
-      -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      -o-transform: rotate(-90deg);
-      transform: rotate(-90deg);
+  .icon-shangjian {
+    &.down {
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
     }
   }
   .extend-box {
@@ -696,6 +692,7 @@
       .item {
         text-align: center;
         float: left;
+        width:25%;
         image {
           width: 42rpx;
           height: 42rpx;

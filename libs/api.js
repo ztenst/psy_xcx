@@ -176,7 +176,13 @@ export default {
         let url = `${config.host}/api/index/setZxs`
         return postRequest(url, params)
     },
-
+    setZxsTime(params) {
+        let url = `${config.host}/api/index/setZxsTime`
+        return postRequest(url, params)
+    },
+    getZxsTime(params) {
+        return getRequest(`${HOST}/api/index/getZxsTime`, params)
+    },
     orderList(params) {
         return getRequest(`${HOST}/api/index/orderList`, params)
     },
@@ -198,6 +204,10 @@ export default {
     /*提交反馈*/
     addReport(params) {
         let url = `${config.host}/api/index/addReport`
+        return postRequest(url, params)
+    },
+    setZxsPrice(params) {
+        let url = `${config.host}/api/index/setZxsPrice`
         return postRequest(url, params)
     },
     getContact(params) {
