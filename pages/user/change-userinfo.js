@@ -57,7 +57,6 @@ Page({
         zzindex: 0,
 
         image: '',
-        zcList: [],
         zzList: [],
         lingyuList: [],
         times: [],
@@ -142,51 +141,48 @@ Page({
             .then(re => {
                 api.getUserInfo({uid: app.globalData.customInfo.uid}).then(res => {
                     let userInfo = res.data;
-                    console.log(userInfo)
-                    this.setData({userInfo});
+                    this.setData({
+                        userInfo,
+                        sex: userInfo.sex
+                    });
+                    console.log(userInfo.sex)
                     api.getActiveTags().then(res => {
                         let json = res.data,
                             obj = _.filter(json, {name: "更多"}),
-                            zc = _.filter(json, {filed: "zc"}),
                             mode = _.filter(json, {filed: "mode"}),
                             lingyuList = _.filter(obj[0].list, {filed: "ly"})[0].list,
                             eduList = _.filter(obj[0].list, {filed: 'edu'})[0].list,
                             zzList = _.filter(obj[0].list, {filed: 'zz'})[0].list,
-                            zcList = zc[0].list,
                             zx_modeList = mode[0].list;
                         this.setData({
-                            lingyuList, eduList, zzList, zcList, zx_modeList
+                            lingyuList, eduList, zzList, zx_modeList
                         }, () => {
                             let eduindex = eduList.findIndex((v) => {
-                                return v.id = userInfo.edu;
+                                return v.id == userInfo.edu;
                             });
                             let zzindex = zzList.findIndex((v) => {
-                                return v.id = userInfo.mid;
+                                return v.id == userInfo.mid;
                             });
                             let modeindex = zx_modeList.findIndex((v) => {
-                                return v.id = userInfo.zx_mode;
+                                return v.id == userInfo.zx_mode;
                             });
+                            let ly = userInfo.ly;
                             this.setData({
-                                eduindex, modeindex,zzindex
+                                eduindex, modeindex, zzindex,ly
                             });
-                            console.log(this.data.eduindex)
                         })
                     });
                     this.getDateList(userInfo.work_year);
                     //获取省份城市字段
                     api.getAreaList().then(res => {
-                        this.setData({areaList: res.data})
                         var objectArray = res.data;
-                        var areaList = [];
-                        for (var i = 0; i < objectArray.length; i++) {
-                            areaList.push(objectArray[i]);
-                            if (i == objectArray.length - 1) {
-                                this.setData({
-                                    areaList: areaList,
-                                    streetList: objectArray[this.data.areaIndex].childAreas
-                                });
-                            }
-                        }
+                        let areaIndex = objectArray.findIndex((v) => v.id == userInfo.area);
+                        let streetIndex = objectArray[areaIndex].childAreas.findIndex((v) => v.id == userInfo.street);
+                        this.setData({
+                            areaList: objectArray,
+                            streetList: objectArray[areaIndex].childAreas,
+                            areaIndex, streetIndex
+                        });
                     });
                 })
             })
@@ -220,6 +216,7 @@ Page({
      * @param e
      */
     sexRadioChange(e) {
+        console.log(e)
         this.setData({
             sex: e.detail.value
         });

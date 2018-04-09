@@ -27,9 +27,9 @@
             <view class="cell-item">
                 <view class="cell-left ">
                     <label for="" class="label">性别</label>
-                    <radio-group class="radio-group" bindchange="sexRadioChange" name="sex" value="{{userInfo.sex}}">
+                    <radio-group class="radio-group" bindchange="sexRadioChange" name="sex">
                         <label class="radio" wx:for="{{sexItems}}">
-                            <radio value="{{item.value}}" checked="{{item.checked}}" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
+                            <radio value="{{item.value}}" checked="{{item.value==sex}}" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
                             {{item.name}}
                         </label>
                     </radio-group>
@@ -124,22 +124,23 @@
                 </view>
                 <view class="cell-right pdleft30">
                     <picker bindchange="bindZxModePickerChange"
-                            value="{{userInfo.zx_mode}}"
+                            value="{{zx_modeList[modeindex].id}}"
                             range-key="name"
-                            range="{{zx_modeList}}" name="zx_mode">
+                            range="{{zx_modeList}}"
+                            name="zx_mode">
                         <view>{{zx_modeList[modeindex].name}}</view>
                     </picker>
                 </view>
             </view>
             <view class="cell-item">
                 <view class="cell-left ">
-                    <textarea placeholder="请输入个人简介" name="content"/>
+                    <textarea placeholder="请输入个人简介" name="content" value="{{userInfo.content}}"/>
                 </view>
                 <view class="cell-right"></view>
             </view>
             <view class="cell-item">
                 <view class="cell-left ">
-                    <textarea placeholder="请填写具体位置" name="place"/>
+                    <textarea placeholder="请填写具体位置" name="place" value="{{userInfo.place}}"/>
                 </view>
                 <view class="cell-right"></view>
             </view>
