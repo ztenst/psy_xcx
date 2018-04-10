@@ -23,7 +23,7 @@
         <view class="blank20"></view>
         <view class="contactBox">
             <view class="content"><span class="text">微信号:</span>{{contactInfo.wx}}</view>
-            <view class="btnAction">
+            <view class="btnAction" bindtap="copyTBL">
                 <image src="../../images/wximg.png" mode="widthFix" style="width:32rpx;"></image>复制
             </view>
         </view>

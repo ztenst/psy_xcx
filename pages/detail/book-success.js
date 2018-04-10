@@ -43,6 +43,20 @@ Page({
             phoneNumber: phone
         })
     },
+    copyTBL(e){
+        wx.setClipboardData({
+            data: this.data.contactInfo.wx,
+            success: function(res) {
+                // self.setData({copyTip:true}),
+                wx.showModal({
+                    title: '提示',
+                    content: '复制成功',
+                    success(res) {
+                    }
+                })
+            }
+        });
+    }
 });
 
 
