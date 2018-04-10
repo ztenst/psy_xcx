@@ -240,13 +240,13 @@
             <view class="cell-item idCard">
                 <view class="img-item" bindtap="didPressChooesImage" data-tag="id_pic_main">
                     <view class="pic">
-                        <image src="{{id_pic_main?id_pic_main:'../../images/110x110.jpg'}}"></image>
+                        <image src="{{id_pic_main?id_pic_main:'../../images/addit.png'}}"></image>
                     </view>
                     <view class="text">身份证正面</view>
                 </view>
                 <view class="img-item" bindtap="didPressChooesImage" data-tag="id_pic_sec">
                     <view class="pic">
-                        <image src="{{id_pic_sec?id_pic_sec:'../../images/110x110.jpg'}}"></image>
+                        <image src="{{id_pic_sec?id_pic_sec:'../../images/addit.png'}}"></image>
                     </view>
                     <view class="text">身份证反面</view>
                 </view>
