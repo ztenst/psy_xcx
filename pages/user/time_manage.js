@@ -31,8 +31,7 @@ Page({
         });
         for (var i = 0; i < 7; i++) {
             courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        }
-        ;
+        };
     },
     onShow() {
         app.getUserOpenId().then(res => {
@@ -69,7 +68,7 @@ Page({
                         }
                     )
                 });
-                this.setData({courseList,times: JSON.stringify(res.data)})
+                this.setData({courseList,times: res.data})
             })
         })
 
@@ -78,6 +77,7 @@ Page({
     chooseDate(e) {
         let data = e.currentTarget.dataset;
         let times = this.data.times;
+        console.log(times)
         times.push({week: data.week, time_area: data.time});
         this.setData({
             times: times

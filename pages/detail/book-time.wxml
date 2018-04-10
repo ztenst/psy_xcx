@@ -34,8 +34,7 @@
     <view class="fybox" wx:if="{{place}}">
         <view>线下咨询地点</view>
         <view class="time">
-            <text class="price">{{place}}</text>
-            <!--/小时-->
+            {{place}}
         </view>
     </view>
     <view class="fybox">

@@ -49,7 +49,7 @@ Page({
                 api.getZxsPrice({uid: app.globalData.customInfo.uid}).then(res => {
                     this.setData({
                         price:res.data
-                    })
+                    });
                 });
             })
     },

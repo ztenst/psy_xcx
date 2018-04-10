@@ -20,16 +20,16 @@
             <view class="cell-item">
                 <view class="cell-left"></view>
                 <view class="cell-right">
-                    <input type="text" class="cell-input" name="name" placeholder-class="c-999"
+                    <input type="text" class="cell-input" name="name" placeholder-class="c-999" disabled
                            placeholder="请填写真实姓名" value="{{userInfo.name}}" readonly/>
                 </view>
             </view>
             <view class="cell-item">
                 <view class="cell-left ">
                     <label for="" class="label">性别</label>
-                    <radio-group class="radio-group" bindchange="sexRadioChange" name="sex">
+                    <radio-group class="radio-group"  name="sex" >
                         <label class="radio" wx:for="{{sexItems}}">
-                            <radio value="{{item.value}}" checked="{{item.value==sex}}" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
+                            <radio disabled value="{{item.value}}" checked="{{item.value==sex}}" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
                             {{item.name}}
                         </label>
                     </radio-group>
@@ -40,7 +40,7 @@
                 <view class="cell-left "></view>
                 <view class="cell-right">
                     <input type="text" name="id_card" class="cell-input" placeholder-class="c-999"
-                           placeholder="请输入身份证号" autocomplete="off" value="{{userInfo.id_card}}"/>
+                           placeholder="请输入身份证号" disabled autocomplete="off" value="{{userInfo.id_card}}"/>
                 </view>
             </view>
             <view class="cell-item">

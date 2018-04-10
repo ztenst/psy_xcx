@@ -66,8 +66,8 @@ Page({
                         uid: app.globalData.customInfo.uid,
                         pid: self.data.options.pid,
                         price: setPayParam.price,
-                        begin: self.handleDate(self.data.begin),
-                        end: self.handleDate(self.data.end)
+                        begin: self.handleDate(self.data.options.begin),
+                        end: self.handleDate(self.data.options.end)
                     };
                     api.addOrder(vipParams).then(r => {
                         let data = r;

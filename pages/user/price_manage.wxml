@@ -8,6 +8,7 @@
                 <view class="cell-left "></view>
                 <view class="cell-right">
                     <input type="text"
+                           value="{{price}}"
                            name="price"
                            class="cell-input"
                            placeholder-class="c-999"
