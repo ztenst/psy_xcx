@@ -59,7 +59,7 @@
                                           wx:for-item="y"
                                           wx:for-index="dateindex"
                                           bindtap="chooseDate"
-                                          data-week="{{weekindex+1}}" data-time="{{dateindex+1}}">
+                                          data-week="{{weekindex}}" data-time="{{dateindex}}">
                                         <view></view>
                                     </view>
                                 </view>

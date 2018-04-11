@@ -30,10 +30,11 @@ Page({
             'times': {required: '请选择时间'},
         });
         for (var i = 0; i < 7; i++) {
-            courseList[i] = [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
-        };
+            courseList[i] = [{id: 0}, {id: 1}, {id: 2}, {id: 3}];
+        }
     },
     onShow() {
+        let self= this;
         app.getUserOpenId().then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -54,31 +55,36 @@ Page({
             } else if (res.uid && res.is_user != '1') {
                 app.goPage('/pages/login/login')
             }
-        }).then(()=>{
-            api.getZxsTime({uid: app.globalData.customInfo.uid}).then(res=>{
-                courseList.forEach((v, index) => {
-                    res.data.forEach((V, I) => {
-                            if ((index + 1) == V.week) {
-                                v.forEach((vv, ii) => {
-                                    if(vv.id==V.time_area){
-                                        vv.selected=true;
-                                    }
-                                })
-                            }
-                        }
-                    )
+        }).then(() => {
+            api.getZxsTime({uid: app.globalData.customInfo.uid}).then(res => {
+                courseList.forEach((V, I) => {
+                    V.forEach((v, i) => {
+                        let ind=self.checkIsMacth(res.data,I,v.id);
+                        if(ind!=-1){
+                            v.selected = true;
+                        };
+                    });
                 });
-                this.setData({courseList,times: res.data})
+                this.setData({courseList, times: res.data})
             })
         })
-
-
+    },
+    checkIsMacth(times, week, time) {
+        return times.findIndex((v, i) => {
+            return v.week == week && v.time_area == time;
+        });
     },
     chooseDate(e) {
         let data = e.currentTarget.dataset;
         let times = this.data.times;
-        console.log(times)
-        times.push({week: data.week, time_area: data.time});
+        let index = times.findIndex((v, i) => {
+            return v.week == data.week && v.time_area == data.time;
+        });
+        if (index != -1) {
+            times.splice(index, 1);
+        } else {
+            times.push({week: data.week, time_area: data.time});
+        }
         this.setData({
             times: times
         });
@@ -88,18 +94,17 @@ Page({
     setTime() {
         let courseList = this.data.courseList;
         let times = this.data.times;
-        courseList.forEach((v, index) => {
-            times.forEach((V, I) => {
-                    if ((index + 1) == V.week) {
-                        v.forEach((vv, ii) => {
-                            if (vv.id == V.time_area) {
-                                vv.selected = true;
-                            }
-                        })
-                    }
+        courseList.forEach((V, I) => {
+            V.forEach((v, i) => {
+                let ind=this.checkIsMacth(times,I,v.id);
+                if(ind!=-1){
+                    v.selected = true;
+                }else{
+                    v.selected = false;
                 }
-            )
+            });
         });
+        
         this.setData({courseList})
     },
 

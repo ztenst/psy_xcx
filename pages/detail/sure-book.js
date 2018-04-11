@@ -4,6 +4,7 @@ import {
 } from '../../components/wxcomponents'
 import api from '../../libs/api'
 import Util from '../../utils/util'
+
 var WxParse = require('../../libs/wxParse/wxParse.js');
 const app = getApp();
 Page({
@@ -13,11 +14,12 @@ Page({
             1: [1, 2, 3, 4],
         }],
         course: [1, 2, 3, 4],
-        toast:null
+        toast: null
     },
-    onLoad (options) {
+    onLoad(options) {
+        console.log(options)
         this.setData({
-            options:options,
+            options: options,
             toast: this.selectComponent('#toast')
         })
         api.getProductInfo(options.pid).then(json => {
@@ -25,11 +27,11 @@ Page({
             this.setData({zxsInfo});
         });
     },
-    onShow(){
+    onShow() {
         app.getUserOpenId().then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
-                is_zxs:res.is_zxs
+                is_zxs: res.is_zxs
             });
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
@@ -40,10 +42,11 @@ Page({
                         text: '知道了',
                         type: 'weui-dialog__btn_primary',
                     }],
-                    onConfirm(e) {},
+                    onConfirm(e) {
+                    },
                 });
-            }else if(res.uid&&res.is_user!='1'){
-                app.goPage('/pages/login/login',{},{type: 'redirect'})
+            } else if (res.uid && res.is_user != '1') {
+                app.goPage('/pages/login/login', {}, {type: 'redirect'})
             }
         });
     },
@@ -66,15 +69,15 @@ Page({
                         uid: app.globalData.customInfo.uid,
                         pid: self.data.options.pid,
                         price: setPayParam.price,
-                        begin: self.handleDate(self.data.options.begin),
-                        end: self.handleDate(self.data.options.end)
+                        begin: self.data.options.begin,
+                        end: self.data.options.end
                     };
                     api.addOrder(vipParams).then(r => {
                         let data = r;
                         self.data.toast.show(data.msg);
                         if (data.status == "success") {
                             setTimeout(function () {
-                                app.goPage('/pages/detail/book-success',{uid:vipParams.pid},{type:'redirect'})
+                                app.goPage('/pages/detail/book-success', {uid: vipParams.pid}, {type: 'redirect'})
                             }, 2e3)
                         }
                     })
@@ -97,7 +100,7 @@ Page({
         return time = mydate + " " + time;
     },
 
-    goback(){
+    goback() {
         wx.navigateBack({
             delta: 1
         })
