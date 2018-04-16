@@ -16,6 +16,18 @@
                            autocomplete="off"/>元/小时
                 </view>
             </view>
+            <view class="cell-item">
+                <view class="cell-left "></view>
+                <view class="cell-right">
+                    <input type="text"
+                           value="{{off_price}}"
+                           name="off_price"
+                           class="cell-input"
+                           placeholder-class="c-999"
+                           placeholder="请输入价格"
+                           autocomplete="off"/>元/小时(线下)
+                </view>
+            </view>
             <button class="btn-block btn-submit" form-type="submit">提交</button>
         </form>
     </view>

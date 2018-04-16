@@ -22,7 +22,7 @@ Page({
 
     },
     async onLoad(options) {
-        let res = await api.getActiveTags();
+        let res = await api.getActiveTagsNew();
         this.setData({
             filters: res.data,
             listOpts: {

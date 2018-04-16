@@ -73,9 +73,15 @@
         </view>
         <view class="textBox">
             <view class="content">
-                <view>{{zxsInfo.price_note}}</view>
+                <view>线上单价</view>
                 <view class="time">
                     <text class="price">¥{{zxsInfo.price}}</text>/小时
+                </view>
+            </view>
+             <view class="content">
+                <view>线下单价</view>
+                <view class="time">
+                    <text class="price">¥{{zxsInfo.off_price}}</text>/小时
                 </view>
             </view>
         </view>
@@ -157,3 +163,4 @@
     </view>
     <view class="btn-yuyue" bindtap="gotoBookTime" data-id="{{zxsInfo.id}}">我要预约</view>
 </view>
+<toast id="toast"></toast>

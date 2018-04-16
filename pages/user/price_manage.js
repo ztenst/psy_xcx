@@ -18,7 +18,12 @@ Page({
         this.WxValidate = app.WxValidate({
             'price': {required: true},
         }, {
-            'price': {required: '请输入你的价格'},
+            'price': {required: '请输入你的线上咨询价格'},
+        });
+        this.WxValidate = app.WxValidate({
+          'off_price': { required: true },
+        }, {
+          'off_price': { required: '请输入你的线上=下咨询价格' },
         });
 
     },
@@ -48,7 +53,8 @@ Page({
             .then(r => {
                 api.getZxsPrice({uid: app.globalData.customInfo.uid}).then(res => {
                     this.setData({
-                        price:res.data
+                        price:res.data.price,
+                        off_price: res.data.off_price,
                     });
                 });
             })
@@ -72,7 +78,7 @@ Page({
             this.data.toast.show(data.msg);
             if (data.status == "success") {
                 setTimeout(function () {
-                    app.goPage('/pages/index/index')
+                    app.goPage('/pages/user/user')
                 }, 2e3)
             }
         });

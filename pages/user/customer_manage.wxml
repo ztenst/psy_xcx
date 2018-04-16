@@ -4,7 +4,11 @@
             <view class="f-left">
                 <view class="name">
                     {{item.name}}
+                    <text class="name" style="font-size:24rpx;color:#868686">
+                    {{item.onoroff}}
+                </text>
                 </view>
+                
                 <view class="time">{{item.phone}}</view>
             </view>
             <view class="price">

@@ -27,7 +27,7 @@
                 </view>
                 <view class="cell">
                     <view class="num">{{item.price}}</view>
-                    <view class="text">{{item.status}}</view>
+                    <view class="text">{{item.onoroff}}</view>
                 </view>
             </view>
         </view>

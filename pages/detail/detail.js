@@ -8,6 +8,7 @@ var WxParse = require('../../libs/wxParse/wxParse.js');
 const app = getApp();
 Page({
     data: {
+        toast: null,
         zxsInfo: {},
         dateList: [{
             1: [1, 2, 3, 4],
@@ -45,7 +46,8 @@ Page({
         app.getUserOpenId().then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
-                is_zxs:res.is_zxs
+                is_zxs:res.is_zxs,
+                toast: this.selectComponent('#toast')
             });
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
@@ -65,7 +67,12 @@ Page({
     },
     gotoBookTime(e){
         let id = e.currentTarget.dataset.id;
-        app.goPage('/pages/detail/book-time', {'id': id})
+        if (app.globalData.customInfo.uid==id) {
+          this.data.toast.show('自己不能预约自己');
+        } else {
+          app.goPage('/pages/detail/book-time', { 'id': id })
+        }
+        
     },
     /**
      * 转发分享

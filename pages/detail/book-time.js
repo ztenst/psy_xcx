@@ -36,6 +36,7 @@ Page({
             this.formatTime(json.list[0].list);
             this.getCanNotUseList(json.list[0].list)
         });
+        this.data.toast.show('请选择开始和结束时间');
     },
     onShow() {
         app.getUserOpenId().then(res => {

@@ -109,6 +109,9 @@ export default {
     getActiveTags() {
         return getRequest(`${HOST}/api/tag/list`, {'cate': 'old'}, {cache: true})
     },
+    getActiveTagsNew() {
+      return getRequest(`${HOST}/api/tag/list`, { 'cate': '' }, { cache: true })
+    },
     getTime(id) {
         return getRequest(`${HOST}/api/index/getTime`, {uid: id}, {cache: true})
     },
