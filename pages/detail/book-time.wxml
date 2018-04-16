@@ -31,6 +31,18 @@
             </view>
         </view>
     </view>
+
+    <view class="fybox" wx:if="{{place}}">
+        <view>咨询模式</view>
+        <view class="time">
+            <radio-group class="radio-group" bindchange="sexRadioChange"  name="onoroff" >
+                <label class="radio" wx:for="{{sexItems}}">
+                    <radio disabled="{{can_edit==0}}" value="{{item.value}}" checked="{{item.value==can_edit}}" size="" color="{{checked==true?'#ccc':'#00b7ee'}}"/>
+                    {{item.name}}
+                </label>
+            </radio-group>
+        </view>
+    </view>
     <view class="fybox" wx:if="{{place}}">
         <view>线下咨询地点</view>
         <view class="time">

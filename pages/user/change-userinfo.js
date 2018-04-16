@@ -78,8 +78,7 @@ Page({
     onLoad() {
         this.setData({
             toast: this.selectComponent('#toast'),
-            customInfo: app.globalData.customInfo,
-            userInfo: app.globalData.userInfo
+            customInfo: app.globalData.customInfo
         });
         //初始化表单校验组件
         this.WxValidate = app.WxValidate({
@@ -119,8 +118,7 @@ Page({
     onShow() {
         app.getUserOpenId().then(res => {
             this.setData({
-                userInfo: app.globalData.userInfo,
-                is_zxs: res.is_zxs
+                is_zxs: res.is_zxs,
             });
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
@@ -143,9 +141,9 @@ Page({
                     let userInfo = res.data;
                     this.setData({
                         userInfo,
-                        sex: userInfo.sex
+                        sex: userInfo.sex,
+                        image:userInfo.image
                     });
-                    console.log(userInfo.sex)
                     api.getActiveTags().then(res => {
                         let json = res.data,
                             obj = _.filter(json, {name: "更多"}),
@@ -296,7 +294,9 @@ Page({
             this.data.toast.show(data.msg);
             if (data.status == "success") {
                 setTimeout(function () {
-                    app.goPage('/pages/index/index', {}, {type: 'redirect'})
+                  wx.navigateBack({
+                    delta: 1
+                  });
                 }, 2e3)
             }
         });

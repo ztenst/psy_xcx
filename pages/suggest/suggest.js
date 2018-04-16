@@ -62,7 +62,9 @@ Page({
             this.data.toast.show(data.msg);
             if (data.status == "success") {
                 setTimeout(function () {
-                    app.goPage('/pages/index/index')
+                  wx.navigateBack({
+                    delta: 1
+                  });
                 }, 2e3)
             }
         });

@@ -78,7 +78,9 @@ Page({
             this.data.toast.show(data.msg);
             if (data.status == "success") {
                 setTimeout(function () {
-                    app.goPage('/pages/user/user')
+                  wx.navigateBack({
+                    delta: 1
+                  });
                 }, 2e3)
             }
         });

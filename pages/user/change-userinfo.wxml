@@ -11,11 +11,11 @@
             <view class="cell-item imageItem">
                 <view bindtap="didPressChooesImage" data-tag="image">
                     <view class="pic">
-                        <image src="{{userInfo.image?userInfo.image:'../../images/users.png'}}"></image>
+                        <image src="{{image?image:'../../images/users.png'}}"></image>
                     </view>
                     <view class="text">上传头像</view>
                 </view>
-                <input type="text" name="image" value="{{userInfo.image}}" hidden/>
+                <input type="text" name="image" value="{{image}}" hidden/>
             </view>
             <view class="cell-item">
                 <view class="cell-left"></view>
