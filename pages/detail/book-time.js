@@ -83,7 +83,8 @@ Page({
   sexRadioChange(e) {
     this.setData({
       onoroff:e.detail.value,
-      yuan: e.detail.value==1?this.data.danjia:this.data.off_price
+      yuan: e.detail.value==1?this.data.danjia:this.data.off_price,
+      price: Math.floor(parseInt(this.data.end - this.data.begin + 1) * (e.detail.value == 1 ? this.data.danjia : this.data.off_price) * 100) / 100
     });
   },
   getTimeList(e) {

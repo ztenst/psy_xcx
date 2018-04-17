@@ -113,7 +113,7 @@ export default {
       return getRequest(`${HOST}/api/tag/list`, { 'cate': '' }, { cache: true })
     },
     getTime(id) {
-        return getRequest(`${HOST}/api/index/getTime`, {uid: id}, {cache: true})
+        return getRequest(`${HOST}/api/index/getTime`, {uid: id}, {cache: false})
     },
     /**/
     setPay(params) {
