@@ -72,7 +72,7 @@ Page({
             {name: '男', value: 1},
             {name: '女', value: 2},
         ],
-
+        ly:[]
 
     },
     onLoad() {
@@ -164,10 +164,10 @@ Page({
                             let modeindex = zx_modeList.findIndex((v) => {
                                 return v.id == userInfo.zx_mode;
                             });
-                            let ly = userInfo.ly;
                             this.setData({
-                                eduindex, modeindex, zzindex,ly
+                                eduindex, modeindex, zzindex
                             });
+                            this.getLy(lingyuList,userInfo.ly)
                         })
                     });
                     this.getDateList(userInfo.work_year);
@@ -185,6 +185,20 @@ Page({
                 })
             })
     },
+     getLy(lingyuList,ly) {
+       lingyuList.forEach((V, I) => {
+         let index = ly.findIndex((v, i) => {
+           return v == V.id;
+         });
+         if (index != -1) {
+           V.selected = true;
+         } else {
+           V.selected = false;
+         }
+       });
+       this.setData({lingyuList,ly})
+  
+     },
     chooseDate(e) {
         let data = e.currentTarget.dataset;
         let times = this.data.times;
@@ -214,7 +228,7 @@ Page({
      * @param e
      */
     sexRadioChange(e) {
-        console.log(e)
+      
         this.setData({
             sex: e.detail.value
         });
@@ -271,11 +285,32 @@ Page({
         this.setData({streetIndex: e.detail.value})
     },
     chooseBtn(e) {
-        let dataset = e.currentTarget.dataset;
-        this.setData({
-            [`${dataset.tag}`]: dataset.id
-        });
-    },
+    let dataset = e.currentTarget.dataset;
+    let i = this.data.ly.findIndex((v, i) => {
+      return v == dataset.id;
+    });
+    
+    if (i === -1){
+      this.data.ly.push(dataset.id);
+    }else{
+      this.data.ly.splice(i, 1);
+    }
+    
+    let lingyuList = this.data.lingyuList, ly = this.data.ly;
+    lingyuList.forEach((V, I) => {
+      let index = ly.findIndex((v, i) => {
+        return v == V.id;
+      });
+      if (index != -1) {
+        V.selected = true;
+      } else {
+        V.selected = false;
+      }
+    });
+    
+    this.setData({lingyuList, ly})
+    
+  },
     /**
      * 提交表单
      * @param e

@@ -26,6 +26,16 @@
     color: #fff;
     background-color: $color_scheme;
   }
+  &.btn-sure2{
+    display:inline-block;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+    overflow:inherit!important;
+  }
   &.btn-cancel{
     color: $color_scheme;
     background-color: #fff;

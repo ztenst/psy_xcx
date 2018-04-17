@@ -9,7 +9,7 @@
     <view class="slide-nav">
         <scroll-view scroll-x class="slide">
             <view class="in">
-                <view class="item  {{tabIndex==index?'on':''}}" bindtap="getTimeList" wx:for="{{dateList}}" data-index="{{index}}">
+                <view class="item  {{tabIndex==index?'on':''}}" bindtap="getTimeList" data-yueri="{{item.day}}" wx:for="{{dateList}}" data-index="{{index}}">
                     <view class="day">{{item.day}}</view>
                     <view class="week">{{item.week}}</view>
                 </view>
