@@ -89,12 +89,16 @@ Page({
   },
   getTimeList(e) {
     let index = e.currentTarget.dataset.index, dateList = this.data.dateList;
+     let [month, day] = e.currentTarget.dataset.yueri.split('/');
     this.setData({
       tabIndex: index,
+      yueri:`${month}-${day}`
     });
+    console.log(this.data.yueri)
     this.formatTime(dateList[index].list);
     this.getCanNotUseList(dateList[index].list)
   },
+
   selectTime(e) {
     let dataset = e.currentTarget.dataset, tempBeginEnd = this.data.tempBeginEnd;
     if (dataset.iscan != 0) {
@@ -159,12 +163,8 @@ Page({
     time = time >= 10 ? time + ":00" : '0' + time + ":00";
     var date = new Date;
     var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    month = (month < 10 ? "0" + month : month);
-    var day = date.getDate();
-    
-    day = (day < 10 ? "0" + day : day);
-    var mydate = (year.toString() + "-" + month.toString() + "-" + day.toString());
+    var mydate = (year.toString() + "-" + this.data.yueri);
+    console.log(mydate)
     return time = mydate + " " + time;
   },
   //处理时间格式
@@ -181,11 +181,7 @@ Page({
   getYuyueTime(begin, end) {
     begin = begin >= 10 ? begin + ":00" : '0' + begin + ":00";
     end = end >= 10 ? end + ":00" : '0' + end + ":00";
-    var date = new Date;
-    var month = date.getMonth() + 1;
-    month = (month < 10 ? "0" + month : month);
-    var day = date.getDate();
-    day = (day < 10 ? "0" + day : day);
+    let [month, day] = this.data.yueri.split('-');
     var mydate = (month.toString() + "月" + day.toString() + "日");
     return mydate + " " + begin + "到" + mydate + " " + end;
   },

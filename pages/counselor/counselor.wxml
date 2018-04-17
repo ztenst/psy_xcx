@@ -148,7 +148,10 @@
             </view>
             <view class="cell-item ">
                 <view class="cell-left btns-cell">
-                    <view class="btn-item {{ly==item.id?'on':''}}" wx:for="{{lingyuList}}" bindtap="chooseBtn" data-tag="ly" data-id="{{item.id}}">{{item.name}}</view>
+                    <view class="btn-item {{item.selected?'on':''}}" wx:for="{{lingyuList}}"
+                          bindtap="chooseBtn"
+                          data-tag="ly"
+                          data-id="{{item.id}}">{{item.name}}</view>
                 </view>
             </view>
             <!--<view class="cell-item nobdm">-->
