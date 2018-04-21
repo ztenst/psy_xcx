@@ -97,6 +97,8 @@ Page({
             'zz': {required: true},
             'wx': {required: true},
             'edu': {required: true},
+            'bank_no': { required: true },
+            'bank_name': { required: true },
         }, {
             'name': {required: '请输入姓名'},
             'image': {required: '请选择头像'},
@@ -113,6 +115,8 @@ Page({
             'zz': {required: '请选择资质'},
             'wx': {required: '请输入学历'},
             'edu': {required: '请选择学历'},
+            'bank_no': { required: '请输入银行卡号' },
+            'bank_name': { required: '请输入银行名称' },
         });
     },
     onShow() {

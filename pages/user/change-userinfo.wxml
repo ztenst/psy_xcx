@@ -58,6 +58,20 @@
                 </view>
             </view>
             <view class="cell-item">
+                <view class="cell-left "></view>
+                <view class="cell-right">
+                    <input type="text" name="bank_no" class="cell-input" placeholder-class="c-999"
+                           placeholder="请输入本人银行卡号" autocomplete="off" value="{{userInfo.bank_no}}"/>
+                </view>
+            </view>
+            <view class="cell-item">
+                <view class="cell-left "></view>
+                <view class="cell-right">
+                    <input type="text" name="bank_name" class="cell-input" placeholder-class="c-999"
+                           placeholder="请输入银行名称" autocomplete="off" value="{{userInfo.bank_name}}"/>
+                </view>
+            </view>
+            <view class="cell-item">
                 <view class="cell-left ">
                     <label for="" class="label">学历</label>
                 </view>

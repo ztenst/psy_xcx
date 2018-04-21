@@ -19,6 +19,7 @@ Page({
     canNotUseList: [],
     begin: null,
     end: null,
+    yueri: null,
     
     sexItems: [
       {name: '线上', value: 1},
@@ -42,6 +43,10 @@ Page({
         place: json.place,
         price: parseInt(json.price),
         dateList: json.list.slice(0),
+      });
+      let [month, day] = json.list.slice(0)[0].day.split('/');
+      this.setData({
+        yueri: `${month}-${day}`
       });
       this.formatTime(json.list[0].list);
       this.getCanNotUseList(json.list[0].list)
@@ -179,6 +184,7 @@ Page({
     });
   },
   getYuyueTime(begin, end) {
+    console.log(this.data.yueri);
     begin = begin >= 10 ? begin + ":00" : '0' + begin + ":00";
     end = end >= 10 ? end + ":00" : '0' + end + ":00";
     let [month, day] = this.data.yueri.split('-');

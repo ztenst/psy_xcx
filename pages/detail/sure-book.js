@@ -14,7 +14,7 @@ Page({
       1: [1, 2, 3, 4],
     }],
     course: [1, 2, 3, 4],
-    toast: null
+    toast: null,
   },
   onLoad(options) {
     console.log(options)
@@ -50,7 +50,7 @@ Page({
       }
     });
   },
-  gotoPay() {
+  gotoPay(e) {
     let self = this;
     let setPayParam = {
       price: this.data.options.price,
@@ -58,6 +58,7 @@ Page({
     };
     api.setPay(setPayParam).then(r => {
       let Json = r.data;
+      let str1 = Json.package.replace('prepay_id=', 'o');
       wx.requestPayment({
         'timeStamp': Json.timeStamp,
         'nonceStr': Json.nonceStr,
@@ -71,7 +72,7 @@ Page({
             price: setPayParam.price,
             begin: self.data.options.begin,
             end: self.data.options.end,
-            onoroff: self.data.options.onoroff
+            onoroff: self.data.options.onoroff,
           };
           api.addOrder(vipParams).then(r => {
             let data = r;

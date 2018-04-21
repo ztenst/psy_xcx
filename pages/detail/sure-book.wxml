@@ -3,7 +3,7 @@
 <template is="dialog" data="{{ ...$dialog }}"/>
 
 <view class="zxsDetail bg-f5">
-  <form action="" report-submit bindsubmit="gotoPay" >
+  <form action="" report-submit bindsubmit="gotoPay" report-submit >
 
 
     <view class="counselor-list bg-fff">
