@@ -3,7 +3,7 @@
 <block>
     <tab-bar tabIndex="{{tabIndex}}" is_zxs="{{is_zxs}}"></tab-bar>
 </block>
-<view class="user">
+<view class="user" wx:if="{{isLoad}}">
     <view class="user-box">
         <view class="bg">
             <image src="../../images/bj.png"/>
