@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "明悦心空",
   "usingComponents": {
-    "tab-bar": "../../components/tab-bar/tab-bar"
+    "tab-bar": "../../components/tab-bar/tab-bar",
+    "toast": "../../components/toast/toast"
   }
 }

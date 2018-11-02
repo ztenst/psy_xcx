@@ -127,8 +127,8 @@ Page({
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息
                 $dialog.alert({
-                    title: '经纪圈新房通',
-                    content: '经纪圈新房通需要获取您的手机号来验证身份，请点击下方按钮进行确认。',
+                    title: '明悦心空',
+                    content: '明悦心空需要获取您的手机号来验证身份，请点击下方按钮进行确认。',
                     buttons: [{
                         text: '知道了',
                         type: 'weui-dialog__btn_primary',
@@ -332,11 +332,13 @@ Page({
             let data = res;
             this.data.toast.show(data.msg);
             if (data.status == "success") {
-                setTimeout(function () {
-                  wx.navigateBack({
-                    delta: 1
-                  });
-                }, 2e3)
+                wx.clearStorage()
+              app.goPage('/pages/user/user', {}, { type: 'redirect' })
+                // setTimeout(function () {
+                //   wx.navigateBack({
+                //     delta: 1
+                //   });
+                // }, 2e3)
             }
         });
     },

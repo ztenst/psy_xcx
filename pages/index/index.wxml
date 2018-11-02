@@ -1,6 +1,6 @@
 <import src="../../components/dialog/dialog.wxml"/>
 <template is="dialog" data="{{ ...$dialog }}"/>
-<block wx:if="{{is_zxs}}">
+<block>
     <tab-bar tabIndex="0" is_zxs="{{is_zxs}}"></tab-bar>
 </block>
 

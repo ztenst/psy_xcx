@@ -41,6 +41,7 @@ App({
             if (self.globalData.customInfo.is_user != '1' || status == 'fresh') {
                 wx.login({
                     success: function (loginres) {
+                      self.globalData.code = loginres.code;
                         wx.getUserInfo({
                             success: function (resuserinfo) {
                                 self.globalData.userInfo = resuserinfo.userInfo;
@@ -110,5 +111,6 @@ App({
         openid: '',
         customInfo: {},
         isUser: false,
+        code: '',
     },
 })

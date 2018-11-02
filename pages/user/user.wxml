@@ -1,6 +1,6 @@
 <import src="../../components/dialog/dialog.wxml"/>
 <template is="dialog" data="{{ ...$dialog }}"/>
-<block wx:if="{{is_zxs}}">
+<block>
     <tab-bar tabIndex="{{tabIndex}}" is_zxs="{{is_zxs}}"></tab-bar>
 </block>
 <view class="user">
@@ -20,6 +20,7 @@
             <view class="usename">
                 {{userInfo.nickName}}
             </view>
+            <button wx:if="{{!is_zxs}}" style='width:100px' class="usename" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">点击登录</button>
             <view class="com"></view>
         </view>
     </view>

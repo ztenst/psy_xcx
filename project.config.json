@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.91",
+	"libVersion": "2.3.2",
 	"appid": "wxbfcd9a63fe00e813",
 	"projectname": "psy_xcx",
 	"isGameTourist": false,
@@ -21,12 +21,16 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -105,6 +109,12 @@
 					"name": "time_manage",
 					"pathName": "pages/user/time_manage",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "zhifuchengg",
+					"pathName": "pages/detail/book-success",
+					"query": "uid=2155"
 				}
 			]
 		}
