@@ -22,7 +22,7 @@ Page({
           phone: json.phone
         })
       }),        
-      app.getUserOpenId().then(res => {
+      app.getUserOpenId('fresh').then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
                 is_zxs:res.is_zxs
