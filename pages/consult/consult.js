@@ -23,6 +23,14 @@ Page({
         focused: false,
 
     },
+  onShareAppMessage: function () {
+    var title = '咨询师列表'
+    // var id = this.options.id;
+    return {
+      title: title,
+      path: '/pages/index/index'
+    }
+  },
     async onLoad(options) {
         let res = await api.getActiveTagsNew();
         this.setData({

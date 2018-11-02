@@ -8,9 +8,18 @@ import api from '../../libs/api';
 wx.showShareMenu({
   withShareTicket: true
 })
+
 const app = getApp();
 Page({
     data: {},
+  onShareAppMessage: function () {
+    var title = '明悦心空'
+    // var id = this.options.id;
+    return {
+      title: title,
+      path: '/pages/index/index'
+    }
+  },
     onLoad() {
         api.index().then(res => {
             if (res.data.length >= 0) {
@@ -22,19 +31,7 @@ Page({
     },
     onShow(){
       // console.log(app.globalData.userInfo);
-      if(!app.globalData.userInfo) {
-        $d1.alert({
-          title: '明悦心空',
-          content: '请先去个人中心登录',
-          buttons: [{
-            text: '知道了',
-            type: 'weui-dialog__btn_primary',
-          }],
-          onConfirm(e) { 
-            app.goPage('/pages/user/user', {}, { type: 'redirect' })
-          },
-        });
-      }
+      
         app.getUserOpenId().then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
