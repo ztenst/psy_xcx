@@ -24,7 +24,7 @@ Component({
             } else if (index == '1') {
                 app.goPage('/pages/consult/consult')
             } else if (index == '2') {
-                app.goPage('/pages/user/change-userinfo')
+              app.goPage('/pages/counselor/counselor')
             } else if (index == '3') {
                 app.goPage('/pages/user/user', {type: 3})
             }
