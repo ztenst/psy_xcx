@@ -22,11 +22,10 @@ Page({
           phone: json.phone
         })
       }),        
-      app.getUserOpenId('fresh').then(res => {
+      app.getUserOpenId().then(res => {
             this.setData({
                 userInfo: app.globalData.userInfo,
-                is_zxs:res.is_zxs,
-                isLoad : true
+                is_zxs:res.is_zxs
             });
             if (!res.uid) {
                 //如果该用户有open_id,则需要获取手机号老验证身份，否则直接设置用户信息

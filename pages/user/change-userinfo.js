@@ -333,7 +333,9 @@ Page({
             this.data.toast.show(data.msg);
             if (data.status == "success") {
                 wx.clearStorage()
+          app.getUserOpenId('fresh').then(obj=>{
               app.goPage('/pages/user/user', {}, { type: 'redirect' })
+          });
                 // setTimeout(function () {
                 //   wx.navigateBack({
                 //     delta: 1
