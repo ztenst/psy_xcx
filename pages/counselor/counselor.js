@@ -334,6 +334,7 @@ Page({
       let data = res;
       this.data.toast.show(data.msg);
       if (data.status == "success") {
+        app.getUserOpenId('fresh').then(obj=>{});
         setTimeout(function () {
           app.goPage('/pages/index/index', {}, {type: 'redirect'})
         }, 2e3)
