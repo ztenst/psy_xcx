@@ -55,15 +55,25 @@
             档案
         </view>
         <view class="content">
-            <span class="text">个人简介:</span>{{filter.filterTag(zxsInfo.content)}}
+            <span class="text">个人简介: </span>{{filter.filterTag(zxsInfo.content)}}
         </view>
         <view class="blank20"></view>
         <view class="content">
-            <span class="text">工作地点:</span>{{zxsInfo.place}}
+            <span class="text">工作地点: </span>{{zxsInfo.place}}
         </view>
         <view class="blank20"></view>
         <view class="content">
-            <span class="text">咨询模式:</span>{{zxsInfo.zx_mode}}
+            <span class="text">咨询模式: </span>{{zxsInfo.zx_mode}}
+        </view>
+        <view class="blank20"></view>
+        <view class="content">
+            <span class="text">联系电话: </span>{{zxsInfo.phone}}
+            <span style="color:#84c6f0" bindtap="call" data-tel="{{zxsInfo.phone}}"> 拨打</span>
+        </view>
+        <view class="blank20"></view>
+        <view class="content">
+            <span class="text">微信号: </span>{{zxsInfo.wx}}
+            <span style="color:#84c6f0" bindtap="copy" data-tel="{{zxsInfo.wx}}"> 复制</span>
         </view>
     </view>
     <view class="section">

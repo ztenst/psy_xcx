@@ -13,7 +13,7 @@ const app = getApp();
 Page({
     data: {},
   onShareAppMessage: function () {
-    var title = '明悦心空'
+    var title = '明悦心空心理卫士'
     // var id = this.options.id;
     return {
       title: title,

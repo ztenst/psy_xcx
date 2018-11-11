@@ -42,6 +42,26 @@ Page({
         });
 
     },
+  //拨打电话
+    call(e) {
+      let phone = e.currentTarget.dataset.tel.replace(/\s*转\s*/, ',');
+      wx.makePhoneCall({
+        phoneNumber: phone
+      })
+    },
+    copy(e) {
+      let phone = e.currentTarget.dataset.tel.replace(/\s*转\s*/, ',');
+      wx.setClipboardData({
+        data: phone,
+        success(res) {
+          wx.getClipboardData({
+            success(res) {
+              console.log(res.data) // data
+            }
+          })
+        }
+      })
+    },
     onShow(){
         app.getUserOpenId().then(res => {
             this.setData({
@@ -85,4 +105,5 @@ Page({
             title: self.data.articleInfo.title,
         }
     }
+    
 });
