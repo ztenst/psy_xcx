@@ -40,7 +40,7 @@
                 <view class="cell-left "></view>
                 <view class="cell-right">
                     <input type="text" name="id_card" class="cell-input" placeholder-class="c-999"
-                           placeholder="请输入身份证号" disabled autocomplete="off" value="{{userInfo.id_card}}"/>
+                           placeholder="请输入身份证号"  autocomplete="off" value="{{userInfo.id_card}}"/>
                 </view>
             </view>
             <view class="cell-item">
@@ -173,24 +173,24 @@
                           data-id="{{item.id}}">{{item.name}}</view>
                 </view>
             </view>
-            <view class="cell-item idCard">
+           <view class="cell-item idCard">
                 <view class="img-item" bindtap="didPressChooesImage" data-tag="id_pic_main">
                     <view class="pic">
-                        <image src="{{userInfo.id_pic_main?userInfo.id_pic_main:'../../images/110x110.jpg'}}"></image>
+                        <image src="{{id_pic_main?id_pic_main:'../../images/addit.png'}}"></image>
                     </view>
                     <view class="text">身份证正面</view>
                 </view>
                 <view class="img-item" bindtap="didPressChooesImage" data-tag="id_pic_sec">
                     <view class="pic">
-                        <image src="{{userInfo.id_pic_sec?userInfo.id_pic_sec:'../../images/110x110.jpg'}}"></image>
+                        <image src="{{id_pic_sec?id_pic_sec:'../../images/addit.png'}}"></image>
                     </view>
                     <view class="text">身份证反面</view>
                 </view>
             </view>
 
-            <input type="text" name="ly" value="{{ly}}" hidden/>
-            <input type="text" name="id_pic_main" value="{{userInfo.id_pic_main}}" hidden/>
-            <input type="text" name="id_pic_sec" value="{{userInfo.id_pic_sec}}" hidden/>
+             <input type="text" name="ly" value="{{ly}}" hidden/>
+            <input type="text" name="id_pic_main" value="{{id_pic_main}}" hidden/>
+            <input type="text" name="id_pic_sec" value="{{id_pic_sec}}" hidden/>
             <button class="btn-block btn-submit" form-type="submit">提交</button>
 
         </form>

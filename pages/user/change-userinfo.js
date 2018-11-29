@@ -61,7 +61,8 @@ Page({
         lingyuList: [],
         times: [],
         courseList: [],
-
+      id_pic_main: '',
+      id_pic_sec: '',
         areaList: [],
         streetList: [],
         areaIndex: 0,
@@ -89,7 +90,7 @@ Page({
             'area': {required: true},
             'street': {required: true},
             'sex': {required: true}, //性别,
-            'id_card': {required: true},
+            'id_card': {required: false},
             'company': {required: true},
             'work_year': {required: true},
             'zx_mode': {required: true},
@@ -97,8 +98,8 @@ Page({
             'zz': {required: true},
             'wx': {required: true},
             'edu': {required: true},
-            'bank_no': { required: true },
-            'bank_name': { required: true },
+          'bank_no': { required: false },
+          'bank_name': { required: false },
         }, {
             'name': {required: '请输入姓名'},
             'image': {required: '请选择头像'},
@@ -146,6 +147,8 @@ Page({
                     this.setData({
                         userInfo,
                         sex: userInfo.sex,
+                      id_pic_main: userInfo.id_pic_main,
+                      id_pic_sec: userInfo.id_pic_sec,
                         image:userInfo.image
                     });
                     api.getActiveTags().then(res => {
